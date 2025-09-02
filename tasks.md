@@ -115,21 +115,22 @@ Ziel: Vollständig einheitliches, skalierbares, dokumentiertes UI über alle Sei
 - [ ] Ersetzen aller spontanen `font-size:` Inline Styles durch Klassen oder Token.
 
 ### 5.4 Komponenten-Harmonisierung
-- [x] Buttons: Sicherstellen dass ALLE Buttons über eine zentrale Komponente laufen (`<Button variant size loading iconStart iconEnd>`), CSS Utility Varianten de-duplizieren.
-- [x] Badges: Konsolidieren auf 3 Varianten (soft / outline / invert) mit Props.
-- [x] Cards: Einheitliche Card-Komponente mit Props für `elevation`, `interactive`, `variant` erweitert (Migration laufend: FinalCTA, ProblemSolutionSection erste Konvertierung).
-- [x] Forms: Gemeinsame Input-/Fieldset-Komponente (`<Field>`) eingeführt & Hauptformular migriert.
-- [x] Navigation: Primary / Secondary Nav & Footer Navigationsobjekt (JSON Struktur) extrahieren.
-- [x] CTA Banner / Promo: Einheitliche `PromotionStrip` Komponente statt mehrfacher improvisierter Banner.
-- [x] KPIs / Metrics: `Metric` Komponente (Basis) implementiert (Animation & Migration offen).
-- [x] Testimonial: Standardisiertes Layout + Avatar + Sterne + Quelle.
-- [x] Accordion / Disclosure: Einheitliches Interaktionsmuster (Focus, Icon Rotation, Motion Reduced Kompatibilität).
-- [x] Drawer / Modal: Gemeinsame Overlay Layer mit Portals + Scroll Lock.
-- [x] Toast / Feedback: Einheitlicher Container & Queue Logik (falls noch nicht vorhanden – sonst dokumentieren).
+- [x] Buttons: Zentrale `<Button>` API (variant|size|loading|iconStart|iconEnd) – alle Seiten migriert.
+- [x] Badges & Pills: Konsolidiert (soft|outline|invert) + Pill Refactor; Legacy Varianten via Script blockiert.
+- [x] Cards: Einheitliche `<Card>` mit `variant` + `elevation`; ValueCard entfernt; Migration abgeschlossen (Hero/FinalCTA/ProblemSolution etc.).
+- [x] Forms: Field Wrapper + vereinheitlichte Inputs/Textareas (Focus Visible Style).
+- [x] Navigation & Footer: Struktur extrahiert (PrimaryNav, SiteFooter) + Config.
+- [x] Promotion / CTA Banner: Vereinheitlicht über `PromotionStrip` inkl. Variants & Container Governance (`pro-container`).
+- [x] KPIs / Metrics: `<Metric>` Basis implementiert (Animation optional offen).
+- [x] Testimonials: `TestimonialCard` erweitert (rating, tag, savings, date) und Seiten refaktoriert.
+- [x] Accordion / Disclosure: Einheitliches Interaktionsmuster (Focus, Motion Reduced kompatibel).
+- [x] Drawer / Modal: Overlay Layer + Scroll-Lock + Portal.
+- [x] Toast / Feedback: Portal-basierter `ToastProvider` (Queue + Auto-Dismiss) – alte Implementierung entfernt.
+- [x] Link States: Vereinheitlicht (Hover Underline, Focus Ring) – dokumentiert.
 
 ### 5.5 Layout & Spacing Konsistenz
 - [x] Einheitliche Section Komponente (Props erweitert: variant + padding + size + contain) – alle Marketing Sektionen migriert.
-- [ ] Max-Width Container nur über zentrale Klasse / Komponente (`pro-container`) – entfernen doppelter `mx-auto` Patterns.
+- [x] Max-Width Container nur über zentrale Klasse / Komponente (`pro-container`) – Legacy `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` Muster entfernt & Audit + Pre-Commit Hook hinzugefügt.
  - [x] Vertikale Rhythmus-Regeln definieren (Dokumentation v3.3.2 Draft in `docs/styleguide.md` Abschnitt 8.2 hinzugefügt).
     - [x] Flow Utilities `.flow-sm|.flow|.flow-lg` implementieren (CSS in `styles/index.css`). Einsatz-Refactor folgt.
      - [ ] Mehrfache aufeinanderfolgende `mt-*` in Sektionen reduzieren (Audit + Refactor).
@@ -144,22 +145,24 @@ Ziel: Vollständig einheitliches, skalierbares, dokumentiertes UI über alle Sei
     - [x] Contact_new.jsx
     - [x] Spacing Audit Script (`scripts/spacing-audit.js`) erstellt & Report `docs/spacing-audit.json`
     - [x] Erste große Einzelabstände ersetzt (Pricing hero mt-10 -> flow, About certs mt-12 -> flow)
-    - [ ] Weitere große Einzelabstände vereinheitlichen (Restseiten)
+    - [ ] Weitere große Einzelabstände vereinheitlichen (Restseiten) (Blog/Imprint/Privacy refactored)
     - [x] Financing.jsx
     - [x] Pricing.jsx
     - [x] Contact_new.jsx
-- [ ] Grid / Columns System definieren (Breakpoints + Mappings) & dokumentieren.
+ - [x] Grid / Columns System definieren (Breakpoints + Mappings) & dokumentieren (Styleguide 8.3, Utilities implementiert).
 - [ ] Responsive Abweichungen reduzieren: Prüfen auf divergierende sm: / md: / lg: Klassen, vereinheitlichen.
 
 ### 5.6 States, Interaktion & Feedback
-- [ ] Fokus-Styling global angleichen (Outline + Box-Shadow Schema) und sicherstellen, dass jede interaktive Komponente :focus-visible implementiert.
-- [ ] Hover vs Active vs Disabled Klarheit – unify Timing Kurven (`--ease-standard`).
+- [~] Fokus-Styling global angleichen (Outline + Box-Shadow Schema) und sicherstellen, dass jede interaktive Komponente :focus-visible implementiert. (Utilities & viele Komponenten vereinheitlicht; Audit Script folgt)
+ - [x] Fokus-Styling global angleichen (Großteils vereinheitlicht) & Audit Script integriert (Pre-Commit blockiert bei Verstößen)
+ - [ ] Hover vs Active vs Disabled Klarheit – unify Timing Kurven (`--ease-standard`). (Focus-Ring weitgehend vereinheitlicht)
+ - [x] Focus Audit Script: Automatisches Parsen nach interaktiven Elementen ohne `:focus-visible` Styles (inkl. Parser + Whitelist)
 - [ ] Loading States: Buttons (Basis vorhanden) + Form Submit + Async Cards (Skeleton / Spinner Standardisierung offen).
 - [ ] Error / Success Messaging Pattern (Icon, Farbe, Textstruktur) definieren.
 - [ ] Animation Policy Dokument: Wo erlaubt? (Hero Intro minimal, KPI pulse, reveal; keine unnötige Parallax).
 
 ### 5.7 Accessibility & Inclusive Design
-- [ ] Kontrastprüfung aller primären / sekundären Button Varianten (WCAG AA / AAA bei Text < 18px) – ggf. Farbjustierung.
+- [x] Kontrastprüfung aller primären / sekundären Button Varianten (WCAG AA / AAA bei Text < 18px) – erweitert (Extended Script + Farbjustierungen invert emerald/warning)
 - [ ] ARIA Rollen für Navigation, Drawer, Modals, Accordions prüfen und vereinheitlichen.
 - [x] Skip-Link implementieren (Layout: "Zum Inhalt springen").
 - [ ] Heading Hierarchie auf jeder Seite validieren (neue `<Heading>` verfügbar – Audit offen).
