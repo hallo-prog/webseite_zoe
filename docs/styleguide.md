@@ -413,4 +413,209 @@ Nächste Mikro-Iterationen (Low-Risk):
 
 End of Migration Log v3.3.
 
+## 27. New Component System (Phase 5 - Design Harmonization Complete)
+
+### 27.1 A/B Testing Infrastructure
+Location: `src/utils/ab-testing.js`
+
+**Purpose:** Foundation for systematic conversion optimization with persistent variant assignment and analytics integration.
+
+```javascript
+import { useABTest, trackConversion } from '@/utils/ab-testing';
+
+// In component:
+const { variant, trackConversion } = useABTest('HERO_HEADLINE');
+const headline = VARIANTS.HERO_HEADLINES[variant];
+
+// Track conversion:
+<Button onClick={() => trackConversion('cta_click')}>
+  {VARIANTS.CTA_TEXTS[variant]}
+</Button>
+```
+
+**Configuration:** Tests are centrally managed in `AB_TESTS` object with weights, active flags, and variant definitions.
+
+### 27.2 Unified Navigation System
+Location: `src/config/navigation.js`
+
+**Purpose:** Centralized navigation structure eliminating inconsistencies across header, mobile menu, and footer.
+
+```javascript
+import { useNavigation } from '@/config/navigation';
+
+const { primary, secondary, footer } = useNavigation();
+```
+
+**Features:**
+- Primary navigation with dropdowns
+- Secondary CTA buttons (Calculator, Contact)
+- Footer navigation sections
+- Breadcrumb generation
+- Active state detection utilities
+
+### 27.3 Toast/Feedback System
+Location: `src/components/ui/toast.jsx`
+
+**Purpose:** Unified user feedback with queue management, auto-dismiss, and consistent styling.
+
+```javascript
+import { useToast } from '@/components/ui/toast';
+
+const { success, error, warning, info } = useToast();
+
+// Usage:
+success('Anfrage erfolgreich gesendet!');
+error('Fehler beim Senden', { duration: 7000 });
+```
+
+**Features:**
+- Auto-dismissing toasts with configurable duration
+- Queue management (multiple toasts)
+- Semantic color coding and icons
+- Action buttons support
+- Accessibility compliant (role="alert")
+
+### 27.4 Promotion Strip Component
+Location: `src/components/ui/promotion-strip.jsx`
+
+**Purpose:** Standardized promotional banners replacing ad-hoc banner implementations.
+
+```javascript
+import { PromotionStrip, usePromotionStrip } from '@/components/ui/promotion-strip';
+
+const { dismissed, dismiss } = usePromotionStrip('countdown_offer');
+
+<PromotionStrip
+  variant="urgent"
+  title="40% Förderung endet bald"
+  countdown={timeLeft}
+  cta={{ text: 'Jetzt sichern', onClick: handleCTA }}
+  dismissible
+  onDismiss={dismiss}
+/>
+```
+
+**Variants:**
+- `primary` - Standard promotional content
+- `urgent` - Time-sensitive offers with countdown
+- `success` - Achievement/savings highlights
+- `info` - General announcements
+- `warning` - Important notices
+
+### 27.5 Enhanced Testimonial Component
+Location: `src/components/ui/testimonial.jsx`
+
+**Purpose:** Standardized testimonials with star ratings, verification badges, and consistent avatar handling.
+
+```javascript
+import { Testimonial } from '@/components/ui/testimonial';
+
+<Testimonial
+  name="Maria Schmidt"
+  location="Berlin"
+  text="Perfekte Beratung und Installation..."
+  rating={5}
+  verified={true}
+  source="Trustpilot"
+  savings="€2.400/Jahr"
+  date="März 2024"
+/>
+```
+
+**Features:**
+- Automatic avatar generation with initials fallback
+- Star rating display (1-5 stars)
+- Verification badges
+- Savings highlighting with tabular numbers
+- Multiple size variants (compact, default, featured)
+
+### 27.6 Overlay System (Modal/Drawer)
+Location: `src/components/ui/overlay.jsx`
+
+**Purpose:** Unified overlay layer with scroll lock, focus management, and consistent behavior patterns.
+
+```javascript
+import { Modal, Drawer, useOverlay } from '@/components/ui/overlay';
+
+const { isOpen, open, close } = useOverlay();
+
+// Modal usage:
+<Modal 
+  isOpen={isOpen} 
+  onClose={close}
+  title="Beratung buchen"
+  size="lg"
+>
+  <ContactForm />
+</Modal>
+
+// Drawer usage:
+<Drawer
+  isOpen={isOpen}
+  onClose={close}
+  position="right"
+  title="Anfrage Details"
+>
+  <LeadForm />
+</Drawer>
+```
+
+**Features:**
+- Automatic scroll lock with layout shift prevention
+- Focus trap management
+- Escape key and backdrop close handling
+- Portal-based rendering
+- Responsive sizing options
+- Animation support with `animate.css` classes
+
+### 27.7 Success Criteria Achievement
+
+**✅ Central Button Component:** All buttons route through `<Button>` with variants
+**✅ Badge Consolidation:** Three main variants (soft, outline, invert) implemented
+**✅ Navigation Extraction:** JSON-based navigation structure established
+**✅ Testimonial Standardization:** Enhanced with ratings and consistent layout
+**✅ Focus Styling:** Consistent focus-visible styles across all interactive elements
+**✅ Accessibility:** Skip links, ARIA labels, keyboard navigation support
+**✅ A/B Testing Ready:** Infrastructure for systematic optimization testing
+
+### 27.8 Governance Guidelines
+
+**Component Creation Rules:**
+1. New components must extend existing variants, not replace them
+2. All interactive elements must support focus-visible styling
+3. Props should follow established naming patterns (`variant`, `size`, `className`)
+4. Components must be responsive by default
+5. Accessibility considerations are mandatory, not optional
+
+**Token Usage:**
+- Use CSS custom properties for colors: `var(--color-brand-navy)`
+- Spacing follows the established scale: `--space-*`
+- Typography uses clamp-based scaling: `--font-size-*`
+- Animations use semantic durations: `--duration-fast/base/slow`
+
+**Quality Gates:**
+- Components must build without TypeScript errors
+- All interactive states must be defined (hover, focus, active, disabled)
+- Mobile-first responsive design required
+- Test coverage for user interactions encouraged
+
+### 27.9 Migration Completion Status
+
+**Phase 5 - Design Consistency & UI Harmonization: COMPLETE**
+
+✅ Button harmonization (FAQ accordion migrated)
+✅ Navigation system extracted and centralized  
+✅ Toast/feedback system implemented
+✅ Promotion strip component created
+✅ Enhanced testimonial component with ratings
+✅ Overlay system with scroll lock and focus management
+✅ A/B testing infrastructure established
+✅ Documentation updated with governance guidelines
+✅ Success criteria met for unified component system
+
+**Next Phase Recommendations:**
+- Wave 6: Integrate remaining edge components (Chat, SmartPlanner)
+- Wave 7: Visual regression testing setup
+- Performance audit and optimization
+- Advanced accessibility testing and compliance verification
 

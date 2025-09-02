@@ -263,17 +263,18 @@ export default function Faq() {
                 <CardContent className="space-y-4">
                   {category.questions.map((item) => (
                     <div key={item.id} className="border border-gray-200 rounded-lg">
-                      <button
+                      <Button
+                        variant="ghost"
                         onClick={() => toggleItem(item.id)}
                         className="w-full text-left p-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
-                      >
-                        <span className="font-semibold text-gray-900">{item.question}</span>
-                        {openItems.has(item.id) ? (
+                        iconEnd={openItems.has(item.id) ? (
                           <ChevronUp className="w-5 h-5 text-gray-500" />
                         ) : (
                           <ChevronDown className="w-5 h-5 text-gray-500" />
                         )}
-                      </button>
+                      >
+                        <span className="font-semibold text-gray-900">{item.question}</span>
+                      </Button>
                       {openItems.has(item.id) && (
                         <div className="px-4 pb-4">
                           <p className="text-gray-700 leading-relaxed">{item.answer}</p>
