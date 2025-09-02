@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import { TestimonialCard } from '@/components/ui/TestimonialCard';
 import { Sun, Euro, Shield, Clock, CheckCircle, AlertTriangle, Calculator, Phone, Award, Users, Star, Gift, Zap, Battery, Leaf } from 'lucide-react';
 import { Heading } from '@/components/ui/heading';
 import { Section } from '../components/ui/section';
@@ -110,7 +111,7 @@ export default function Financing() {
 
       {/* Urgency Banner */}
       <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="pro-container">
           <div className="flex items-center justify-center space-x-6">
             <Clock className="w-5 h-5 animate-pulse" />
             <span className="font-bold">⏰ Förderdeadline: Nur noch {timeLeft.days} Tage {timeLeft.hours} Std {timeLeft.minutes} Min</span>
@@ -294,27 +295,18 @@ export default function Financing() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-sm text-gray-500">{testimonial.location}</div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-lg font-bold text-emerald-600 tabular-nums">{testimonial.savings}</div>
-                    <div className="text-sm text-gray-500">gespart</div>
-                  </div>
-                </div>
-              </div>
+            {testimonials.map((t, i) => (
+              <TestimonialCard
+                key={i}
+                name={t.name}
+                location={t.location}
+                text={t.text}
+                savings={`${t.savings} gespart`}
+                rating={t.rating}
+                variant="glass"
+              />
             ))}
-      </div>
+          </div>
     </Section>
 
   {/* Scarcity & CTA */}

@@ -62,12 +62,13 @@ export default function SectionBeweis({ persona, track }) {
           <span className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-800 rounded-full px-3 py-1"><Sparkles className="w-4 h-4 text-amber-600"/>{t('beweis.chips.installs')}</span>
           <div className="inline-flex rounded-full overflow-hidden border border-amber-200 bg-white/90 backdrop-blur ml-2 text-xs">
             {['priv','biz'].map(mode => (
-              <button
+              <Button
                 key={mode}
+                variant="plain"
                 onClick={() => { setKpiMode(mode); track?.('kpi_mode_change',{placement:'beweis',mode}); }}
                 className={`px-3 py-1 font-medium transition ${kpiMode===mode ? 'bg-amber-500 text-white' : 'text-amber-800 hover:bg-amber-100'}`}
                 aria-pressed={kpiMode===mode}
-              >{mode==='priv' ? t('beweis.toggle_priv') : t('beweis.toggle_biz')}</button>
+              >{mode==='priv' ? t('beweis.toggle_priv') : t('beweis.toggle_biz')}</Button>
             ))}
           </div>
         </div>
@@ -101,7 +102,7 @@ export default function SectionBeweis({ persona, track }) {
               </div>
               <div className="mt-4 text-xs sm:text-sm text-gray-500 leading-relaxed">{c.note}</div>
               <div className="mt-5 flex gap-3">
-        <button onClick={() => track?.('cta_click', { placement: 'beweis', action: 'download_case', persona, case: c.title })} className="text-xs sm:text-sm inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 hover:bg-amber-100 transition"><Download className="w-3.5 h-3.5"/>{t('beweis.cta_block.report_icon')}</button>
+  <Button variant="plain" onClick={() => track?.('cta_click', { placement: 'beweis', action: 'download_case', persona, case: c.title })} className="text-xs sm:text-sm inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 hover:bg-amber-100 transition"><Download className="w-3.5 h-3.5"/>{t('beweis.cta_block.report_icon')}</Button>
               </div>
             </div>
           ))}

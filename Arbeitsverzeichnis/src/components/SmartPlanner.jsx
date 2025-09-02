@@ -86,11 +86,11 @@ export default function SmartPlanner({ onResult, persona = 'privat' }) {
   );
 
   const OptionButton = ({ active, onClick, children, icon: Icon, rightTag }) => (
-    <button type="button" onClick={onClick} className={`relative flex items-center gap-2 px-3 py-2 rounded-lg border text-sm transition-colors ${active ? 'bg-blue-50 text-blue-700 border-blue-200' : 'bg-white/90 border-gray-200 hover:border-gray-300 text-gray-700'}`}>
+    <Button type="button" variant="plain" onClick={onClick} className={`relative flex items-center gap-2 px-3 py-2 rounded-lg border text-sm transition-colors focus-visible:focus-ring ${active ? 'bg-blue-50 text-blue-700 border-blue-200' : 'bg-white/90 border-gray-200 hover:border-gray-300 text-gray-700'}`}>
       {Icon ? <Icon className="w-4 h-4"/> : null}
       {children}
       {rightTag ? <span className="absolute -top-2 -right-2 text-[10px] bg-amber-100 text-amber-800 border border-amber-200 rounded-full px-2 py-0.5">{rightTag}</span> : null}
-    </button>
+    </Button>
   );
 
   return (
@@ -154,7 +154,7 @@ export default function SmartPlanner({ onResult, persona = 'privat' }) {
             </>
           )}
           <div className="flex justify-end gap-2 mt-2">
-            <Button onClick={() => { setStep(2); track('planner_next', { step: 1 }); }} className="bg-blue-600 hover:bg-blue-700">Jetzt einschätzen</Button>
+            <Button onClick={() => { setStep(2); track('planner_next', { step: 1 }); }} className="bg-blue-600 hover:bg-blue-700 focus-visible:focus-ring">Jetzt einschätzen</Button>
           </div>
         </div>
       )}
@@ -209,7 +209,7 @@ export default function SmartPlanner({ onResult, persona = 'privat' }) {
             <Button variant="outline" onClick={() => setStep(1)}>Zurück</Button>
             <div className="flex items-center gap-2">
               <span className="hidden sm:inline text-xs sm:text-sm text-gray-500">Keine Verpflichtung</span>
-              <Button onClick={() => { setStep(3); track('planner_next', { step: 2 }); }} className="bg-blue-600 hover:bg-blue-700">Ergebnis anzeigen</Button>
+              <Button onClick={() => { setStep(3); track('planner_next', { step: 2 }); }} className="bg-blue-600 hover:bg-blue-700 focus-visible:focus-ring">Ergebnis anzeigen</Button>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import getCopy from './copy';
 import { Heading } from '@/components/ui/heading';
 import { Section } from '@/components/ui/section';
+import { Button } from '@/components/ui/button';
 
 export function SectionObjectionsFAQ({ items = [], copy = {} }) {
   const hl = copy.hl || getCopy('obj.hl', 'Häufige Fragen & Einwände');
@@ -20,10 +21,10 @@ export function SectionObjectionsFAQ({ items = [], copy = {} }) {
             const isOpen = open === item.slug;
             return (
               <div key={item.slug} className="border border-neutral-200 rounded-lg bg-white transition-colors">
-                <button onClick={()=>toggle(item.slug)} className="w-full text-left px-5 py-4 flex items-center justify-between hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40">
+                <Button variant="plain" onClick={()=>toggle(item.slug)} className="w-full text-left px-5 py-4 flex items-center justify-between hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/40">
                   <span className="font-medium text-sm-token leading-snug">{item.hl}</span>
                   <span className="text-neutral-500 text-xs" aria-hidden>{isOpen ? '−' : '+'}</span>
-                </button>
+                </Button>
                 {isOpen && (
                   <div className="px-5 pb-5 text-sm-token text-neutral-600 leading-relaxed">
                     <p className="mb-3">{item.body}</p>

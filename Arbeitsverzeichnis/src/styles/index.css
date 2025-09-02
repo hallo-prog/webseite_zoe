@@ -299,6 +299,31 @@
   .flow-sm > * + * { margin-top: 1rem; }
   .flow > * + * { margin-top: 1.5rem; }
   .flow-lg > * + * { margin-top: 2rem; }
+
+  /* Grid / Columns System (Semantic Layer on top of Tailwind) */
+  /* Breakpoints: sm 640px, md 768px, lg 1024px, xl 1280px (Tailwind defaults) */
+  .grid-auto-sm { display:grid; gap:1.5rem; grid-template-columns: 1fr; }
+  @media (min-width:768px){ .grid-auto-sm { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+  @media (min-width:1280px){ .grid-auto-sm { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+
+  .cols-2 { display:grid; gap:2rem; grid-template-columns: 1fr; }
+  @media (min-width:768px){ .cols-2 { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+  .cols-3 { display:grid; gap:2rem; grid-template-columns: 1fr; }
+  @media (min-width:1024px){ .cols-3 { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+  .cols-4 { display:grid; gap:2rem; grid-template-columns: 1fr 1fr; }
+  @media (min-width:1024px){ .cols-4 { grid-template-columns: repeat(4,minmax(0,1fr)); } }
+  .cols-tight { --gap:1.25rem; gap:var(--gap); }
+  .cols-loose { --gap:2.5rem; gap:var(--gap); }
+
+  /* Column Span Helpers (semantic override) */
+  [class*="col-span-"] { grid-column:auto; }
+  .col-span-2 { grid-column: span 2 / span 2; }
+  @media (max-width:767.9px){ .col-span-full-sm { grid-column: 1 / -1; } }
+
+  /* Focus Ring Unification */
+  .focus-ring { outline:none; box-shadow:0 0 0 2px #fff,0 0 0 4px rgba(14,111,122,.45); }
+  .focus-ring-danger { outline:none; box-shadow:0 0 0 2px #fff,0 0 0 4px rgba(220,38,38,.55); }
+  .focus-ring-inset { outline:none; box-shadow:0 0 0 2px rgba(14,111,122,.55) inset; }
 }
 
 /* Navigation & Footer (Minimal Professional) */
@@ -318,8 +343,10 @@
   .footer-links a:hover { color: var(--color-neutral-800); }
   .social-icon { display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border:1px solid var(--color-neutral-200); border-radius:50%; color: var(--color-neutral-500); transition: background .18s, color .18s, border-color .18s; }
   .social-icon:hover { background: var(--color-neutral-50); color: var(--color-brand-navy); border-color: var(--color-neutral-300); }
+  .social-icon:focus-visible { outline:none; box-shadow:0 0 0 2px #fff,0 0 0 4px rgba(14,111,122,.45); background: var(--color-neutral-50); }
   .fab-btn { display:inline-flex; align-items:center; justify-content:center; width:54px; height:54px; border-radius:50%; background: var(--color-brand-navy); color:#fff; box-shadow:0 4px 16px -4px rgba(0,0,0,.35); transition: background .2s, transform .25s; }
   .fab-btn:hover { background:#123845; transform: translateY(-2px); }
+  .fab-btn:focus-visible { outline:none; box-shadow:0 0 0 2px #fff,0 0 0 5px rgba(14,111,122,.55); }
 }
 
 /* Variant B (Radikal Typografisch) adjustments */

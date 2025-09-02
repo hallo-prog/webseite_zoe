@@ -7,7 +7,7 @@ export default function Team() {
   const stats = t('team.stats', { returnObjects: true }) || [];
   return (
     <section className="py-20 bg-gradient-to-b from-white to-emerald-50" id="team">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="pro-container">
         <div className="mb-10">
           <span className="inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-700 tracking-wide uppercase">{t('team.badge')}</span>
           <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 leading-tight">

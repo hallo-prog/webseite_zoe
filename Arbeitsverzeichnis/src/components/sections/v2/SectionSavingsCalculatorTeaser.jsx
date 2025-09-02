@@ -29,11 +29,11 @@ export function SectionSavingsCalculatorTeaser({ copy = {}, onStart }) {
           <form onSubmit={e=>e.preventDefault()} className="space-y-5">
             <div>
               <label className="block text-[11px] font-medium mb-1 uppercase tracking-wide">{getCopy('form.label.zip','Postleitzahl')}</label>
-              <input className="w-full rounded-md border border-neutral-300 px-3 py-2.5 text-sm" placeholder={getCopy('form.placeholder.zip','z.B. 12345')} />
+              <input className="w-full rounded-md border border-neutral-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-neutral-400" placeholder={getCopy('form.placeholder.zip','z.B. 12345')} />
             </div>
             <div>
               <label className="block text-[11px] font-medium mb-1 uppercase tracking-wide">{getCopy('form.label.consumption','Jahresstromverbrauch')}</label>
-              <input className="w-full rounded-md border border-neutral-300 px-3 py-2.5 text-sm" placeholder={getCopy('form.placeholder.consumption','z.B. 4500')} />
+              <input className="w-full rounded-md border border-neutral-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand/50 focus:border-neutral-400" placeholder={getCopy('form.placeholder.consumption','z.B. 4500')} />
             </div>
             <Button variant="outline" size="md" type="submit" className="w-full text-sm">{getCopy('calc.cta.inline','Kurzen Check durchführen')}</Button>
           </form>

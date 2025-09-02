@@ -54,7 +54,7 @@ export function SectionGuarantees({ items = [], copy = {} }) {
                 <div className="flex-1">
                   <Heading as="h3" size="sm" className="mb-2 leading-snug">{g.t}</Heading>
                   <p className="text-gray-600 text-sm-token leading-relaxed mb-3">{g.d}</p>
-                  <Badge variant="emerald" size="xs">{g.highlight}</Badge>
+                  <Badge variant="soft" color="emerald" size="xs">{g.highlight}</Badge>
                 </div>
               </div>
             </Card>

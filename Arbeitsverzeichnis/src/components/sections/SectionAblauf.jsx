@@ -79,8 +79,8 @@ export default function SectionAblauf({ persona, track }) {
                     <span className="inline-flex flex-col items-center justify-center rounded-md border border-gray-200 bg-white/70 px-2 py-1"><FileCheck className="w-3.5 h-3.5 text-amber-600"/><span>{t('ablauf.kpi_docs','Dokumente')}</span></span>
                   </div>
                   <div className="mt-3 flex gap-3">
-                    <button onClick={()=> track?.('cta_click',{placement:'ablauf_step',action:'calculator',persona, step:i+1})} className="text-[11px] font-semibold tracking-wide uppercase text-amber-700 hover:text-amber-800">{t('ablauf.step_cta_calc','Spanne prüfen')}</button>
-                    <button onClick={()=> track?.('cta_click',{placement:'ablauf_step',action:'contact',persona, step:i+1})} className="text-[11px] font-semibold tracking-wide uppercase text-gray-600 hover:text-gray-800">{t('ablauf.step_cta_contact','Fragen?')}</button>
+                    <Button variant="plain" onClick={()=> track?.('cta_click',{placement:'ablauf_step',action:'calculator',persona, step:i+1})} className="text-[11px] font-semibold tracking-wide uppercase text-amber-700 hover:text-amber-800 p-0 h-auto">{t('ablauf.step_cta_calc','Spanne prüfen')}</Button>
+                    <Button variant="plain" onClick={()=> track?.('cta_click',{placement:'ablauf_step',action:'contact',persona, step:i+1})} className="text-[11px] font-semibold tracking-wide uppercase text-gray-600 hover:text-gray-800 p-0 h-auto">{t('ablauf.step_cta_contact','Fragen?')}</Button>
                   </div>
                   {i < steps.length -1 && <ArrowRight aria-hidden className="hidden md:block absolute -right-6 top-6 w-5 h-5 text-amber-300 group-hover:text-amber-400 transition"/>}
                 </li>

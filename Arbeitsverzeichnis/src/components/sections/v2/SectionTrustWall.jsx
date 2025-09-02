@@ -107,7 +107,7 @@ export function SectionTrustWall({ kpis = [], certs = [], testimonials = [], cop
 
             {/* Trust Badge */}
             <div className="text-center">
-              <Badge variant="emerald" size="xs" className="inline-flex px-4 py-2">🏆 TÜV-zertifizierter Betrieb seit 2008</Badge>
+              <Badge variant="soft" color="emerald" size="xs" className="inline-flex px-4 py-2">🏆 TÜV-zertifizierter Betrieb seit 2008</Badge>
             </div>
           </div>
         </div>

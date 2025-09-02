@@ -122,8 +122,8 @@ export default function Projects() {
       </Helmet>
 
       {/* Urgency Banner */}
-      <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center space-x-6">
+      <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3">
+        <div className="pro-container flex items-center justify-center space-x-6">
           <Clock className="w-5 h-5" />
           <span className="font-semibold">🔥 €1.500 Bonus endet in:</span>
           <div className="flex space-x-2">
@@ -149,7 +149,7 @@ export default function Projects() {
   {/* Hero Section */}
   <Section padding="normal" variant="gradient" className="bg-gradient-to-br from-blue-50 to-indigo-50" size="wide">
           <div className="text-center mb-16">
-            <Pill variant="light" className="mb-4">Unsere Arbeit</Pill>
+            <Pill variant="soft" color="neutral" className="mb-4">Unsere Arbeit</Pill>
             <Heading as="h1" size="4xl" className="text-gray-900 mb-6">Projekte, die für sich <span className="text-blue-600">sprechen</span></Heading>
             <p className="lead text-gray-600 max-w-3xl mx-auto mb-8">
               Sehen Sie eine Auswahl unserer jüngsten Installationen und die beeindruckenden Ergebnisse,
@@ -197,7 +197,7 @@ export default function Projects() {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 right-4">
-                    <Pill variant="light" className="bg-green-100 text-green-800 border-green-200">
+                    <Pill variant="soft" color="emerald">
                       {project.autarky} Autarkie
                     </Pill>
                   </div>
@@ -246,7 +246,7 @@ export default function Projects() {
                     <h4 className="font-semibold text-gray-900 mb-3">Ausstattung:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.features.map((feature, i) => (
-                        <Pill key={i} variant="light" className="text-xs sm:text-sm">
+                        <Pill key={i} variant="soft" color="neutral" className="text-xs sm:text-sm">
                           {feature}
                         </Pill>
                       ))}

@@ -60,7 +60,7 @@ export function PromotionStrip({
       role="banner"
       {...props}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="pro-container">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4 flex-1">
             {/* Icon */}
@@ -136,7 +136,7 @@ export function PromotionStrip({
             <div className="flex-shrink-0 ml-4">
               <button
                 onClick={onDismiss}
-                className="p-1 rounded-lg hover:bg-black/10 transition-colors"
+                className="p-1 rounded-lg hover:bg-white/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
                 aria-label="Banner schließen"
               >
                 <X className="w-4 h-4" />
@@ -149,47 +149,23 @@ export function PromotionStrip({
   );
 }
 
-/**
- * Pre-configured promotion variants
- */
+// Pre-configured variants
 export const PROMOTION_VARIANTS = {
   urgentOffer: (props) => (
-    <PromotionStrip
-      variant="urgent"
-      icon="clock"
-      badge="Limitiert"
-      {...props}
-    />
+    <PromotionStrip variant="urgent" icon="clock" {...props} />
   ),
-  
   savingsHighlight: (props) => (
-    <PromotionStrip
-      variant="success"
-      icon="euro"
-      {...props}
-    />
+    <PromotionStrip variant="success" icon="euro" {...props} />
   ),
-  
   announcementBar: (props) => (
-    <PromotionStrip
-      variant="info"
-      size="compact"
-      {...props}
-    />
+    <PromotionStrip variant="info" size="compact" {...props} />
   ),
-  
   criticalAlert: (props) => (
-    <PromotionStrip
-      variant="warning"
-      icon="alert"
-      {...props}
-    />
+    <PromotionStrip variant="warning" icon="alert" {...props} />
   ),
 };
 
-/**
- * React hook for managing promotion strip state
- */
+// State hook
 export function usePromotionStrip(key = 'default') {
   const [dismissed, setDismissed] = React.useState(() => {
     if (typeof window === 'undefined') return false;
@@ -206,11 +182,7 @@ export function usePromotionStrip(key = 'default') {
     localStorage.removeItem(`promotion_dismissed_${key}`);
   }, [key]);
 
-  return {
-    dismissed,
-    dismiss,
-    reset,
-  };
+  return { dismissed, dismiss, reset };
 }
 
 export default PromotionStrip;

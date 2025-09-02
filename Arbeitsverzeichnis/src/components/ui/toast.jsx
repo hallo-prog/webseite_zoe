@@ -1,202 +1,103 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
-import { CheckCircle, AlertCircle, AlertTriangle, X, Info } from 'lucide-react';
+import React, { createContext, useCallback, useContext, useRef, useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { createPortal } from 'react-dom';
+const ToastContext = createContext(null);
+let idCounter = 0;
 
-/**
- * Toast Types and Configuration
- */
-const TOAST_TYPES = {
-  SUCCESS: 'success',
-  ERROR: 'error', 
-  WARNING: 'warning',
-  INFO: 'info'
-};
-
-const TOAST_ICONS = {
-  [TOAST_TYPES.SUCCESS]: CheckCircle,
-  [TOAST_TYPES.ERROR]: AlertCircle,
-  [TOAST_TYPES.WARNING]: AlertTriangle,
-  [TOAST_TYPES.INFO]: Info,
-};
-
-const TOAST_STYLES = {
-  [TOAST_TYPES.SUCCESS]: 'bg-green-50 border-green-200 text-green-800',
-  [TOAST_TYPES.ERROR]: 'bg-red-50 border-red-200 text-red-800',
-  [TOAST_TYPES.WARNING]: 'bg-amber-50 border-amber-200 text-amber-800',
-  [TOAST_TYPES.INFO]: 'bg-blue-50 border-blue-200 text-blue-800',
-};
-
-const ICON_STYLES = {
-  [TOAST_TYPES.SUCCESS]: 'text-green-400',
-  [TOAST_TYPES.ERROR]: 'text-red-400',
-  [TOAST_TYPES.WARNING]: 'text-amber-400',
-  [TOAST_TYPES.INFO]: 'text-blue-400',
-};
-
-/**
- * Toast Context
- */
-const ToastContext = createContext();
-
-/**
- * Individual Toast Component
- */
-function Toast({ toast, onClose }) {
-  const Icon = TOAST_ICONS[toast.type];
-  const toastStyle = TOAST_STYLES[toast.type];
-  const iconStyle = ICON_STYLES[toast.type];
-
-  return (
-    <div 
-      className={`
-        ${toastStyle} 
-        flex items-start p-4 rounded-lg border shadow-lg 
-        animate-in slide-in-from-right-full duration-300
-        max-w-md w-full
-      `}
-      role="alert"
-    >
-      <Icon className={`${iconStyle} w-5 h-5 mt-0.5 flex-shrink-0`} />
-      <div className="ml-3 flex-1">
-        {toast.title && (
-          <h4 className="text-sm font-semibold mb-1">{toast.title}</h4>
-        )}
-        <p className="text-sm">{toast.message}</p>
-        {toast.action && (
-          <div className="mt-2">
-            <button
-              onClick={toast.action.onClick}
-              className="text-sm font-medium underline hover:no-underline"
-            >
-              {toast.action.label}
-            </button>
-          </div>
-        )}
-      </div>
-      <button
-        onClick={() => onClose(toast.id)}
-        className="ml-3 flex-shrink-0 p-1 rounded-lg hover:bg-white/50 transition-colors"
-        aria-label="Toast schließen"
-      >
-        <X className="w-4 h-4" />
-      </button>
-    </div>
-  );
-}
-
-/**
- * Toast Container Component
- */
-function ToastContainer({ toasts, onClose }) {
-  if (toasts.length === 0) return null;
-
-  return (
-    <div className="fixed top-4 right-4 z-50 flex flex-col gap-2">
-      {toasts.map((toast) => (
-        <Toast key={toast.id} toast={toast} onClose={onClose} />
-      ))}
-    </div>
-  );
-}
-
-/**
- * Toast Provider Component
- */
-export function ToastProvider({ children }) {
+export function ToastProvider({ children, position='top-right', duration=4000 }) {
   const [toasts, setToasts] = useState([]);
-
-  const addToast = useCallback((toast) => {
-    const id = Date.now() + Math.random();
-    const newToast = {
-      id,
-      type: TOAST_TYPES.INFO,
-      duration: 5000, // 5 seconds default
-      ...toast,
-    };
-
-    setToasts(prev => [...prev, newToast]);
-
-    // Auto-remove after duration
-    if (newToast.duration > 0) {
-      setTimeout(() => {
-        removeToast(id);
-      }, newToast.duration);
-    }
-
+  const portalRef = useRef(null);
+  if (!portalRef.current && typeof document !== 'undefined') {
+    const el = document.createElement('div');
+    el.className = 'ui-portal-root';
+    portalRef.current = el;
+  }
+  useEffect(() => { if (portalRef.current) { document.body.appendChild(portalRef.current); return ()=> portalRef.current.parentNode?.removeChild(portalRef.current);} }, []);
+  const push = useCallback((content, opts={}) => {
+    const id = ++idCounter;
+    const toast = { id, content, variant: opts.variant||'info', ttl: opts.duration||duration };
+    setToasts(t => [...t, toast]);
     return id;
-  }, []);
+  }, [duration]);
+  const remove = useCallback(id => setToasts(t => t.filter(x=>x.id!==id)), []);
 
-  const removeToast = useCallback((id) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id));
-  }, []);
+  // Auto dismiss
+  useEffect(()=>{
+    if(!toasts.length) return; const timers = toasts.map(t=> setTimeout(()=> remove(t.id), t.ttl));
+    return () => timers.forEach(clearTimeout);
+  }, [toasts, remove]);
 
-  const removeAllToasts = useCallback(() => {
-    setToasts([]);
-  }, []);
+  const value = { push, remove };
+  const posClass = position.includes('top') ? 'top-4' : 'bottom-4';
+  const xClass = position.includes('right') ? 'right-4' : position.includes('left') ? 'left-4' : 'left-1/2 -translate-x-1/2';
+  return (
+    <ToastContext.Provider value={value}>
+      {children}
+      {portalRef.current && createPortal(
+        <div className={`fixed z-[140] ${posClass} ${xClass} space-y-3 w-full max-w-sm`}>
+          {toasts.map(t => (
+            <div key={t.id} className={`toast flex items-start gap-3 p-4 rounded-lg shadow-md border text-sm bg-white ${toastVariantCls(t.variant)}`} role="status" aria-live="polite">
+              <div className="flex-1 leading-snug">{typeof t.content === 'function' ? t.content({ id:t.id, dismiss:()=>remove(t.id) }) : t.content}</div>
+              <Button variant="plain" onClick={()=>remove(t.id)} className="opacity-60 hover:opacity-100 rounded p-1 focus-visible:focus-ring" aria-label="Schließen">✕</Button>
+            </div>
+          ))}
+        </div>, portalRef.current)}
+    </ToastContext.Provider>
+  );
+}
+function toastVariantCls(v){
+  switch(v){
+    case 'success': return 'border-emerald-200 bg-emerald-50 text-emerald-900';
+  case 'error': return 'border-red-200 bg-red-50 text-red-800';
+  case 'warning': return 'border-amber-200 bg-amber-50 text-amber-900';
+  case 'info': default: return 'border-neutral-200 bg-white text-neutral-900';
+  }
+}
 
-  // Convenience methods
-  const success = useCallback((message, options = {}) => {
-    return addToast({ 
-      message, 
-      type: TOAST_TYPES.SUCCESS, 
-      ...options 
-    });
-  }, [addToast]);
+export function useToast(){
+  const ctx = useContext(ToastContext);
+  if(!ctx) throw new Error('useToast must be used within <ToastProvider>');
+  return ctx;
+}
 
-  const error = useCallback((message, options = {}) => {
-    return addToast({ 
-      message, 
-      type: TOAST_TYPES.ERROR, 
-      duration: 7000, // Errors stay longer
-      ...options 
-    });
-  }, [addToast]);
+  const push = useCallback((content, opts={}) => {
+    const id = ++idCounter;
+    const toast = { id, content, variant: opts.variant||'info', ttl: opts.duration||duration };
+    setToasts(t => [...t, toast]);
+    return id;
+  }, [duration]);
+  const remove = useCallback(id => setToasts(t => t.filter(x=>x.id!==id)), []);
 
-  const warning = useCallback((message, options = {}) => {
-    return addToast({ 
-      message, 
-      type: TOAST_TYPES.WARNING, 
-      ...options 
-    });
-  }, [addToast]);
+  // Auto dismiss
+  useEffect(()=>{
+    if(!toasts.length) return; const timers = toasts.map(t=> setTimeout(()=> remove(t.id), t.ttl));
+    return () => timers.forEach(clearTimeout);
+  }, [toasts, remove]);
 
-  const info = useCallback((message, options = {}) => {
-    return addToast({ 
-      message, 
-      type: TOAST_TYPES.INFO, 
-      ...options 
-    });
-  }, [addToast]);
-
-  const value = {
-    toasts,
-    addToast,
-    removeToast,
-    removeAllToasts,
-    success,
-    error,
-    warning,
-    info,
-  };
+  const value = { push, remove };
+  const posClass = position.includes('top') ? 'top-4' : 'bottom-4';
+  const xClass = position.includes('right') ? 'right-4' : position.includes('left') ? 'left-4' : 'left-1/2 -translate-x-1/2';
 
   return (
     <ToastContext.Provider value={value}>
       {children}
-      <ToastContainer toasts={toasts} onClose={removeToast} />
+      {portalRef.current && createPortal(
+        <div className={`fixed z-[140] ${posClass} ${xClass} space-y-3 w-full max-w-sm`}>
+          {toasts.map(t => (
+            <div key={t.id} className={`toast flex items-start gap-3 p-4 rounded-lg shadow-md border text-sm bg-white ${toastVariantCls(t.variant)}`} role="status" aria-live="polite">
+              <div className="flex-1 leading-snug">{typeof t.content === 'function' ? t.content({ id:t.id, dismiss:()=>remove(t.id) }) : t.content}</div>
+              <Button variant="plain" onClick={()=>remove(t.id)} className="opacity-60 hover:opacity-100 rounded p-1 focus-visible:focus-ring" aria-label="Schließen">✕</Button>
+            </div>
+          ))}
+        </div>, portalRef.current)}
     </ToastContext.Provider>
   );
 }
 
-/**
- * Hook to use toast functionality
- */
-export function useToast() {
-  const context = useContext(ToastContext);
-  
-  if (!context) {
-    throw new Error('useToast must be used within a ToastProvider');
-  }
-  
-  return context;
+export function useToast(){
+  const ctx = useContext(ToastContext);
+  if(!ctx) throw new Error('useToast must be used within <ToastProvider>');
+  return ctx;
 }
 
 /**
@@ -214,3 +115,19 @@ export function withToast(Component) {
 
 // Export types for external use
 export { TOAST_TYPES };
+function toastVariantCls(v){
+  switch(v){
+    case 'success': return 'border-emerald-200 bg-emerald-50 text-emerald-900';
+    case 'error': return 'border-red-200 bg-red-50 text-red-800';
+    case 'warning': return 'border-amber-200 bg-amber-50 text-amber-900';
+    case 'info': default: return 'border-neutral-200 bg-white text-neutral-900';
+  }
+}
+
+export function useToast(){
+  const ctx = useContext(ToastContext);
+  if(!ctx) throw new Error('useToast must be used within <ToastProvider>');
+  return ctx;
+}
+
+export default ToastProvider;

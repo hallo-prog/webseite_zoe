@@ -1,0 +1,374 @@
+{
+  "timestamp": 1756833946930,
+  "counts": {
+    "sm:": 165,
+    "md:": 129,
+    "lg:": 73,
+    "xl:": 12,
+    "2xl:": 2
+  },
+  "median": 73,
+  "anomalies": [
+    {
+      "breakpoint": "xl:",
+      "count": 12,
+      "median": 73,
+      "ratio": "0.16"
+    },
+    {
+      "breakpoint": "2xl:",
+      "count": 2,
+      "median": 73,
+      "ratio": "0.03"
+    }
+  ],
+  "files": {
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ConsentManager.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ConsentManager.jsx",
+      "sm:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/PopupBanners.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/PopupBanners.jsx",
+      "sm:": 7
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ServiceDrawer.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ServiceDrawer.jsx",
+      "sm:": 5
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/Sidebar.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/Sidebar.jsx",
+      "sm:": 1,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/SmartPlanner.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/SmartPlanner.jsx",
+      "sm:": 13
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/SupportChatDrawer.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/SupportChatDrawer.jsx",
+      "sm:": 4
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/footer/SiteFooter.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/footer/SiteFooter.jsx",
+      "sm:": 1,
+      "md:": 8,
+      "lg:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/lead/LeadForm.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/lead/LeadForm.jsx",
+      "md:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/nav/MegaMenu.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/nav/MegaMenu.jsx",
+      "sm:": 9,
+      "md:": 5,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/nav/PrimaryNav.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/nav/PrimaryNav.jsx",
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/Differentiation.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/Differentiation.jsx",
+      "sm:": 1,
+      "md:": 1,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/LeadMagnetLadder.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/LeadMagnetLadder.jsx",
+      "sm:": 2,
+      "md:": 1,
+      "lg:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionAblauf.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionAblauf.jsx",
+      "sm:": 8,
+      "md:": 2,
+      "lg:": 5
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionAngebot.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionAngebot.jsx",
+      "sm:": 6,
+      "lg:": 4
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionBeweis.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionBeweis.jsx",
+      "sm:": 6,
+      "md:": 2,
+      "lg:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionComparison.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionComparison.jsx",
+      "sm:": 5,
+      "md:": 2,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionEconomicImpact.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionEconomicImpact.jsx",
+      "sm:": 9,
+      "md:": 4,
+      "lg:": 5
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionHeader.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/SectionHeader.jsx",
+      "sm:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/Team.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/Team.jsx",
+      "sm:": 2,
+      "md:": 5,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/TestimonialsSlider.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/TestimonialsSlider.jsx",
+      "sm:": 1,
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/UVPGuarantee.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/UVPGuarantee.jsx",
+      "sm:": 1,
+      "md:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionCostInaction.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionCostInaction.jsx",
+      "md:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionDifferentiators.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionDifferentiators.jsx",
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionGuarantees.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionGuarantees.jsx",
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionLeadMagnetStack.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionLeadMagnetStack.jsx",
+      "md:": 4
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionPainIntro.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionPainIntro.jsx",
+      "md:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionPricingTeaser.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionPricingTeaser.jsx",
+      "md:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionProcessSteps.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionProcessSteps.jsx",
+      "md:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionPromises.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionPromises.jsx",
+      "md:": 1,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionSavingsCalculatorTeaser.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionSavingsCalculatorTeaser.jsx",
+      "md:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionSolutionArchitecture.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionSolutionArchitecture.jsx",
+      "md:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTeam.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTeam.jsx",
+      "sm:": 1,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTechArchitecture.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTechArchitecture.jsx",
+      "sm:": 1,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTechAuthority.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTechAuthority.jsx",
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTechCalculatorCTA.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTechCalculatorCTA.jsx",
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTechComponentsGrid.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTechComponentsGrid.jsx",
+      "md:": 1,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTrustWall.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v2/SectionTrustWall.jsx",
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/Bundles.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/Bundles.jsx",
+      "md:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/FinalCTA.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/FinalCTA.jsx",
+      "sm:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/FinancingTeaser.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/FinancingTeaser.jsx",
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/HeroSolar.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/HeroSolar.jsx",
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/ImpactSection.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/ImpactSection.jsx",
+      "md:": 4,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/MetricsBar.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/MetricsBar.jsx",
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/ProblemSolutionSection.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/ProblemSolutionSection.jsx",
+      "sm:": 1,
+      "md:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/ProcessJourney.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/ProcessJourney.jsx",
+      "md:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/TeamSection.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/TeamSection.jsx",
+      "md:": 2,
+      "lg:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/TestimonialsSection.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/TestimonialsSection.jsx",
+      "sm:": 1,
+      "md:": 6
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/TrustAuthoritySection.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/sections/v4/TrustAuthoritySection.jsx",
+      "md:": 6,
+      "lg:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/badge.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/badge.jsx",
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/button.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/button.jsx",
+      "sm:": 1,
+      "md:": 1,
+      "lg:": 1,
+      "xl:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/card.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/card.jsx",
+      "sm:": 1,
+      "md:": 1,
+      "lg:": 1,
+      "xl:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/drawer.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/drawer.jsx",
+      "md:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/metric.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/metric.jsx",
+      "sm:": 1,
+      "md:": 1,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/modal.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/modal.jsx",
+      "sm:": 1,
+      "md:": 1,
+      "lg:": 1,
+      "xl:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/pill.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/pill.jsx",
+      "sm:": 1,
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/promotion-strip.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/promotion-strip.jsx",
+      "sm:": 5
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/section.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/components/ui/section.jsx",
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/layout.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/layout.jsx",
+      "sm:": 17,
+      "md:": 4,
+      "lg:": 4,
+      "xl:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/About.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/About.jsx",
+      "sm:": 10,
+      "md:": 4,
+      "lg:": 4
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Blog.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Blog.jsx",
+      "md:": 1,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/BlogPost.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/BlogPost.jsx",
+      "sm:": 1,
+      "lg:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Calculator.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Calculator.jsx",
+      "sm:": 5,
+      "md:": 1,
+      "lg:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Contact_new.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Contact_new.jsx",
+      "sm:": 5,
+      "md:": 1,
+      "lg:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Faq.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Faq.jsx",
+      "sm:": 4,
+      "md:": 1
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Financing.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Financing.jsx",
+      "sm:": 4,
+      "md:": 6,
+      "lg:": 3
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Pricing.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Pricing.jsx",
+      "md:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Projects.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Projects.jsx",
+      "sm:": 6,
+      "md:": 1,
+      "lg:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Service.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Service.jsx",
+      "sm:": 5,
+      "md:": 4,
+      "lg:": 2
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/SuccessStories.jsx": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/SuccessStories.jsx",
+      "sm:": 5,
+      "md:": 1,
+      "lg:": 7
+    },
+    "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/styles/index.css": {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/styles/index.css",
+      "sm:": 3,
+      "md:": 2,
+      "lg:": 3,
+      "xl:": 8,
+      "2xl:": 2
+    }
+  }
+}

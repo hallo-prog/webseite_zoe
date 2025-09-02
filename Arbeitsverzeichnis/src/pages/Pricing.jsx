@@ -22,6 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Pill } from "@/components/ui/pill";
 import { Bundles, FinancingTeaser, ProcessJourney, ImpactSection, FinalCTA, MetricsBar } from '@/components/sections/v4';
+import { TestimonialCard } from '@/components/ui/TestimonialCard';
 import { Section } from '@/components/ui/section';
 import { trackVariant, trackCta } from '@/utils/tracking';
 
@@ -68,7 +69,7 @@ export default function Pricing() {
       {/* Warm Neutral Hero */}
       <Section className="hero-shell cinematic relative text-center" padding="normal" variant="default" size="wide">
         <div className="max-w-5xl mx-auto flow">
-          <Pill variant="light" className="mb-5 bg-neutral-100 border-neutral-200 text-neutral-600">Preisstruktur 2025</Pill>
+          <Pill variant="soft" color="neutral" className="mb-5">Preisstruktur 2025</Pill>
           <h1 className="display-1 inline-soft">Transparente Solarpakete mit Festpreis</h1>
           <p className="lead text-neutral-600 max-w-3xl mx-auto inline-emphasis">Keine Überraschungen: konservative Auslegung, 25 Jahre Garantie und modulare Erweiterbarkeit. Wählen Sie den passenden Start – skalieren Sie später.</p>
           <div className="flex flex-wrap gap-5 justify-center">
@@ -129,32 +130,18 @@ export default function Pricing() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="shadow-lg pro-card">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="flex">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <Pill variant="light" className="ml-4 bg-emerald-100 text-emerald-800 border-emerald-200">{testimonial.package}</Pill>
-                  </div>
-
-                  <p className="text-gray-700 italic mb-4">"{testimonial.text}"</p>
-
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="font-semibold text-gray-800">{testimonial.name}</div>
-                      <div className="text-sm text-gray-600">{testimonial.location}</div>
-                    </div>
-                    <div className="text-right">
-                      <div className="font-semibold text-emerald-600">{testimonial.savings}</div>
-                      <div className="text-sm text-gray-600">jährlich</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            {testimonials.map((t,i)=>(
+              <TestimonialCard
+                key={i}
+                name={t.name}
+                location={t.location}
+                text={t.text}
+                savings={t.savings}
+                rating={t.rating}
+                tag={t.package}
+                tagColor="emerald"
+                variant="glass"
+              />
             ))}
           </div>
         </div>

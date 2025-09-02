@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { API_BASE } from '../utils/api';
 import { Heading } from '@/components/ui/heading';
+import { Section } from '@/components/ui/section';
 import { useTranslation } from 'react-i18next';
 
 const Blog = () => {
@@ -32,15 +33,15 @@ const Blog = () => {
     }, []);
 
     return (
-        <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <Section size="wide" padding="normal">
             <Helmet>
                 <title>Solar-Ratgeber - ZOE Solar</title>
                 <meta name="description" content="Aktuelle Nachrichten, Tipps und rechtliche Informationen aus der Welt der Solarenergie. Bleiben Sie mit ZOE Solar auf dem Laufenden." />
             </Helmet>
 
-            <div className="text-center mb-12">
-                <Heading as="h1" size="3xl" className="mb-2">{t('blog.title')}</Heading>
-                <p className="lead max-w-2xl mx-auto text-gray-500 mt-4">{t('blog.subtitle')}</p>
+            <div className="text-center flow-lg mb-12">
+                <Heading as="h1" size="3xl">{t('blog.title')}</Heading>
+                <p className="lead max-w-2xl mx-auto text-gray-500">{t('blog.subtitle')}</p>
             </div>
 
             {loading && <p className="text-center">Lade Beiträge...</p>}
@@ -71,7 +72,7 @@ const Blog = () => {
                     </Link>
                 ))}
             </div>
-        </div>
+    </Section>
     );
 };
 

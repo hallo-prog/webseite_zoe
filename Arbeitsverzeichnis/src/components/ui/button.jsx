@@ -1,15 +1,24 @@
 import React from 'react';
 
-// Vereinheitlichte Button-Komponente, die die bestehenden globalen CSS Utility-Klassen (btn-*) nutzt.
-// Ziel: Alle CTAs laufen perspektivisch über diese Schnittstelle, damit Variant-Änderungen zentral möglich sind.
-// Props: variant (primary|outline|secondary|ghost|destructive), size (sm|md|lg|xl), loading, iconStart, iconEnd, as (Elementtyp)
+// Vereinheitlichte Button-Komponente.
+// Ziel: Alle interaktiven Call-to-Actions laufen über diese Schnittstelle.
+// Varianten decken klassische CTA Styles + technische/ikonische Buttons (fab, plain/unstyled) ab.
+// Props:
+//  - variant: primary | outline | secondary | ghost | destructive | fab | plain
+//  - size: sm | md | lg | xl
+//  - loading: Spinner Overlay
+//  - iconStart / iconEnd: ReactNode
+//  - as: Elementtyp (button | a | Link etc.)
+//  - type: falls Button (default 'button')
 
 const VARIANT_CLASS = {
   primary: 'btn-primary',
   outline: 'btn-outline-primary',
   secondary: 'btn-secondary',
   ghost: 'btn-ghost',
-  destructive: 'btn-destructive'
+  destructive: 'btn-destructive',
+  fab: 'fab-btn', // kreisrunde Floating Action Buttons
+  plain: '' // ungestylte Variante (bewusst minimal) – nutzt nur übergebene className Utilities
 };
 
 const SIZE_CLASS = {
@@ -25,25 +34,29 @@ export function Button({
   size = 'md',
   loading = false,
   disabled,
+  type,
   iconStart,
   iconEnd,
   as: Component = 'button',
   children,
   ...rest
 }) {
-  const variantCls = VARIANT_CLASS[variant] || VARIANT_CLASS.primary;
+  const variantCls = VARIANT_CLASS[variant] !== undefined ? VARIANT_CLASS[variant] : VARIANT_CLASS.primary;
   const sizeCls = SIZE_CLASS[size] || '';
   const loadingCls = loading ? 'btn-loading' : '';
   const isDisabled = disabled || loading;
+  const btnType = Component === 'button' ? (type || 'button') : undefined;
   return (
     <Component
       className={`${variantCls} ${sizeCls} ${loadingCls} ${className}`.trim()}
       disabled={isDisabled}
+      type={btnType}
+      aria-busy={loading || undefined}
       {...rest}
     >
-      {iconStart && <span className="btn-icon-start flex items-center">{iconStart}</span>}
+      {iconStart && <span className="btn-icon-start flex items-center" aria-hidden="true">{iconStart}</span>}
       <span className="inline-flex items-center gap-2">{children}</span>
-      {iconEnd && <span className="btn-icon-end flex items-center">{iconEnd}</span>}
+      {iconEnd && <span className="btn-icon-end flex items-center" aria-hidden="true">{iconEnd}</span>}
     </Component>
   );
 }

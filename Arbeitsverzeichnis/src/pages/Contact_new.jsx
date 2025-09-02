@@ -12,6 +12,7 @@ import { Field } from "@/components/ui/field";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TestimonialCard } from '@/components/ui/TestimonialCard';
 import { Pill } from "@/components/ui/pill";
 import { Checkbox } from "@/components/ui/checkbox";
 
@@ -187,7 +188,7 @@ export default function Contact() {
       </Helmet>
 
       <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="pro-container">
           <div className="flex items-center justify-center space-x-4">
             <Clock className="w-5 h-5" />
             <span className="font-semibold">Sonderaktion endet in:</span>
@@ -203,7 +204,7 @@ export default function Contact() {
 
       <Section padding="normal" variant="gradient" className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white" size="wide">
         <div className="text-center flow">
-          <Pill variant="dark" className="mb-4">Kostenlose Beratung</Pill>
+          <Pill variant="invert" className="mb-4">Kostenlose Beratung</Pill>
             <Heading as="h1" size="4xl" className="mb-6">Ihr Weg zur eigenen Solaranlage startet hier</Heading>
           <p className="lead opacity-90 max-w-3xl mx-auto mb-8">Lassen Sie sich kostenfrei beraten und erhalten Sie Ihr individuelles Angebot.</p>
 
@@ -233,24 +234,18 @@ export default function Contact() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="shadow-lg pro-card">
-                <CardContent className="p-6">
-                  <div className="flex mb-3">
-                    {[1,2,3,4,5].map(i => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 italic mb-4">"{testimonial.text}"</p>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <div className="font-semibold text-gray-800">{testimonial.name}</div>
-                      <div className="text-sm text-gray-600">{testimonial.location}</div>
-                    </div>
-                    <Pill variant="light" className="bg-emerald-100 text-emerald-800 border-emerald-200">Verifiziert</Pill>
-                  </div>
-                </CardContent>
-              </Card>
+            {testimonials.map((t,i)=>(
+              <TestimonialCard
+                key={i}
+                name={t.name}
+                location={t.location}
+                text={t.text}
+                rating={t.rating}
+                verified
+                variant="glass"
+                tag="Verifiziert"
+                tagColor="emerald"
+              />
             ))}
           </div>
         </div>
@@ -437,7 +432,7 @@ export default function Contact() {
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">4.9/5</div>
                   <p className="text-gray-600 text-sm mb-4">Basierend auf 2.547+ Bewertungen</p>
-                  <Pill variant="light" className="bg-green-100 text-green-800 border-green-200">TÜV geprüfte Kundenzufriedenheit</Pill>
+                  <Pill variant="soft" color="emerald">TÜV geprüfte Kundenzufriedenheit</Pill>
                 </CardContent>
               </Card>
 

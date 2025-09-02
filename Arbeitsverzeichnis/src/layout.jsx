@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { createPageUrl } from "@/utils";
 import { Sun, Phone, Mail, ChevronDown, Menu, X, Zap, Battery, Award, Shield, Home as HomeIcon, Calculator as CalcIcon, Users, Star, Settings, Wrench, Globe, Facebook, Twitter, Instagram, Linkedin, ArrowUp, MessageSquare } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Button } from '@/components/ui/button';
 import MegaMenu from "@/components/nav/MegaMenu"; // legacy direct usage (wird in PrimaryNav kapsuliert)
 import { PrimaryNav } from '@/components/nav/PrimaryNav';
 import { SiteFooter } from '@/components/footer/SiteFooter';
@@ -374,11 +375,11 @@ export default function Layout({ children }) {
       {/* Top Promo Banner */}
   {showTopBanner && (
     <div ref={bannerRef} className="w-full sticky top-0 z-50 border-b border-neutral-200 bg-white/85 backdrop-blur-sm supports-[backdrop-filter]:bg-white/70">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap items-center gap-4 top-banner text-neutral-700">
+  <div className="pro-container py-2 flex flex-wrap items-center gap-4 top-banner text-neutral-700">
         <span className="inline-flex items-center gap-1 text-neutral-600"><span className="hidden md:inline">Konservativ kalkuliert:</span> <strong className="font-medium tracking-tight">Ø 9–11 Jahre Payback</strong></span>
         <span className="hidden md:inline h-4 w-px bg-neutral-300" />
         <Link to={createPageUrl('Calculator')} className="cta-link">Analyse starten</Link>
-        <button onClick={()=>{ setShowTopBanner(false); localStorage.setItem('zoe_top_banner_dismissed','1'); }} className="ml-auto text-neutral-400 hover:text-neutral-600 text-[11px] tracking-wide uppercase">Schließen</button>
+  <Button variant="plain" onClick={()=>{ setShowTopBanner(false); localStorage.setItem('zoe_top_banner_dismissed','1'); }} className="ml-auto text-neutral-400 hover:text-neutral-600 text-[11px] tracking-wide uppercase">Schließen</Button>
       </div>
     </div>
   )}
@@ -393,7 +394,7 @@ export default function Layout({ children }) {
   className={`site-header fixed z-40 left-0 right-0 transition-all duration-300 ${afterHero ? 'bg-white/95 backdrop-blur-sm border-b border-neutral-200 shadow-sm' : 'bg-transparent'} ${afterHero ? 'py-2.5' : 'py-2 mt-2'}`}
     style={{ top: 'var(--zoe-banner-h, 0px)' }}
   >
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="pro-container">
   <div className={`flex items-center justify-between w-full gap-4 ${afterHero ? '' : 'rounded-full bg-white/80 backdrop-blur-sm border border-neutral-200 shadow-sm'} px-5 sm:px-6 lg:px-7 transition-all duration-300`}> 
             {/* Left: Logo */}
             <Link to={createPageUrl('Home')} className="flex items-center gap-2 pl-1">
@@ -448,18 +449,19 @@ export default function Layout({ children }) {
             if (s) setCommand(s.label);
                       }
                     }}
-                    className="w-[260px] px-3 py-1.5 text-sm rounded-full border border-neutral-300 bg-white/70 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-neutral-400"
+                    className="w-[260px] px-3 py-1.5 text-sm rounded-full border border-neutral-300 bg-white/70 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-brand/40 focus:border-neutral-400 focus-visible:focus-ring"
                     ref={cmdInputRef}
                   />
                   <span className="absolute right-2 top-1.5 text-[11px] text-gray-400">Enter · ⌘/Ctrl K</span>
           {showCmd && (
                     <div className="absolute left-0 right-0 mt-1 rounded-xl border border-neutral-200 bg-white shadow-lg overflow-hidden z-10">
             {(command.trim() ? filtered : suggestions).map((s, i) => (
-                        <button
+                        <Button
+                          variant="plain"
                           key={s.label}
                           onMouseDown={(e)=>{ e.preventDefault(); navigate(createPageUrl(s.to)); setShowCmd(false); saveHistory(command.trim()); }}
                           className={`w-full text-left px-3 py-2 text-sm hover:bg-neutral-50 ${i===cmdIndex ? 'bg-neutral-50' : ''}`}
-                        >{s.label}</button>
+                        >{s.label}</Button>
                       ))}
             {(command.trim() ? filtered : suggestions).length === 0 && (
                         <div className="px-3 py-2 text-sm text-neutral-500">Keine Vorschläge</div>
@@ -469,7 +471,7 @@ export default function Layout({ children }) {
                         <div className="px-3 py-1.5 text-[11px] uppercase tracking-wider text-neutral-400">Zuletzt gesucht</div>
                         <div className="py-1">
             {cmdHistory.map((h, i) => (
-                            <button key={i} onMouseDown={(e)=>{ e.preventDefault(); setCommand(h); requestAnimationFrame(()=>cmdInputRef.current?.focus()); }} className="w-full text-left px-3 py-1.5 text-sm text-neutral-600 hover:bg-neutral-50">{h}</button>
+                            <Button variant="plain" key={i} onMouseDown={(e)=>{ e.preventDefault(); setCommand(h); requestAnimationFrame(()=>cmdInputRef.current?.focus()); }} className="w-full text-left px-3 py-1.5 text-sm text-neutral-600 hover:bg-neutral-50">{h}</Button>
                           ))}
                         </div>
                       </div>
@@ -492,21 +494,21 @@ export default function Layout({ children }) {
                 </DropdownMenuContent>
               </DropdownMenu>
               <Link to={createPageUrl('Calculator')} onMouseEnter={()=>prefetchRoute('Calculator')} onClick={()=>trackNav('Solarrechner')} className={`hidden sm:inline-flex items-center nav-item border border-neutral-300 ${isActive('Calculator')?'is-active':''}`}>Solarrechner</Link>
-              <button
-                type="button"
+              <Button
+                variant="plain"
                 onClick={()=> {
                   const next = toggleVariant();
                   setVariant(next);
                 }}
                 className="hidden xl:inline-flex items-center nav-item border border-neutral-300"
                 title="Variant umschalten (intern)"
-              >{variant === 'type' ? 'Minimal' : 'Typo'}</button>
-              <a href="tel:+49301234567" className="inline-flex items-center gap-1.5 px-4 py-2 text-sm sm:text-[15px] font-semibold rounded-full text-white bg-neutral-900 hover:bg-neutral-800 transition-colors shadow-sm" title="Direkt anrufen">
+              >{variant === 'type' ? 'Minimal' : 'Typo'}</Button>
+              <a href="tel:+49301234567" className="inline-flex items-center gap-1.5 px-4 py-2 text-sm sm:text-[15px] font-semibold rounded-full text-white bg-neutral-900 hover:bg-neutral-800 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand/50" title="Direkt anrufen">
                 <Phone className="w-4 h-4" /> 030 1234567
               </a>
-              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden p-2 rounded-full hover:bg-neutral-100">
+              <Button variant="plain" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden p-2 rounded-full hover:bg-neutral-100">
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -542,16 +544,16 @@ export default function Layout({ children }) {
         )}
       </header>
 
-  <main id="main-content" role="main" className="min-h-[60vh] outline-none focus:outline-none">
+  <main id="main-content" role="main" className="min-h-[60vh] outline-none focus:outline-none focus-visible:focus-ring">
         {children}
       </main>
 
       {/* Floating Action Buttons */}
       <div className="fixed bottom-6 right-6 z-50 space-y-3" aria-label="Schnellaktionen">
-        <button className="fab-btn" aria-label="Chat öffnen">
+        <Button variant="fab" aria-label="Chat öffnen">
           <MessageCircle className="w-7 h-7" />
-        </button>
-        <a href="tel:+49301234567" className="fab-btn" aria-label="Jetzt anrufen">
+        </Button>
+  <a href="tel:+49301234567" className="fab-btn focus:outline-none focus-visible:focus-ring" aria-label="Jetzt anrufen">
           <PhoneCall className="w-7 h-7" />
         </a>
         <PersonaMemoryDialog />
@@ -567,9 +569,9 @@ export default function Layout({ children }) {
 
       {/* Scroll to Top Button */}
       {showScrollTop && (
-        <button onClick={scrollToTop} className="fixed bottom-20 right-6 z-50 w-12 h-12 rounded-full bg-neutral-900 text-white shadow-lg flex items-center justify-center hover:bg-neutral-800 transition-colors">
+        <Button variant="plain" onClick={scrollToTop} className="fixed bottom-20 right-6 z-50 w-12 h-12 rounded-full bg-neutral-900 text-white shadow-lg flex items-center justify-center hover:bg-neutral-800 transition-colors">
           <ArrowUp className="w-6 h-6" />
-        </button>
+        </Button>
       )}
     </div>
   );
@@ -606,15 +608,15 @@ function PersonaMemoryDialog() {
   };
   return (
     <>
-  <button onClick={()=> setOpen(true)} className="fab-btn" aria-label="Persona & Memory">
+  <Button onClick={()=> setOpen(true)} variant="fab" aria-label="Persona & Memory">
         <MessageSquare className="w-7 h-7" />
-      </button>
+      </Button>
       {open && (
         <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-black/30 p-0 sm:p-6" onClick={()=> setOpen(false)}>
           <div className="w-full sm:max-w-lg bg-white rounded-t-2xl sm:rounded-2xl shadow-xl flex flex-col max-h-[90vh]" onClick={e=> e.stopPropagation()}>
             <div className="px-5 py-4 border-b flex items-center justify-between gap-3">
               <div className="text-sm font-semibold text-gray-800">Persona & Memory</div>
-              <button onClick={()=> setOpen(false)} className="text-gray-500 hover:text-gray-700">×</button>
+              <Button variant="plain" onClick={()=> setOpen(false)} className="text-gray-500 hover:text-gray-700">×</Button>
             </div>
             <div className="px-5 py-3 text-xs text-gray-500 flex flex-wrap gap-2 border-b">
               <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-800 border border-amber-200 rounded-full px-2 py-0.5">Persona: {persona}</span>
@@ -632,8 +634,8 @@ function PersonaMemoryDialog() {
               ))}
             </div>
             <form onSubmit={submit} className="p-4 border-t flex items-center gap-2">
-              <input value={input} onChange={e=> setInput(e.target.value)} placeholder="Ihre Notiz / Wunsch…" className="flex-1 rounded-full border border-neutral-300 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40" />
-              <button type="submit" className="px-4 py-2 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-sm font-semibold">Speichern</button>
+              <input value={input} onChange={e=> setInput(e.target.value)} placeholder="Ihre Notiz / Wunsch…" className="flex-1 rounded-full border border-neutral-300 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand/40 focus-visible:focus-ring" />
+              <Button type="submit" className="px-4 py-2 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-sm font-semibold" variant="plain">Speichern</Button>
             </form>
           </div>
         </div>

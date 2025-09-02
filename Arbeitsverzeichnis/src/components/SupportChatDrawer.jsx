@@ -52,15 +52,15 @@ export default function SupportChatDrawer() {
   return (
     <div className="fixed inset-0 z-50" aria-modal="true" role="dialog" aria-label="Support-Chat">
       <div className="absolute inset-0 bg-black/30" onClick={() => setOpen(false)} />
-      <div ref={panelRef} className="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-2xl border-l border-gray-200 flex flex-col">
+  <div ref={panelRef} className="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-2xl border-l border-gray-200 flex flex-col outline-none focus-visible:focus-ring" tabIndex="-1">
     <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200">
           <div>
       <div className="font-semibold text-gray-900 text-base sm:text-lg">Support-Chat</div>
       <div className="text-xs sm:text-sm text-gray-500">Gemini LLM über sicheren Proxy</div>
           </div>
-          <button aria-label="Schließen" className="p-2 rounded hover:bg-gray-100" onClick={() => setOpen(false)}>
+          <Button variant="plain" aria-label="Schließen" className="p-2 rounded hover:bg-gray-100 focus-visible:focus-ring" onClick={() => setOpen(false)}>
             <X className="w-5 h-5" />
-          </button>
+          </Button>
         </div>
 
   <div className="flex-1 overflow-y-auto p-4 space-y-3 text-base sm:text-lg" aria-live="polite">
@@ -79,13 +79,13 @@ export default function SupportChatDrawer() {
               value={text}
               onChange={(e) => setText(e.target.value)}
             />
-            <Button type="submit" className="bg-blue-600 hover:bg-blue-700" aria-label="Senden">
+            <Button type="submit" className="bg-blue-600 hover:bg-blue-700 focus-visible:focus-ring" aria-label="Senden">
               <Send className="w-4 h-4" />
             </Button>
           </form>
-          <Button
+            <Button
             variant="outline"
-            className="w-full justify-center"
+            className="w-full justify-center focus-visible:focus-ring"
             onClick={() => (window.location.href = 'tel:+498009999999')}
           >
             <PhoneCall className="w-4 h-4 mr-2" /> Mit KI‑VoIP sprechen

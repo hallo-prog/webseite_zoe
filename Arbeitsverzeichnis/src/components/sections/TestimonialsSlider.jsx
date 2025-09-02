@@ -1,5 +1,6 @@
 import React, { useMemo, useState, useEffect, useRef } from 'react';
 import { Quote, Star, Pause, Play } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
 
 export default function TestimonialsSlider() {
@@ -34,10 +35,10 @@ export default function TestimonialsSlider() {
       <div className="mx-auto max-w-5xl">
         <div className="sr-only">{t('testimonials.status', { count: items.length, page: page+1, pages: totalPages, state: paused ? t('testimonials.paused') : t('testimonials.running') })}</div>
         <div className="flex items-center justify-end mb-3 gap-2">
-          <button onClick={()=> setPaused(p=>!p)} className="inline-flex items-center gap-1 text-xs px-3 py-1.5 rounded-full border border-amber-200 bg-white text-amber-800 hover:bg-amber-50">
+          <Button variant="plain" onClick={()=> setPaused(p=>!p)} className="inline-flex items-center gap-1 text-xs px-3 py-1.5 rounded-full border border-amber-200 bg-white text-amber-800 hover:bg-amber-50">
             {paused ? <Play className="w-3.5 h-3.5"/> : <Pause className="w-3.5 h-3.5"/>}
             {paused ? t('testimonials.play_label') : t('testimonials.pause_label')}
-          </button>
+          </Button>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {visible.map((tItem,i)=>(
@@ -51,11 +52,11 @@ export default function TestimonialsSlider() {
           ))}
         </div>
         <div className="mt-5 flex items-center justify-center gap-2">
-          <button onClick={()=> setPage(p=> Math.max(0,p-1))} disabled={page===0} className="px-3 py-1.5 text-sm rounded-full border border-amber-200 bg-white text-amber-800 disabled:opacity-40" aria-label={t('testimonials.prev')}>‹</button>
+          <Button variant="plain" onClick={()=> setPage(p=> Math.max(0,p-1))} disabled={page===0} className="px-3 py-1.5 text-sm rounded-full border border-amber-200 bg-white text-amber-800 disabled:opacity-40" aria-label={t('testimonials.prev')}>‹</Button>
           {Array.from({length: totalPages}).map((_,i)=>(
-            <button key={i} aria-label={t('testimonials.page',{ page: i+1 })} onClick={()=> setPage(i)} className={`h-2.5 w-6 rounded-full ${i===page?'bg-amber-600':'bg-amber-200'} transition`}></button>
+            <Button variant="plain" key={i} aria-label={t('testimonials.page',{ page: i+1 })} onClick={()=> setPage(i)} className={`h-2.5 w-6 rounded-full ${i===page?'bg-amber-600':'bg-amber-200'} transition p-0`}></Button>
           ))}
-          <button onClick={()=> setPage(p=> Math.min(totalPages-1,p+1))} disabled={page===totalPages-1} className="px-3 py-1.5 text-sm rounded-full border border-amber-200 bg-white text-amber-800 disabled:opacity-40" aria-label={t('testimonials.next')}>›</button>
+          <Button variant="plain" onClick={()=> setPage(p=> Math.min(totalPages-1,p+1))} disabled={page===totalPages-1} className="px-3 py-1.5 text-sm rounded-full border border-amber-200 bg-white text-amber-800 disabled:opacity-40" aria-label={t('testimonials.next')}>›</Button>
         </div>
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}} />
       </div>

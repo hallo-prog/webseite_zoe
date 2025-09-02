@@ -21,7 +21,7 @@ export default function HeroSolar({ onPrimary, onSecondary, data = {} }) {
           {/* Kicker */}
           <div className="mb-6 flex flex-wrap gap-3 items-center">
             <Badge variant="soft">{kicker}</Badge>
-            <Badge variant="ambient" size="xs" className="text-neutral-600 font-medium">Ø 200–300€ monatliche Stromkosten</Badge>
+            <Badge variant="outline" color="ambient" size="xs" className="text-neutral-600 font-medium">Ø 200–300€ monatliche Stromkosten</Badge>
           </div>
 
             <h1 className="display-1 mb-6 text-neutral-900 inline-highlight">{title}</h1>

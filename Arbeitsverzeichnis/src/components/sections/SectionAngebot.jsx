@@ -52,7 +52,7 @@ export default function SectionAngebot({ persona, track }) {
           {tiers.map(tier => (
             <div key={tier.key} className="relative" role="presentation">
               {tier.recommended && <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-semibold text-amber-800 bg-amber-100 border border-amber-200 rounded-full px-2 py-0.5">{t('offer.tiers.recommended')}</span>}
-              <button onClick={() => setOfferTier(tier.key)} role="tab" aria-selected={offerTier===tier.key} aria-controls={`offer-panel-${tier.key}`} id={`offer-tab-${tier.key}`} className={`px-4 py-2 rounded-full text-sm border ${offerTier===tier.key ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'}`}>{tier.label}</button>
+              <Button variant="plain" onClick={() => setOfferTier(tier.key)} role="tab" aria-selected={offerTier===tier.key} aria-controls={`offer-panel-${tier.key}`} id={`offer-tab-${tier.key}`} className={`px-4 py-2 rounded-full text-sm border ${offerTier===tier.key ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'}`}>{tier.label}</Button>
             </div>
           ))}
         </div>
@@ -78,9 +78,9 @@ export default function SectionAngebot({ persona, track }) {
                   </div>
                 )}
                 <div className="mt-6 flex flex-wrap gap-2" aria-label="Merkmale">
-                  <Pill variant="light">{pills.price}</Pill>
-                  <Pill variant="light">{pills.conservative}</Pill>
-                  <Pill variant="light">{pills.no_hidden}</Pill>
+                  <Pill variant="soft" color="neutral">{pills.price}</Pill>
+                  <Pill variant="soft" color="neutral">{pills.conservative}</Pill>
+                  <Pill variant="soft" color="neutral">{pills.no_hidden}</Pill>
                 </div>
                 <div className="mt-6 grid grid-cols-3 gap-4" aria-label="Package KPIs">
                   {kpis?.map(k => (

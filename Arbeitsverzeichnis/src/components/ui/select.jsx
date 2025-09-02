@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import { Button } from '@/components/ui/button';
 
 const SelectCtx = createContext(null);
 
@@ -22,7 +23,7 @@ export function Select({ value, onValueChange, children }) {
 export function SelectTrigger({ className = '', children }) {
   const { open, setOpen } = useContext(SelectCtx);
   return (
-    <button type="button" onClick={() => setOpen(!open)} className={`w-full h-10 px-3 text-left border border-gray-300 rounded-md ${className}`}>{children}</button>
+    <Button variant="plain" type="button" onClick={() => setOpen(!open)} className={`w-full h-10 px-3 text-left border border-gray-300 rounded-md ${className}`}>{children}</Button>
   );
 }
 

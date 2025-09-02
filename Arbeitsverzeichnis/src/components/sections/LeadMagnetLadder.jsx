@@ -35,7 +35,7 @@ export default function LeadMagnetLadder({ persona, onTrack }) {
                   </div>
                 </div>
                 <p className="mt-3 text-sm text-gray-600 leading-relaxed flex-1">{it.d}</p>
-                <div className="mt-4 flex flex-wrap gap-1.5">{(it.chips||[]).map(c=> <Badge key={c} variant="amber" size="xs" className="font-semibold">{c}</Badge>)}</div>
+                <div className="mt-4 flex flex-wrap gap-1.5">{(it.chips||[]).map(c=> <Badge key={c} variant="soft" color="amber" size="xs" className="font-semibold">{c}</Badge>)}</div>
                 {it.cta && <div className="mt-5"><LeadMagnetCTA persona={persona} variant={it.cta} onTrack={onTrack} /></div>}
                 {idx < items.length - 1 && <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-amber-300" aria-hidden>→</div>}
               </li>

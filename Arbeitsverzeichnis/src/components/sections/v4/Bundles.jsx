@@ -52,7 +52,7 @@ export default function Bundles({ bundles=defaultBundles, onSelect }) {
             const variant = b.popular ? 'accent' : 'subtle';
             return (
               <Card key={b.id} variant={variant} elevation={b.popular ? 'md' : 'sm'} className="flex flex-col relative">
-                {b.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2"><Badge variant="ambient">Empfohlen</Badge></div>}
+                {b.popular && <div className="absolute -top-3 left-1/2 -translate-x-1/2"><Badge variant="outline" color="ambient">Empfohlen</Badge></div>}
                 <div className="mb-4">
                   <Heading as="h3" size="md" className="mb-2 leading-snug">{b.title}</Heading>
                   <p className="text-sm text-neutral-600 leading-relaxed mb-4">{b.desc}</p>

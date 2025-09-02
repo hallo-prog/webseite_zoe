@@ -54,7 +54,7 @@ export default function SectionEconomicImpact({ persona = 'privat', track }) {
             </ul>
           )}
           <div className="mt-6 flex flex-wrap justify-center gap-2">
-            {chips.map(c => <Pill key={c} size="md" variant="light">{c}</Pill>)}
+            {chips.map(c => <Pill key={c} size="md" variant="soft" color="neutral">{c}</Pill>)}
           </div>
         </div>
 

@@ -49,10 +49,10 @@ export default function SectionComparison() {
             const isOpen = open === i;
             return (
               <div key={f.k} className="border border-gray-200 bg-white rounded-xl overflow-hidden shadow-sm">
-                <button onClick={()=> setOpen(isOpen ? null : i)} className="w-full flex items-center justify-between gap-4 px-4 py-3 text-left" aria-expanded={isOpen} aria-controls={`cmp-panel-${i}`}>
+                <Button variant="plain" onClick={()=> setOpen(isOpen ? null : i)} className="w-full flex items-center justify-between gap-4 px-4 py-3 text-left" aria-expanded={isOpen} aria-controls={`cmp-panel-${i}`}>
                   <span className="text-sm font-medium text-gray-800">{f.k}</span>
                   <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}/>
-                </button>
+                </Button>
                 <div id={`cmp-panel-${i}`} className={`grid grid-cols-2 border-t border-gray-100 text-sm transition-[max-height] duration-300 ${isOpen ? 'max-h-48' : 'max-h-0'} overflow-hidden`} role="group" aria-label={`Vergleich ${f.k}`}>
                   <div className="px-4 py-3 flex items-start gap-2 text-emerald-700 bg-emerald-50/60">
                     <CheckCircle2 className="w-4 h-4 mt-0.5"/>
