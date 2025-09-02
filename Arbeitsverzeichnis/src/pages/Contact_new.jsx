@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from 'react-helmet-async';
+import { Section } from '@/components/ui/section';
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { createPageUrl } from "@/utils";
-import { Phone, Mail, MapPin, CheckCircle, Calculator, Star, Clock, Shield, Award, Users, TrendingUp, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Clock, Star, TrendingUp, Award, Shield, Zap, CheckCircle, HelpCircle, AlertTriangle, Phone, Calculator as CalculatorIcon, Sun, Battery, BarChart, Leaf, Users, Wrench, Lock, ArrowRight, MapPin, Check, X, Mail, Globe, Building, Factory, Home, Calendar, Info, PhoneCall, DollarSign, FileText, PieChart, HardDrive, Server, Cpu, Settings, Smartphone, Thermometer, Activity, Cloud, Truck, AlertCircle } from 'lucide-react';
+import { Heading } from '@/components/ui/heading';
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Field } from "@/components/ui/field";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -30,6 +32,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     const targetDate = new Date('2025-09-15T23:59:59');
@@ -50,10 +53,48 @@ export default function Contact() {
     return () => clearInterval(timer);
   }, []);
 
-  const handleInputChange = (field, value) => setFormData(prev => ({ ...prev, [field]: value }));
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name ist erforderlich';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'E-Mail ist erforderlich';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Bitte geben Sie eine gültige E-Mail-Adresse ein';
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Telefonnummer ist erforderlich';
+    } else if (!/^[\+]?[0-9\s\-\(\)]{10,}$/.test(formData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = 'Bitte geben Sie eine gültige Telefonnummer ein';
+    }
+
+    if (!formData.address.trim()) {
+      newErrors.address = 'Adresse ist erforderlich';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: '' }));
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     setIsSubmitting(true);
     try {
       const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
@@ -131,12 +172,18 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-white">
       <Helmet>
-        <title>Kostenlose Beratung anfordern | ZOE Solar</title>
-        <meta name="description" content="In 2 Minuten Anfrage stellen – Rückruf innerhalb von 2 Stunden. Transparent, unverbindlich, ohne Druck." />
-        <meta property="og:title" content="Kostenlose Beratung anfordern | ZOE Solar" />
-        <meta property="og:description" content="In 2 Minuten Anfrage stellen – Rückruf innerhalb von 2 Stunden. Transparent, unverbindlich, ohne Druck." />
+        <title>Solaranlage Beratung Berlin | Kostenlos & Unverbindlich | ZOE Solar</title>
+        <meta name="description" content="Solaranlage Beratung Berlin ✓ Kostenlos ✓ Unverbindlich ✓ TÜV-zertifiziert ✓ 15+ Jahre Erfahrung ✓ Rückruf in 2 Stunden ✓ Jetzt anfragen!" />
+        <meta name="keywords" content="Solaranlage Beratung Berlin, Photovoltaik Beratung, Solarstrom Beratung, Energieberatung Berlin, PV-Anlage Beratung" />
+        <meta property="og:title" content="Solaranlage Beratung Berlin | Kostenlos & Unverbindlich | ZOE Solar" />
+        <meta property="og:description" content="Solaranlage Beratung Berlin ✓ Kostenlos ✓ Unverbindlich ✓ TÜV-zertifiziert ✓ 15+ Jahre Erfahrung ✓ Rückruf in 2 Stunden ✓ Jetzt anfragen!" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="geo.region" content="DE-BE" />
+        <meta name="geo.placename" content="Berlin" />
+        <meta name="geo.position" content="52.5200;13.4050" />
+        <meta name="ICBM" content="52.5200, 13.4050" />
+        <link rel="canonical" href="https://www.zoe-solar.de/kontakt" />
       </Helmet>
 
       <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-4">
@@ -154,10 +201,10 @@ export default function Contact() {
         </div>
       </div>
 
-      <section className="py-16 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <Section padding="normal" variant="gradient" className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white" size="wide">
+        <div className="text-center flow">
           <Pill variant="dark" className="mb-4">Kostenlose Beratung</Pill>
-          <h1 className="heading-1 mb-6">Ihr Weg zur eigenen Solaranlage startet hier</h1>
+            <Heading as="h1" size="4xl" className="mb-6">Ihr Weg zur eigenen Solaranlage startet hier</Heading>
           <p className="lead opacity-90 max-w-3xl mx-auto mb-8">Lassen Sie sich kostenfrei beraten und erhalten Sie Ihr individuelles Angebot.</p>
 
           <div className="bg-red-600/20 border border-red-400/30 rounded-xl p-6 max-w-2xl mx-auto">
@@ -168,11 +215,11 @@ export default function Contact() {
             <p className="text-red-100">Strompreise steigen weiter – sichern Sie sich jetzt Ihre Unabhängigkeit zu besten Konditionen</p>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+      <Section padding="tight" variant="plain" size="wide">
+        <div>
+          <div className="text-center flow">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Was unsere Kunden über die Beratung sagen</h2>
             <div className="flex justify-center items-center space-x-4">
               <div className="flex">
@@ -207,9 +254,9 @@ export default function Contact() {
             ))}
           </div>
         </div>
-      </section>
+      </Section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <Section padding="normal" variant="plain" size="wide">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
             <Card className="border-none shadow-2xl pro-card">
@@ -230,22 +277,18 @@ export default function Contact() {
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold text-gray-900">Ihre Kontaktdaten</h3>
                     <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="name">Vor- und Nachname *</Label>
-                        <Input id="name" required value={formData.name} onChange={(e) => handleInputChange('name', e.target.value)} className="mt-1" />
-                      </div>
-                      <div>
-                        <Label htmlFor="email">E-Mail-Adresse *</Label>
-                        <Input id="email" type="email" required value={formData.email} onChange={(e) => handleInputChange('email', e.target.value)} className="mt-1" />
-                      </div>
+                      <Field id="name" label="Vor- und Nachname" required error={errors.name}>
+                        <Input id="name" required value={formData.name} onChange={(e) => handleInputChange('name', e.target.value)} className={`mt-1 ${errors.name ? 'border-red-500' : ''}`} />
+                      </Field>
+                      <Field id="email" label="E-Mail-Adresse" required error={errors.email}>
+                        <Input id="email" type="email" required value={formData.email} onChange={(e) => handleInputChange('email', e.target.value)} className={`mt-1 ${errors.email ? 'border-red-500' : ''}`} />
+                      </Field>
                     </div>
                     <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="phone">Telefonnummer *</Label>
-                        <Input id="phone" type="tel" required value={formData.phone} onChange={(e) => handleInputChange('phone', e.target.value)} className="mt-1" />
-                      </div>
-                      <div>
-                        <Label htmlFor="urgency">Zeitrahmen für Installation</Label>
+                      <Field id="phone" label="Telefonnummer" required error={errors.phone}>
+                        <Input id="phone" type="tel" required value={formData.phone} onChange={(e) => handleInputChange('phone', e.target.value)} className={`mt-1 ${errors.phone ? 'border-red-500' : ''}`} />
+                      </Field>
+                      <Field id="urgency" label="Zeitrahmen für Installation" hint="Hilft uns bei der Priorisierung">
                         <Select value={formData.urgency} onValueChange={(value) => handleInputChange('urgency', value)}>
                           <SelectTrigger className="mt-1">
                             <SelectValue placeholder="Wählen Sie..." />
@@ -257,19 +300,17 @@ export default function Contact() {
                             <SelectItem value="planning">Ich plane erst</SelectItem>
                           </SelectContent>
                         </Select>
-                      </div>
+                      </Field>
                     </div>
-                    <div>
-                      <Label htmlFor="address">Vollständige Adresse *</Label>
-                      <Input id="address" required value={formData.address} onChange={(e) => handleInputChange('address', e.target.value)} className="mt-1" placeholder="Straße, Hausnummer, PLZ, Ort" />
-                    </div>
+                    <Field id="address" label="Vollständige Adresse" required error={errors.address} hint="Straße, Hausnummer, PLZ, Ort">
+                      <Input id="address" required value={formData.address} onChange={(e) => handleInputChange('address', e.target.value)} className={`mt-1 ${errors.address ? 'border-red-500' : ''}`} placeholder="Straße, Hausnummer, PLZ, Ort" />
+                    </Field>
                   </div>
 
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold text-gray-900">Angaben zu Ihrem Haus</h3>
                     <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <Label htmlFor="houseType">Gebäudetyp</Label>
+                      <Field id="houseType" label="Gebäudetyp">
                         <Select value={formData.houseType} onValueChange={(value) => handleInputChange('houseType', value)}>
                           <SelectTrigger className="mt-1">
                             <SelectValue placeholder="Wählen Sie..." />
@@ -282,9 +323,8 @@ export default function Contact() {
                             <SelectItem value="gewerbe">Gewerbegebäude</SelectItem>
                           </SelectContent>
                         </Select>
-                      </div>
-                      <div>
-                        <Label htmlFor="roofArea">Geschätzte Dachfläche (m²)</Label>
+                      </Field>
+                      <Field id="roofArea" label="Geschätzte Dachfläche (m²)">
                         <Select value={formData.roofArea} onValueChange={(value) => handleInputChange('roofArea', value)}>
                           <SelectTrigger className="mt-1">
                             <SelectValue placeholder="Wählen Sie..." />
@@ -297,23 +337,22 @@ export default function Contact() {
                             <SelectItem value="unknown">Weiß ich nicht</SelectItem>
                           </SelectContent>
                         </Select>
-                      </div>
+                      </Field>
                     </div>
-                    <div>
-                      <Label htmlFor="currentBill">Aktuelle monatliche Stromkosten (€)</Label>
+                    <Field id="currentBill" label="Aktuelle monatliche Stromkosten (€)">
                       <Select value={formData.currentBill} onValueChange={(value) => handleInputChange('currentBill', value)}>
                         <SelectTrigger className="mt-1">
                           <SelectValue placeholder="Wählen Sie Ihren Bereich..." />
                         </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="100">Bis 100€</SelectItem>
-                            <SelectItem value="150">100-150€</SelectItem>
-                            <SelectItem value="200">150-200€</SelectItem>
-                            <SelectItem value="250">200-250€</SelectItem>
-                            <SelectItem value="300">Über 250€</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
+                        <SelectContent>
+                          <SelectItem value="100">Bis 100€</SelectItem>
+                          <SelectItem value="150">100-150€</SelectItem>
+                          <SelectItem value="200">150-200€</SelectItem>
+                          <SelectItem value="250">200-250€</SelectItem>
+                          <SelectItem value="300">Über 250€</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </Field>
                     </div>
 
                     <div>
@@ -423,7 +462,7 @@ export default function Contact() {
               </Card>
             </div>
           </div>
-        </div>
+        </Section>
     </div>
   );
 }

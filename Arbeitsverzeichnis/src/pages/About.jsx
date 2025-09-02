@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Section } from '../components/ui/section';
 import { Helmet } from 'react-helmet-async';
 import { Award, Users, TrendingUp, Shield, CheckCircle, Clock, Star, MapPin, Euro, Heart, Zap, Home, Phone } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -130,9 +131,8 @@ export default function About() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Hero Section */}
+  <Section padding="normal" variant="gradient" className="bg-gradient-to-br from-emerald-50 to-white" size="wide">
           <div className="text-center mb-16">
             <Pill variant="light" className="mb-4">Über ZOE Solar</Pill>
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -158,7 +158,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center flow">
             <div>
               <img
                 src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
@@ -169,20 +169,20 @@ export default function About() {
 
             <div className="space-y-8">
               <div className="grid sm:grid-cols-2 gap-6">
-                <div className="bg-white/70 p-6 rounded-xl shadow-lg text-center">
-                  <div className="text-4xl font-bold text-emerald-600">2.547+</div>
+                <div className="bg-white/70 p-6 rounded-xl shadow-lg text-center tabular-nums">
+                  <div className="text-4xl font-bold text-emerald-600 tabular-nums">2.547+</div>
                   <div className="text-gray-600">Installierte Anlagen</div>
                 </div>
-                <div className="bg-white/70 p-6 rounded-xl shadow-lg text-center">
-                  <div className="text-4xl font-bold text-emerald-600">15MW</div>
+                <div className="bg-white/70 p-6 rounded-xl shadow-lg text-center tabular-nums">
+                  <div className="text-4xl font-bold text-emerald-600 tabular-nums">15MW</div>
                   <div className="text-gray-600">Installierte Leistung</div>
                 </div>
-                <div className="bg-white/70 p-6 rounded-xl shadow-lg text-center">
-                  <div className="text-4xl font-bold text-emerald-600">99.8%</div>
+                <div className="bg-white/70 p-6 rounded-xl shadow-lg text-center tabular-nums">
+                  <div className="text-4xl font-bold text-emerald-600 tabular-nums">99.8%</div>
                   <div className="text-gray-600">Kundenzufriedenheit</div>
                 </div>
-                <div className="bg-white/70 p-6 rounded-xl shadow-lg text-center">
-                  <div className="text-4xl font-bold text-emerald-600">25</div>
+                <div className="bg-white/70 p-6 rounded-xl shadow-lg text-center tabular-nums">
+                  <div className="text-4xl font-bold text-emerald-600 tabular-nums">25</div>
                   <div className="text-gray-600">Jahre Garantie</div>
                 </div>
               </div>
@@ -202,12 +202,10 @@ export default function About() {
               </Card>
             </div>
           </div>
-        </div>
-      </section>
+  </Section>
 
-      {/* Authority Quote */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Authority Quote */}
+  <Section padding="tight" variant="plain" size="wide">
           <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
             <CardContent className="p-8">
               <div className="flex items-start space-x-6">
@@ -228,12 +226,10 @@ export default function About() {
               </div>
             </CardContent>
           </Card>
-        </div>
-      </section>
+  </Section>
 
-      {/* Warum ZOE Solar Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Warum ZOE Solar Section */}
+  <Section padding="normal" variant="neutral" size="wide">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Warum ZOE Solar die beste Wahl ist
@@ -243,7 +239,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 flow">
             <Card className="pro-card text-center group hover:scale-105 transition-transform">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
@@ -296,12 +292,10 @@ export default function About() {
               </CardContent>
             </Card>
           </div>
-        </div>
-      </section>
+  </Section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Team Section */}
+  <Section padding="normal" variant="plain" size="wide">
           <div className="text-center mb-16">
             <Pill variant="light" className="mb-4">Unser Team</Pill>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -313,7 +307,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 flow">
             {teamMembers.map((member, index) => (
               <Card key={index} className="pro-card overflow-hidden group hover:scale-105 transition-transform">
                 <div className="aspect-square overflow-hidden">
@@ -339,12 +333,10 @@ export default function About() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
+  </Section>
 
-      {/* Social Proof - Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Social Proof - Testimonials */}
+  <Section padding="normal" variant="neutral" size="wide">
           <div className="text-center mb-16">
             <Pill variant="light" className="mb-4">Kundenstimmen</Pill>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -355,7 +347,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 flow">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="pro-card">
                 <CardContent className="p-6">
@@ -382,12 +374,10 @@ export default function About() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
+  </Section>
 
-      {/* Certifications Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Certifications Section */}
+  <Section padding="normal" variant="plain" size="wide">
           <div className="text-center mb-16">
             <Pill variant="light" className="mb-4">Zertifizierungen</Pill>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -399,7 +389,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-12 border border-gray-100">
+          <div className="bg-white rounded-2xl shadow-lg p-12 border border-gray-100 flow">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {certifications.map((cert, index) => (
                 <div key={index} className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
@@ -408,9 +398,8 @@ export default function About() {
                 </div>
               ))}
             </div>
-
-            <div className="mt-12 text-center">
-              <p className="text-lg text-gray-600 mb-6">
+            <div className="text-center flow">
+              <p className="text-lg text-gray-600">
                 Zusätzlich sind wir Mitglied im <strong className="text-blue-600">Bundesverband Solarwirtschaft</strong>
                 und unterliegen regelmäßigen Qualitätskontrollen.
               </p>
@@ -422,13 +411,12 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+  </Section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12">
+  {/* CTA Section */}
+  <Section padding="normal" variant="gradient" className="bg-gradient-to-r from-blue-600 to-green-600" size="wide">
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 flow">
             <h2 className="text-3xl font-bold text-white mb-6">
               Bereit für Ihre Solar-Zukunft?
             </h2>
@@ -436,7 +424,7 @@ export default function About() {
               Lassen Sie sich kostenlos beraten und erhalten Sie Ihr persönliches Solar-Konzept
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-4 text-lg"
@@ -471,7 +459,7 @@ export default function About() {
             </Card>
           </div>
         </div>
-      </section>
+      </Section>
     </div>
   );
 }

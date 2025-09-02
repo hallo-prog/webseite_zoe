@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useTranslation } from 'react-i18next';
 import { Calculator as CalculatorIcon, TrendingUp, Clock, Award, Users, Zap, Euro, Home, Shield } from 'lucide-react';
+import { Heading } from '@/components/ui/heading';
 
 export default function Calculator() {
   const { t } = useTranslation();
@@ -101,11 +102,16 @@ export default function Calculator() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Helmet>
-        <title>Solar-Rechner: Berechnen Sie Ihre Ersparnis | ZOE Solar</title>
-        <meta name="description" content="Kostenloser Solar-Rechner: Dachfläche eingeben und sofort Ersparnis, Amortisation und Autarkie berechnen. Experten-Tool mit TÜV-zertifizierten Berechnungen." />
-        <meta property="og:title" content="Solar-Rechner: Ihre persönliche Ersparnis-Berechnung" />
-        <meta property="og:description" content="Berechnen Sie in 2 Minuten Ihre optimale Solaranlage und jährliche Ersparnis. Kostenlos & präzise." />
+        <title>Solar-Rechner Berlin | Photovoltaik Kosten & Ersparnis Berechnen | ZOE</title>
+        <meta name="description" content="Solar-Rechner Berlin: Berechnen Sie Ihre PV-Anlage Kosten & Ersparnis ✓ Dachfläche eingeben ✓ Sofort Ergebnis ✓ TÜV-zertifiziert ✓ Kostenlos ✓ Jetzt berechnen!" />
+        <meta name="keywords" content="Solar-Rechner Berlin, Photovoltaik Rechner, PV-Anlage Kosten, Solaranlage Berechnung, Ersparnis Rechner, Amortisationsrechner" />
+        <meta property="og:title" content="Solar-Rechner Berlin | Photovoltaik Kosten & Ersparnis Berechnen | ZOE" />
+        <meta property="og:description" content="Solar-Rechner Berlin: Berechnen Sie Ihre PV-Anlage Kosten & Ersparnis ✓ Dachfläche eingeben ✓ Sofort Ergebnis ✓ TÜV-zertifiziert ✓ Kostenlos ✓ Jetzt berechnen!" />
         <meta property="og:image" content="/Logo-ZOE.png" />
+        <meta name="geo.region" content="DE-BE" />
+        <meta name="geo.placename" content="Berlin" />
+        <meta name="geo.position" content="52.5200;13.4050" />
+        <meta name="ICBM" content="52.5200, 13.4050" />
         <link rel="canonical" href="https://zoe-solar.de/calculator" />
       </Helmet>
 
@@ -139,9 +145,7 @@ export default function Calculator() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
             <CalculatorIcon className="w-8 h-8 text-blue-600 mr-3" />
-            <h1 className="heading-1 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
-              Ihr Solar-Schnellrechner
-            </h1>
+            <Heading as="h1" size="4xl" className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Ihr Solar-Schnellrechner</Heading>
           </div>
           <p className="lead text-gray-600 mb-6">
             Berechnen Sie Ihre persönliche Ersparnis in nur 2 Minuten

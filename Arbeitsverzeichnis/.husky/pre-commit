@@ -1,0 +1,51 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🎨 Running Design System Compliance Checks..."
+
+# Check for disallowed hex colors (excluding allowed ones)
+echo "Checking for disallowed hex colors..."
+DISALLOWED_COLORS=$(git diff --cached --name-only --diff-filter=AM | grep -E '\.(jsx?|tsx?|css|scss)$' | xargs grep -l '#[0-9a-fA-F]\{3,6\}' | xargs grep -v '#fff\|#000\|#ffffff\|#000000\|var(--color' || true)
+
+if [ ! -z "$DISALLOWED_COLORS" ]; then
+  echo "❌ Found disallowed hex colors. Please use design system tokens instead:"
+  echo "$DISALLOWED_COLORS"
+  echo ""
+  echo "Use CSS custom properties like var(--color-brand-navy) instead of hex values."
+  exit 1
+fi
+
+# Check for inline styles (with exceptions for dynamic styles)
+echo "Checking for inline styles..."
+INLINE_STYLES=$(git diff --cached --name-only --diff-filter=AM | grep -E '\.(jsx?|tsx?)$' | xargs grep -l 'style=' | xargs grep 'style=' | grep -v '// dynamic style\|// calculated style\|// exception' || true)
+
+if [ ! -z "$INLINE_STYLES" ]; then
+  echo "❌ Found inline styles. Please use className with design system utilities:"
+  echo "$INLINE_STYLES" | head -10
+  echo ""
+  echo "If inline styles are necessary for dynamic/calculated values, add a comment: // dynamic style"
+  exit 1
+fi
+
+# Check for non-token font-size usage
+echo "Checking for non-token font-size usage..."
+FONT_SIZE_USAGE=$(git diff --cached --name-only --diff-filter=AM | grep -E '\.(jsx?|tsx?|css|scss)$' | xargs grep -l 'font-size:' | xargs grep 'font-size:' | grep -v 'var(--font-size\|rem\|em' || true)
+
+if [ ! -z "$FONT_SIZE_USAGE" ]; then
+  echo "❌ Found non-token font-size usage. Please use design system font scale:"
+  echo "$FONT_SIZE_USAGE" | head -10
+  echo ""
+  echo "Use var(--font-size-*) tokens or relative units (rem/em) instead."
+  exit 1
+fi
+
+# Run ESLint with design system rules
+echo "Running ESLint with design system rules..."
+npx eslint --config .eslintrc.design-system.js $(git diff --cached --name-only --diff-filter=AM | grep -E '\.(jsx?|tsx?)$' | tr '\n' ' ')
+
+if [ $? -ne 0 ]; then
+  echo "❌ ESLint found design system violations. Please fix them before committing."
+  exit 1
+fi
+
+echo "✅ Design system compliance checks passed!"

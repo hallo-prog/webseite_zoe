@@ -187,4 +187,9 @@ i18n
     detection: { order: ['querystring','localStorage','navigator'], caches: ['localStorage'] }
   });
 
+export const preloadLocale = async (locale) => {
+  // Simple preload function - in a real app this would preload locale resources
+  return Promise.resolve();
+};
+
 export default i18n;

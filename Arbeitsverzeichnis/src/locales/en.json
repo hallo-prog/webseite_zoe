@@ -1,0 +1,198 @@
+{
+  "nav": {"start": "Home", "why": "Why ZOE?", "info": "Knowledge", "exp": "Stories", "calc": "Calculator", "deals": "Deals", "consult": "Free Consultation"},
+  "seo": {"home": {"title": "Buy solar – Cut your power bill by up to 50% | ZOE Solar", "desc": "Become energy independent in 2 minutes: free potential analysis, fixed price offer, 25 year warranty. Calculate your savings now!"}},
+  "hero": {"kicker": "Rising energy costs? Not for you!", "h1": "Slash your electricity bill – predictable & guaranteed.", "sub": "Know your savings in 2 minutes. Premium tech, fixed price offer, 25 year warranty and subsidies included.", "cta_calc": "Calculate savings", "cta_call": "Book 15‑min intro call"},
+  "common": {"skip_content": "Skip to content", "loading": {"calculator": "Loading calculator…", "voices": "Loading testimonials…", "form": "Loading form…", "section": "Loading section:"}},
+  "sections": {"start": "Start", "mission": "Why us", "impact": "Economics", "problem": "The Problem", "beweis": "Proof", "ablauf": "Process", "angebot": "Offer", "vergleich": "Comparison", "versprechen": "Safety Net", "schutz": "Security", "einwaende": "Objections", "faq": "FAQ", "cta": "Get started"},
+  "mission": {"why_now": "Why act now?", "headline_priv": "Cut power costs – without risk or overstatement", "headline_biz": "Reduce energy spend structurally – protect liquidity", "sub_priv": "Conservative yield basis, written fixed price, documented execution – you keep control & transparency.", "sub_biz": "We close CAPEX/OPEX blind spots, secure subsidy windows & provide a verifiable payback basis instead of wishful thinking.", "pains": ["Over‑optimistic yield calcs", "Unclear extra costs / change orders", "No responsibility post install"], "safeguards": ["Conservatively & in writing", "Fixed price + defined scope", "Documented handover & monitoring"], "outcomes_priv": ["Immediate traceable savings range", "Technical & regulatory safety", "Measurable ROI not gut feel"], "outcomes_biz": ["Liquidity‑friendly cashflow", "Technical & regulatory safety", "Measurable ROI not gut feel"], "chips": {"conservative": "Conservative", "written": "Written", "documented": "Documented"}, "pill": {"price_time": "Fixed price & date", "master": "Master led", "conservative": "Conservative basis", "handover": "Documented handover"}, "cards": {"problem": "Problem", "problem_title": "Where many fail", "solution": "Safeguard", "solution_title": "How we protect you", "outcome": "Outcome", "outcome_title": "Your tangible gain"}, "micro_headline": "See the realistic potential in 30s", "micro_sub": "No mandatory fields. You get a conservative range you can compare.", "micro_cta": "Check now", "micro_pills": {"no_sales": "No sales pressure", "roi": "ROI basis", "traceable": "Traceable"}, "pillars_title": "What we actually safeguard", "pillars": [{"h": "Yield basis", "d": "Conservative & documented – no peak scenario."},{"h": "Cost & scope", "d": "Fixed price + written scope."},{"h": "Schedule", "d": "Proposed fixed date & milestones."},{"h": "Handover & operation", "d": "Protocol, briefing, monitoring option."}], "matrix_title": "Risk → Safeguard", "matrix_cols": {"risk": "Risk", "mit": "Safeguard"}, "matrix_rows": [{"r": "Yield overstated", "m": "Conservative documented basis"},{"r": "Change orders", "m": "Fixed price + scope"},{"r": "Delays", "m": "Schedule & reserved slots"},{"r": "Quality gaps", "m": "Master‑led documentation"}]},
+  "scarcity": {"ribbon": {"msg_slots": "Only {{count}} install slots left this month","msg_action": "Countdown until end of day","msg_cta": "Reserve your slot now."}},
+  "popup": {
+    "common": {"email_invalid": "Please enter a valid email.", "submit_error": "Submission failed. Try again later.", "email_ok": "Thanks! We'll email you the info.", "sending": "Sending…", "receive": "Get it"},
+    "timed": {"title": "10‑min solar quick guide", "l1": "Savings / ROI – conservative range", "l2": "Battery: yes/no rule of thumb", "l3": "Subsidy check: what matters", "email_help": "1–2 emails/week, unsubscribe anytime.", "cta_calc": "Run calc", "btn_later": "Later", "email_placeholder": "Email"},
+    "exit": {"aria_title": "Before you leave", "title_base": "Quick reality check?", "desc_base": "Your realistic {savings/ROI} range in 30 seconds – no mandatory fields. Or get our concept sample by email.", "title_incentive": "Special: claim €500 install discount", "desc_incentive": "Get a one‑time <strong>€500 discount</strong> if you reserve an installation slot within 14 days after receiving your conservative range.", "btn_calc": "Check now", "btn_incentive": "Claim discount", "email_intro": "Or: concept sample via email"}
+  },
+  "einwaende": {
+    "eyebrow": "Typical objections",
+    "headline_priv": "Common misconceptions – clarified",
+    "headline_biz": "Frequent business case objections – addressed",
+    "simple_intro": "In short: conservative numbers, everything written, documented handover. That’s how you avoid nasty surprises.",
+    "simple_bullets": ["Conservative numbers","Fixed price + scope","Proposed fixed date","Documented handover"],
+    "sub_priv": "Short, factual & evidenced: why conservative numbers + documentation actually de‑risk.",
+    "sub_biz": "CAPEX / OPEX, cashflow & subsidy windows: clarity over delay – written & traceable.",
+    "chips": ["Conservative","Written","Traceable"],
+    "items_priv": [
+      { "q": "I'll wait for prices to drop", "a": "Price declines are flattening; missed monthly savings (opportunity cost) overtake potential price advantage quickly. Conservative range already €250–450 /mo." },
+      { "q": "Subsidy unclear – decide later", "a": "Subsidy windows & degression shift. Written basis + reservation secure conditions & slot – no obligation." },
+      { "q": "Yield calcs are always sugar‑coated", "a": "We expose assumptions conservatively (site, profile, degression). No peak values – everything documented in writing." },
+      { "q": "Fixed price = hidden change orders", "a": "Scope, schedule & technical basis defined in writing. Changes only with your explicit approval." }
+    ],
+    "items_biz": [
+      { "q": "CAPEX ties up liquidity", "a": "Conservative ROI basis + subsidy / depreciation levers show the real cashflow effect. Typical +1–3% EBIT – documented." },
+      { "q": "Load profile still unclear", "a": "We use conservative bands + sensitivities. Refinements are versioned – no overstatement." },
+      { "q": "Market prices may fall", "a": "Volatility persists; planning a share of self‑power reduces risk now. Waiting increases unrecovered opportunity gap." },
+      { "q": "Internal resources lacking", "a": "Structured roadmap + doc templates minimise internal effort. Grid & subsidy processes handled by us." }
+    ],
+    "block_headline": "What makes the decision robust",
+    "block_text": "You receive a conservative range + written basis before commitment – not just an optimistic figure.",
+    "block_list": ["Conservative yield & payback basis","Fixed price + scope documented","Fixed date proposal & milestones","Subsidy & grid pre‑check"],
+    "risk_title": "Risks of waiting",
+    "risk_pairs": [
+      { "r": "Opportunity cost", "m": "Monthly savings foregone" },
+      { "r": "Subsidy window", "m": "Programs / degression shift" },
+      { "r": "Install slots", "m": "Capacity is limited" },
+      { "r": "Price volatility", "m": "Uncertain procurement costs stay" }
+    ]
+  },
+  "problem": {"progress_label": "Step progress", "savings_ticker_priv": "Avg home: €250–450 /mo", "savings_ticker_biz": "+1–3% EBIT cashflow effect"},
+  
+  "hero_ext": {"head_priv_prefix": "Slash your electricity costs – ", "head_biz_prefix": "Cut energy spend intelligently – ", "head_priv_prefix_alt": "Halve your power costs – ", "head_biz_prefix_alt": "Reduce energy spend structurally – ", "words_priv": ["predictable","secure","traceable"], "words_biz": ["cash‑flow strong","tax efficient","transparent"], "badge_rating": "4.9/5 • Fixed price • Fixed date", "badge_list": {"festpreis": "Fixed price", "fixtermin": "Fixed date", "handover": "Documented handover"}, "cta_calc_priv": "Check savings", "cta_calc_biz": "Check ROI", "cta_contact": "15‑min intro call", "microline_priv": "Realistic range – fixed price, date & handover in writing. No pressure.", "microline_biz": "Robust ROI – scope, date & responsibility written. No sales pressure.", "simple_bullets_priv": ["Conservative","Fixed price","No pressure"], "simple_bullets_biz": ["Conservative ROI","Fixed scope","Transparent"], "alt": "Solar power for your home", "inline_quality": "4.9/5 quality", "inline_capacity": "12,300+ kWp delivered", "persona_toggle": {"privat": "Home", "gewerbe": "Business"}, "price_trend_label": "Avg market power price (12M)", "price_trend_hint": "Rising volatility = higher risk", "volatility": "Volatility", "last_update": "Updated"},
+  "cta": {"final": {"headline": "Get a conservative basis before you decide", "sub": "Yield & payback range, fixed price & proposed date – transparent & written.", "primary_priv": "Check savings now", "primary_biz": "Check ROI now", "secondary": "15‑min advisory call", "chip_no_commit": "No obligation", "chip_transparency": "Transparent assumptions", "chip_handover": "Documented handover", "trust_list": {"warranty": "25y components", "fixed_price": "Written fixed price", "no_sales_pressure": "No sales pressure", "master_led": "Master led", "scheduled": "Scheduled"}, "micro_kpis_priv": [{"label": "Avg savings", "value": "€250–450 /mo"}, {"label": "Avg autonomy", "value": "75–85%"}, {"label": "Payback conservative", "value": "8–11 y"}], "micro_kpis_biz": [{"label": "EBIT impact", "value": "+1–3%"}, {"label": "Avg autonomy", "value": "55–70%"}, {"label": "Payback conservative", "value": "6–9 y"}], "urgency_badges": ["Subsidy window", "Limited slots", "Price volatility"], "aria_kpi_grid": "CTA key metrics"}, "sticky": {"priv_msg": "Save 250–450 €/mo", "biz_msg": "Earn with solar: calc ROI", "calc_priv": "Check", "calc_biz": "ROI", "contact_priv": "Advisory", "contact_biz": "Call"}},
+  "metrics": {"aria": "Key metrics", "avg_rating": "Ø Rating", "installed_capacity": "Installed capacity", "avg_amort_priv": "Ø Payback (home)", "on_time": "On‑time", "avg_autarky": "Ø Autarky"},
+  "availability": {"window": "Install window in {{startDays}}–{{endDays}} days · 2 free slots daily"},
+  "partners": {"trusted_by": "Trusted by", "partner_alt": "Partner {{index}}"},
+  "versprechen": {"eyebrow": "Planning & Protection", "title": "The safety net for your investment", "subtitle": "Every promise in writing: conservative base numbers, master‑led execution, clear responsibility.", "top": [{"title": "Transparency", "points": ["Fixed price & written scope","Traceable yield calc upfront","No hidden extras"]}, {"title": "Quality", "points": ["Master‑led documented install","Brand components sized right","Clean handover incl. briefing"]}, {"title": "Security", "points": ["Grid operator coordination","Commissioning with protocol","Reachable service"]}], "mid": [{"title": "Fixed price – means", "points": ["Scope defined in writing","No later material markups","Changes only with written approval"]}, {"title": "Scheduling", "points": ["Fixed date in the offer","10–14 day install window","Limited daily slots"]}, {"title": "Reachable service", "points": ["Dedicated contact","Documented handover & briefing","Optional monitoring & maintenance"]}], "chips": ["4.9/5 · 250+ reviews","All in writing","No sales pressure"], "cta_calc": "Check in 30s", "cta_contact": "Intro call", "disclaimer": "No cold calls. No uncontrolled subcontract chain.", "disclaimer_sub": "Fixed price subject to on‑site check.", "kpis_priv": [{"label": "Avg savings range", "value": "€250–450 /mo"}, {"label": "Avg autonomy", "value": "75–85%"}, {"label": "Payback conservative", "value": "8–11 y"}], "kpis_biz": [{"label": "EBIT cashflow impact", "value": "+1–3%"}, {"label": "Avg autonomy", "value": "55–70%"}, {"label": "Payback conservative", "value": "6–9 y"}], "kpi_heading_priv": "Your KPIs", "kpi_heading_biz": "Project KPIs", "risk_title": "How risk is inverted", "risk_col_risk": "Risk", "risk_col_mit": "Mitigation", "risk_pairs": [{"risk": "Over‑optimistic yield assumptions", "mit": "Conservative documented basis"}, {"risk": "Variable costs / change orders", "mit": "Fixed price + scope written"}, {"risk": "Unclear responsibilities", "mit": "Central master responsibility"}, {"risk": "Late subsidy / grid hurdles", "mit": "Early subsidy & grid check"}], "guarantee_title": "Written safeguards", "guarantee_points": ["Fixed price & schedule","Conservative yield basis","Documented handover","Monitoring option"], "legend_risk": "Risk", "legend_mit": "Safeguard", "legend_aria": "Legend", "aria_kpi_grid": "Safety net KPIs", "aria_risk_table": "Risk inversion table"},
+  "cert": {"headline": "Technical conformity & grid alignment", "sub": "Our planning, installation and commissioning follow standards & regional grid rules – documented for safe operation.", "simple_intro": "Key: Standards met, grid cleared, handover documented.", "simple_bullets": ["Grid cleared","VDE compliant","Documented"], "badge": "Certifications", "sub_headline": "Safe grid & technical standard", "paragraph": "Coordination with grid operators, tested components (VDE) and documented commissioning – so your system runs stable & compliant.", "bullets": ["Grid-operator compliant planning", "VDE tested components", "Documented handover & logs"], "chips": {"net_approved": "Grid operator aligned", "tech_checked": "Tech verified", "docs": "Logs & documents"}, "logo_labels": {"edis": "E.DIS grid operator", "hwk": "Chamber of Crafts", "stromnetz_berlin": "Stromnetz Berlin", "vde": "VDE Certification"}},
+  "schutz": {"headline": "Your protection architecture", "sub": "Risk inverted: documented scope, transparent assumptions, monitored execution & written handover.", "simple_intro": "Short: Written scope, conservative assumptions, documented handover – less risk.", "simple_bullets": ["Fixed price","Conservative","Documented","Service"], "pillars": [{"title": "Written scope", "points": ["Fixed price + scope in writing","No hidden extras","Change control documented"]}, {"title": "Execution quality", "points": ["Master‑led team","VDE / code compliant","Handover protocol"]}, {"title": "Operational security", "points": ["Monitoring ready","Grid & subsidy pre‑check","Service reachable"]}], "matrix": {"headline": "Risk / Safeguard", "cols": {"risk": "Risk", "mit": "Safeguard"}, "rows": [{"risk": "Cost creep", "mit": "Fixed price + scope"}, {"risk": "Delay uncertainty", "mit": "Scheduled slots"}, {"risk": "Responsibility gaps", "mit": "Master ownership"}, {"risk": "Quality variance", "mit": "Documented protocol"}]}, "guarantees": {"headline": "Guarantee timeline", "items": [{"label": "Offer", "desc": "Fixed price + scope"}, {"label": "Scheduling", "desc": "Install window proposal"}, {"label": "Execution", "desc": "Master supervised"}, {"label": "Handover", "desc": "Protocol + briefing"}]}, "coverage": {"headline": "Coverage vs. market", "cols": {"aspect": "Aspect", "zoe": "ZOE", "market": "Typical"}, "rows": [{"aspect": "Yield basis", "zoe": "Conservative written", "market": "Optimistic verbal"}, {"aspect": "Scope clarity", "zoe": "Detailed written", "market": "Fragmented"}, {"aspect": "Schedule", "zoe": "Fixed + milestones", "market": "Vague"}, {"aspect": "Handover docs", "zoe": "Protocol + briefing", "market": "Shortened"}]}, "chips": ["Fixed price","Written scope","Documented handover"], "cta_calc_priv": "Check savings", "cta_calc_biz": "Check ROI", "cta_contact": "Short call", "aria_pillars": "Security pillars", "aria_matrix": "Risk safeguard matrix", "aria_coverage": "Coverage comparison"},
+  "faq": {"headline": "Frequent questions – concise & honest", "simple_intro": "Key questions on numbers, process, costs & operation – plain language.", "simple_bullets": ["Conservative","Fixed price","Fixed date","Service"], "search_placeholder": "Search (e.g. subsidy)", "search_aria": "Search FAQ", "open_all": "Open all", "close_all": "Close all", "no_results": "No results. Adjust search.", "clear_search": "Reset", "groups": []},
+  "testimonials": {"aria": "Customer voices", "status": "{{count}} testimonials. Page {{page}} of {{pages}}. {{state}}", "paused": "Auto rotation paused.", "running": "Auto rotation every 6s.", "play_label": "Auto", "pause_label": "Pause", "prev": "Previous", "next": "Next", "page": "Page {{page}}", "rating_value": "5.0", "items": []},
+  "beweis": {"simple_intro": "In short: Many real installs, happy customers, deadlines kept. All traceable.", "simple_bullets": ["Many real projects","High satisfaction","On-time"], "stats_help": ["Completed systems","Avg rating all channels","Delivered on time"], "toggle_priv": "Home KPIs", "toggle_biz": "Business KPIs", "disclaimer": "Figures = conservative examples / experience values. Results vary by site, roof, load profile & subsidy situation."}
+  ,"impact": {
+    "eyebrow": "Economic lever",
+    "headline_priv": "Make your monthly savings potential predictable",
+    "headline_biz": "Cut energy spend – protect cashflow & EBIT",
+    "sub_priv": "Conservatively calculated range, written fixed price & documented execution – basis for a decision without sales pressure.",
+    "sub_biz": "Transparent ROI basis, CAPEX/OPEX separated & subsidy optimised – robust instead of marketing figure.",
+  "simple_intro": "In short: we show a cautious range and expose assumptions – written & traceable.",
+  "simple_bullets": ["Conservative basis","All in writing","Assumptions open","No sales pressure"],
+  "kpi_help": ["Time until investment pays back","Avg home savings range","EBIT cashflow effect"],
+    "chips": ["Conservative","Written","Traceable","EBIT impact"],
+    "lever_title": "Core value levers",
+    "levers": [
+      {"h": "Direct power cost reduction", "d": "Self-consumption optimised – conservative kWh yield basis not peak scenario."},
+      {"h": "Hedge against price hikes", "d": "Fixed share of your consumption becomes predictable – lowers volatility."},
+      {"h": "Subsidy & tax optimisation", "d": "Programs, degression & tax treatment integrated early."},
+      {"h": "Documented handover & monitoring", "d": "Secure operation & early deviation detection."}
+    ],
+    "kpis": [
+      {"icon": "LineChart", "label": "Ø Payback", "value": "8–11 y", "note": "Conservative – depends on roof & profile."},
+      {"icon": "PiggyBank", "label": "Monthly effect", "value": "€250–450", "note": "Home – after commissioning (range)."},
+      {"icon": "Factory", "label": "EBIT impact", "value": "+1–3%", "note": "Business – load profile dependent."}
+    ],
+    "range_title": "Your conservative range",
+    "range_text": "We show a traceable basis: {{range}} savings / contribution – no overstatement.",
+  "range_reassure": "Conservative & written – no sales pressure.",
+    "calc_range_priv": "€250–450 /mo",
+    "calc_range_biz": "Cashflow +1–3%",
+    "range_bullets": ["Site & consumption data included","Assumptions transparent","Subsidy potential flagged","No mandatory fields"],
+    "range_chips": ["Conservative","Written","Comparable"],
+    "cta_calc_short": "Check range",
+    "cta_contact_short": "Call",
+    "cta_calc_priv": "Check savings",
+    "cta_calc_biz": "Check ROI",
+    "cta_contact": "Short call",
+    "window_title": "Current action window",
+    "window_text": "Subsidy applications & delivery windows shift. Those who document now secure conditions & install slot.",
+    "window_chips": ["Subsidy window","Slot securing","Price volatility"],
+    "delta_title": "What you actually receive",
+    "delta_text": "Compressed, verifiable decision set – less uncertainty, more financial clarity.",
+    "delta_list": ["Conservative yield & payback basis","Fixed price + scope in writing","Fixed date proposal & milestones","Subsidy & grid pre-check","Documented handover & monitoring option"]
+  }
+  ,"offer": {
+    "eyebrow": "Packages",
+    "title_priv": "The right package for your roof",
+    "title_biz": "The scalable package for your project",
+    "subtitle": "Choose the approach – conservative yield basis & written fixed price follow after a few details.",
+  "simple_intro_priv": "Three levels – all include a conservative yield basis, fixed price & clean documentation. Just pick how much comfort you want.",
+  "simple_intro_biz": "Scalable scope: from base design to detailed documentation & redundancy. Each step builds clearly on the previous.",
+    "tiers": {"smart": "Smart", "komfort": "Comfort", "premium": "Premium", "recommended": "Recommended"},
+    "features": {"header_priv": "Performance & Equipment", "header_biz": "Scope & Equipment"},
+    "featureSets": {
+      "priv": {
+        "smart": ["Modules + inverter · storage optional","Transparent base sizing","Monitoring & handover","Wallbox preparation"],
+        "komfort": ["Modules, inverter, storage 5–10 kWh","Optimised design (incl. shading)","Monitoring · App · documentation","Optional wallbox integration"],
+        "premium": ["High‑efficiency modules + hybrid inverter","Storage 10–15 kWh (optimised)","Detailed design incl. strings/statics","Wallbox & backup power option"]
+      },
+      "biz": {
+        "smart": ["Modules + string inverter · storage optional","Transparent base design","Monitoring & handover","Grid / EEG check included"],
+        "komfort": ["Modules, string / central inverter","Load mgmt & optimised design","Monitoring · App · documentation","Subsidy check & application"],
+        "premium": ["High‑efficiency modules, redundancy","Detailed design (strings/statics)","Advanced monitoring & protocol","Utility coordination & PPA option"]
+      }
+    },
+    "matrix": {
+      "headline": "Differences at a glance",
+      "rows": [
+        {"label": "Storage option", "smart": "Optional", "komfort": "5–10 kWh", "premium": "10–15 kWh"},
+  {"label": "Design & shading", "smart": "Base", "komfort": "Optimised", "premium": "Detail / statics"},
+        {"label": "Monitoring", "smart": "Standard", "komfort": "Advanced", "premium": "Advanced + protocol"},
+        {"label": "Subsidy / EEG", "smart": "Check", "komfort": "Check + application", "premium": "Strategic"},
+        {"label": "Wallbox / load mgmt", "smart": "Prepared", "komfort": "Optional integration", "premium": "Integrated / redundancy"}
+      ],
+      "col_smart": "Smart",
+      "col_komfort": "Comfort",
+      "col_premium": "Premium"
+    },
+    "pills": {"price": "Fixed price written", "conservative": "Conservative", "no_hidden": "No hidden costs"},
+    "tier_benefits_label": "Plain explainer",
+    "tier_benefits": {
+      "priv": {
+        "smart": ["Solid start – storage can be added later","Transparent base design"],
+        "komfort": ["Optimised design + right sized storage","All key docs & monitoring included"],
+        "premium": ["Max efficiency + larger storage","Detailed planning & options like backup"]
+      },
+      "biz": {
+        "smart": ["Foundation for quick economics check","Monitoring & grid/subsidy check included"],
+        "komfort": ["Optimised design + load management","Subsidy application & documentation"],
+        "premium": ["Redundancy + detailed engineering","Advanced monitoring & utility/PPA option"]
+      }
+    },
+    "kpis_priv": [
+      {"label": "Avg savings", "value": "€250–450 /mo"},
+      {"label": "Avg autonomy", "value": "75–85%"},
+      {"label": "Payback conservative", "value": "8–11 y"}
+    ],
+    "kpis_biz": [
+      {"label": "EBIT impact", "value": "+1–3%"},
+      {"label": "Avg autonomy", "value": "55–70%"},
+      {"label": "Payback conservative", "value": "6–9 y"}
+    ],
+    "micro_note_priv": "Range conservative · written",
+    "micro_note_biz": "ROI basis conservative · written",
+    "cta_contact": "Request concrete offer",
+    "cta_calc_priv": "Check savings",
+    "cta_calc_biz": "Check ROI",
+    "fix_headline": "Fixed guaranteed",
+    "fix_points": ["Conservative yield & payback basis in writing","Fixed price & scope (no hidden costs)","Schedule & milestones","Subsidy check & handling","Master‑led installation & handover protocol"],
+    "disclaimer": "Realistic & fair: timelines are reference values. Offer subject to on‑site check.",
+    "rate_headline": "Investment as a monthly rate",
+    "rate_note": "No financial advice · details in call.",
+    "badge_recommend": "Most chosen",
+    "aria_tier_tabs": "Package selection",
+    "aria_matrix": "Package feature comparison"
+  }
+  ,"comparison": {
+    "headline": "Why structure & documentation matter",
+    "sub": "Core differences that make your investment plannable – and typical weak spots in the market.",
+    "chips": {"responsibility": "Responsibility", "written": "Written", "dates": "Fixed dates", "conservative": "Conservative"},
+    "features": {"ertragsbasis": "Yield & payback basis", "festpreis": "Fixed price + scope", "foerder": "Subsidy handling", "terminplan": "Schedule", "monitoring": "Monitoring & handover", "subunternehmer": "Sub‑contractor control", "handover": "Documented handover", "transparency": "Assumption transparency"},
+    "rows": [
+      {"k": "Yield & payback basis", "a": "conservative & written", "b": "optimistic best case"},
+      {"k": "Fixed price + scope", "a": "fixed & transparent", "b": "change orders likely"},
+      {"k": "Subsidy handling", "a": "included", "b": "self manage"},
+      {"k": "Schedule", "a": "fixed dates + milestones", "b": "variable / vague"},
+      {"k": "Monitoring & handover", "a": "included", "b": "optional"},
+      {"k": "Sub‑contractor control", "a": "central responsibility", "b": "often unclear"},
+      {"k": "Documented handover", "a": "protocol & briefing", "b": "often shortened"},
+      {"k": "Assumption transparency", "a": "fully disclosed", "b": "hardly detailed"}
+    ],
+    "micro_cta": "Check your conservative range",
+    "cta_calc": "Check now",
+    "aria_table": "Comparison ZOE Solar vs. market standard",
+  "mobile_label": "Comparison (mobile)",
+  "legend_yes": "Present / assured",
+  "legend_no": "Missing / unsure",
+  "legend_focus": "Our focus: planning & written clarity",
+  "legend_aria": "Legend",
+  "to_offer_cta": "See packages now"
+  }
+  ,"ablauf": {"eyebrow": "Process", "title": "≈14 days to a solid decision", "subtitle": "Structure over sales pressure: documented stages, written basis, clear accountability.", "simple_intro": "4 documented stages – conservative, written, no pressure.", "simple_bullets": ["Conservative","Fixed price","Fixed date"], "steps": [{"badge": "Day 0–2", "title": "Kickoff & Short Concept", "duration": "30–45 min", "desc": "Check roof & meter, core data, first conservative range.", "chips": ["no mandatory docs","remote / on-site","first range"]}, {"badge": "Day 3–6", "title": "Pre-Check & Economics", "duration": "2–3 days", "desc": "Site data, shading, subsidy / EEG, load profile indication.", "chips": ["subsidy check","site data","conservative"]}, {"badge": "Day 7–10", "title": "Fixed Price & Schedule", "duration": "1–2 days", "desc": "Scope, fixed date proposal, milestones documented.", "chips": ["fixed price","timeline","transparency"]}, {"badge": "Day 11–14", "title": "Decision & Reservation", "duration": "optional", "desc": "Clarify open points, reserve components, grid pre‑request.", "chips": ["no pressure","reservation","grid pre‑checked"]}], "cta_title": "Your tailored roadmap – free", "cta_sub": "Conservative & written. No obligation.", "cta_btn": "Request roadmap", "disclaimer": "Time windows = experience values. Variations per roof / complexity possible.", "deliverables_title": "Documented deliverables", "deliverables": ["Short concept (PDF) – variants","Yield & payback base","Fixed date proposal + milestones","Subsidy check","Fixed price offer"], "why_title": "Why a structured roadmap?", "why_items": ["Reduces mis-decisions","Clear accountability","Faster ROI comparison","Early subsidy securing"], "fair_note": "Fair: Fixed price subject to on-site verification. No hidden costs.", "progress_label": "Progress", "progress_hint": "Structure over pressure", "persona_note_priv": "Residential: Right-sized early – risk down", "persona_note_biz": "Business: CAPEX/OPEX transparent early", "kpi_yield": "Yield", "kpi_risk": "Risk ↓", "kpi_docs": "Docs", "step_cta_calc": "Check range", "step_cta_contact": "Questions?", "mini_metrics": [{"label": "Avg planning time", "note": "≤14 days"}, {"label": "On-time delivery", "note": "98%"}, {"label": "Avg autonomy", "note": "75–85%"}, {"label": "ROI range", "note": "8–11 yrs"}], "why_note": "Structure reduces mis-decisions & change orders."}
+}

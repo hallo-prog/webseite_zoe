@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Pill } from '@/components/ui/pill';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
+import { Section } from '../components/ui/section';
 
 export default function Service() {
   const { t } = useTranslation();
@@ -167,9 +168,8 @@ export default function Service() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Hero Section */}
+  <Section padding="normal" variant="gradient" className="bg-gradient-to-br from-blue-50 to-indigo-50" size="wide">
           <div className="text-center mb-16">
             <Pill variant="light" className="mb-4">Service & Wartung</Pill>
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -196,23 +196,21 @@ export default function Service() {
           </div>
 
           {/* Service Stats */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 tabular-nums">
             {serviceStats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-gray-900 mb-2 tabular-nums">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+  </Section>
 
-      {/* Service Packages */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 content-lg">
+  {/* Service Packages */}
+  <Section padding="normal" variant="plain" size="wide">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Unsere Service-Pakete</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -220,7 +218,7 @@ export default function Service() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 flow">
             {servicePackages.map((pkg, index) => (
               <Card key={index} className={`pro-card relative ${pkg.popular ? 'ring-2 ring-blue-500' : ''}`}>
         {pkg.popular && (
@@ -253,12 +251,10 @@ export default function Service() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
+  </Section>
 
-      {/* Emergency Services */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 content-lg">
+  {/* Emergency Services */}
+  <Section padding="normal" variant="neutral" size="wide">
           <div className="text-center mb-16">
             <Pill variant="light" className="mb-4 bg-red-100 text-red-800 border-red-200">Notfall-Service</Pill>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Schnelle Hilfe im Notfall</h2>
@@ -267,7 +263,7 @@ export default function Service() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 flow">
             {emergencyServices.map((service, index) => (
               <Card key={index} className="pro-card text-center">
                 <CardContent className="p-8">
@@ -284,12 +280,10 @@ export default function Service() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
+  </Section>
 
-      {/* Authority Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Authority Section */}
+  <Section padding="tight" variant="plain" size="wide">
           <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
             <CardContent className="p-8">
               <div className="flex items-start space-x-6">
@@ -309,12 +303,10 @@ export default function Service() {
               </div>
             </CardContent>
           </Card>
-        </div>
-      </section>
+  </Section>
 
-      {/* Loss Aversion */}
-      <section className="py-16 bg-gradient-to-r from-red-50 to-orange-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Loss Aversion */}
+  <Section padding="tight" variant="gradient" className="bg-gradient-to-r from-red-50 to-orange-50" size="wide">
           <Card className="bg-white/50 border-red-200">
             <CardContent className="p-8 text-center">
               <div className="flex items-center justify-center mb-4">
@@ -326,33 +318,31 @@ export default function Service() {
                 Schmutz, Defekte, Verschleiß kosten Sie €500-1.000/Jahr extra.
                 Mit unserem Service sparen Sie €800+ jährlich!
               </p>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="grid md:grid-cols-3 gap-6 text-center tabular-nums">
                 <div>
-                  <div className="text-2xl font-bold text-red-600">-20%</div>
+                  <div className="text-2xl font-bold text-red-600 tabular-nums">-20%</div>
                   <div className="text-sm text-red-600">Ertragsverlust ohne Wartung</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-red-600">€1.000+</div>
+                  <div className="text-2xl font-bold text-red-600 tabular-nums">€1.000+</div>
                   <div className="text-sm text-red-600">Jährliche Mehrkosten</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-green-600">€800+</div>
+                  <div className="text-2xl font-bold text-green-600 tabular-nums">€800+</div>
                   <div className="text-sm text-green-600">Ersparnis mit Service</div>
                 </div>
               </div>
             </CardContent>
           </Card>
-        </div>
-      </section>
+  </Section>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Testimonials */}
+  <Section padding="tight" variant="neutral" size="wide">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Service-Kundenstimmen</h2>
             <p className="text-gray-600">Zuverlässigkeit, die überzeugt</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 flow">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="pro-card">
                 <CardContent className="p-6">
@@ -372,13 +362,12 @@ export default function Service() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
+  </Section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12">
+  {/* CTA Section */}
+  <Section padding="normal" variant="gradient" className="bg-gradient-to-r from-blue-600 to-green-600" size="wide">
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 flow">
             <h2 className="text-3xl font-bold text-white mb-6">
               Sorgenfrei in die Zukunft
             </h2>
@@ -387,7 +376,7 @@ export default function Service() {
               Jetzt kostenlose Erstberatung anfordern.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-4 text-lg"
@@ -422,7 +411,7 @@ export default function Service() {
             </Card>
           </div>
         </div>
-      </section>
+      </Section>
     </div>
   );
 }

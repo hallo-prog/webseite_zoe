@@ -1,0 +1,262 @@
+{
+  "aggregate": {
+    "generatedAt": "2025-09-02T12:23:57.585Z",
+    "totalFilesWithMt": 7,
+    "totalMtOccurrences": 29,
+    "topFiles": [
+      {
+        "file": "Arbeitsverzeichnis/src/pages/Contact_new.jsx",
+        "total": 10
+      },
+      {
+        "file": "Arbeitsverzeichnis/src/pages/Calculator.jsx",
+        "total": 7
+      },
+      {
+        "file": "Arbeitsverzeichnis/src/pages/Blog.jsx",
+        "total": 4
+      },
+      {
+        "file": "Arbeitsverzeichnis/src/pages/Pricing.jsx",
+        "total": 3
+      },
+      {
+        "file": "Arbeitsverzeichnis/src/pages/About.jsx",
+        "total": 2
+      },
+      {
+        "file": "Arbeitsverzeichnis/src/pages/Service.jsx",
+        "total": 2
+      },
+      {
+        "file": "Arbeitsverzeichnis/src/pages/SuccessStories.jsx",
+        "total": 1
+      }
+    ]
+  },
+  "files": [
+    {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/About.jsx",
+      "total": 2,
+      "occurrences": [
+        {
+          "line": 372,
+          "count": 1,
+          "text": "<p className=\"text-xs sm:text-sm text-gray-500 mt-2\">{testimonial.project}</p>"
+        },
+        {
+          "line": 402,
+          "count": 1,
+          "text": "<div className=\"mt-12 text-center\">"
+        }
+      ],
+      "large": [
+        {
+          "line": 402,
+          "value": "mt-12",
+          "text": "<div className=\"mt-12 text-center\">"
+        }
+      ],
+      "consecutiveGroups": []
+    },
+    {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Blog.jsx",
+      "total": 4,
+      "occurrences": [
+        {
+          "line": 43,
+          "count": 1,
+          "text": "<p className=\"lead max-w-2xl mx-auto text-gray-500 mt-4\">{t('blog.subtitle')}</p>"
+        },
+        {
+          "line": 52,
+          "count": 1,
+          "text": "<p className=\"mt-2 text-gray-500\">Der automatische Prozess zur Beitragserstellung läuft täglich. Schauen Sie bald wieder vorbei!</p>"
+        },
+        {
+          "line": 53,
+          "count": 1,
+          "text": "<p className=\"mt-4 text-sm text-gray-400\">(Entwicklung: API via HTTPS-Proxy bereitzustellen empfohlen – setzen Sie ggf. VITE_API_BASE_URL. Vermeiden Sie Mixed Content durch unverschlüsselte http:// Aufrufe.)</p>"
+        },
+        {
+          "line": 66,
+          "count": 1,
+          "text": "<div className=\"mt-4 flex items-center font-semibold text-blue-600\">"
+        }
+      ],
+      "large": [],
+      "consecutiveGroups": [
+        [
+          52,
+          53
+        ]
+      ]
+    },
+    {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Calculator.jsx",
+      "total": 7,
+      "occurrences": [
+        {
+          "line": 206,
+          "count": 1,
+          "text": "className=\"mt-2 text-lg\""
+        },
+        {
+          "line": 210,
+          "count": 1,
+          "text": "<p className=\"text-sm text-gray-500 mt-1\">Messbare Fläche ohne Hindernisse</p>"
+        },
+        {
+          "line": 219,
+          "count": 1,
+          "text": "className=\"mt-2 text-lg\""
+        },
+        {
+          "line": 223,
+          "count": 1,
+          "text": "<p className=\"text-sm text-gray-500 mt-1\">Aus Ihrer letzten Stromrechnung</p>"
+        },
+        {
+          "line": 233,
+          "count": 1,
+          "text": "className=\"mt-2 text-lg\""
+        },
+        {
+          "line": 237,
+          "count": 1,
+          "text": "<p className=\"text-sm text-gray-500 mt-1\">Arbeitspreis ohne Grundgebühr</p>"
+        },
+        {
+          "line": 291,
+          "count": 1,
+          "text": "<p className=\"text-xs sm:text-sm text-red-600 mt-1\">"
+        }
+      ],
+      "large": [],
+      "consecutiveGroups": []
+    },
+    {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Contact_new.jsx",
+      "total": 10,
+      "occurrences": [
+        {
+          "line": 270,
+          "count": 1,
+          "text": "<div className=\"flex items-center space-x-2 mt-4\">"
+        },
+        {
+          "line": 281,
+          "count": 1,
+          "text": "<Input id=\"name\" required value={formData.name} onChange={(e) => handleInputChange('name', e.target.value)} className={`mt-1 ${errors.name ? 'border-red-500' : ''}`} />"
+        },
+        {
+          "line": 284,
+          "count": 1,
+          "text": "<Input id=\"email\" type=\"email\" required value={formData.email} onChange={(e) => handleInputChange('email', e.target.value)} className={`mt-1 ${errors.email ? 'border-red-500' : ''}`} />"
+        },
+        {
+          "line": 289,
+          "count": 1,
+          "text": "<Input id=\"phone\" type=\"tel\" required value={formData.phone} onChange={(e) => handleInputChange('phone', e.target.value)} className={`mt-1 ${errors.phone ? 'border-red-500' : ''}`} />"
+        },
+        {
+          "line": 293,
+          "count": 1,
+          "text": "<SelectTrigger className=\"mt-1\">"
+        },
+        {
+          "line": 306,
+          "count": 1,
+          "text": "<Input id=\"address\" required value={formData.address} onChange={(e) => handleInputChange('address', e.target.value)} className={`mt-1 ${errors.address ? 'border-red-500' : ''}`} placeholder=\"Straße, Hausnummer, PLZ, Ort\" />"
+        },
+        {
+          "line": 315,
+          "count": 1,
+          "text": "<SelectTrigger className=\"mt-1\">"
+        },
+        {
+          "line": 329,
+          "count": 1,
+          "text": "<SelectTrigger className=\"mt-1\">"
+        },
+        {
+          "line": 344,
+          "count": 1,
+          "text": "<SelectTrigger className=\"mt-1\">"
+        },
+        {
+          "line": 360,
+          "count": 1,
+          "text": "<Textarea id=\"message\" value={formData.message} onChange={(e) => handleInputChange('message', e.target.value)} className=\"mt-1\" rows={4} placeholder=\"z.B. Besonderheiten des Dachs, gewünschte Speicherlösung, etc.\" />"
+        }
+      ],
+      "large": [],
+      "consecutiveGroups": []
+    },
+    {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Pricing.jsx",
+      "total": 3,
+      "occurrences": [
+        {
+          "line": 74,
+          "count": 1,
+          "text": "<div className=\"mt-10 flex flex-wrap gap-5 justify-center\">"
+        },
+        {
+          "line": 95,
+          "count": 1,
+          "text": "<p className=\"mt-4 text-xl text-gray-600\">TÜV-zertifizierte Qualität mit 25 Jahren Garantie</p>"
+        },
+        {
+          "line": 128,
+          "count": 1,
+          "text": "<p className=\"mt-4 text-xl text-gray-600\">Erfahrungen mit unseren Solarpaketen</p>"
+        }
+      ],
+      "large": [
+        {
+          "line": 74,
+          "value": "mt-10",
+          "text": "<div className=\"mt-10 flex flex-wrap gap-5 justify-center\">"
+        }
+      ],
+      "consecutiveGroups": []
+    },
+    {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/Service.jsx",
+      "total": 2,
+      "occurrences": [
+        {
+          "line": 231,
+          "count": 1,
+          "text": "<div className=\"text-3xl font-bold text-blue-600 mt-2\">{pkg.price}</div>"
+        },
+        {
+          "line": 232,
+          "count": 1,
+          "text": "<p className=\"text-gray-600 mt-2\">{pkg.description}</p>"
+        }
+      ],
+      "large": [],
+      "consecutiveGroups": [
+        [
+          231,
+          232
+        ]
+      ]
+    },
+    {
+      "file": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src/pages/SuccessStories.jsx",
+      "total": 1,
+      "occurrences": [
+        {
+          "line": 287,
+          "count": 1,
+          "text": "<div className=\"mt-2 text-sm text-gray-600 font-semibold\">"
+        }
+      ],
+      "large": [],
+      "consecutiveGroups": []
+    }
+  ]
+}

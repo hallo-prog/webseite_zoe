@@ -1,0 +1,477 @@
+{
+  "generatedAt": "2025-09-01T00:56:09.215Z",
+  "baseDir": "/workspaces/webseite_zoe/Arbeitsverzeichnis/src",
+  "totals": {
+    "files": 109
+  },
+  "components": [
+    {
+      "name": "About",
+      "file": "pages/About.jsx"
+    },
+    {
+      "name": "API_BASE",
+      "file": "utils/api.js"
+    },
+    {
+      "name": "App",
+      "file": "App.jsx"
+    },
+    {
+      "name": "Badge",
+      "file": "components/ui/badge.jsx"
+    },
+    {
+      "name": "Blog",
+      "file": "pages/Blog.jsx"
+    },
+    {
+      "name": "BlogPost",
+      "file": "pages/BlogPost.jsx"
+    },
+    {
+      "name": "Bundles",
+      "file": "components/sections/v4/Bundles.jsx"
+    },
+    {
+      "name": "Button",
+      "file": "components/ui/button.jsx"
+    },
+    {
+      "name": "Calculator",
+      "file": "pages/Calculator.jsx"
+    },
+    {
+      "name": "Card",
+      "file": "components/ui/card.jsx"
+    },
+    {
+      "name": "CardContent",
+      "file": "components/ui/card.jsx"
+    },
+    {
+      "name": "CardHeader",
+      "file": "components/ui/card.jsx"
+    },
+    {
+      "name": "CardTitle",
+      "file": "components/ui/card.jsx"
+    },
+    {
+      "name": "Checkbox",
+      "file": "components/ui/checkbox.jsx"
+    },
+    {
+      "name": "ConsentManager",
+      "file": "components/ConsentManager.jsx"
+    },
+    {
+      "name": "Contact",
+      "file": "pages/Contact_new.jsx"
+    },
+    {
+      "name": "Deals",
+      "file": "pages/Deals.jsx"
+    },
+    {
+      "name": "DeferredJsonLd",
+      "file": "components/seo/DeferredJsonLd.jsx"
+    },
+    {
+      "name": "Differentiation",
+      "file": "components/sections/Differentiation.jsx"
+    },
+    {
+      "name": "DropdownMenu",
+      "file": "components/ui/dropdown-menu.jsx"
+    },
+    {
+      "name": "DropdownMenuContent",
+      "file": "components/ui/dropdown-menu.jsx"
+    },
+    {
+      "name": "DropdownMenuItem",
+      "file": "components/ui/dropdown-menu.jsx"
+    },
+    {
+      "name": "DropdownMenuTrigger",
+      "file": "components/ui/dropdown-menu.jsx"
+    },
+    {
+      "name": "Faq",
+      "file": "pages/Faq.jsx"
+    },
+    {
+      "name": "Field",
+      "file": "components/ui/field.jsx"
+    },
+    {
+      "name": "FinalCTA",
+      "file": "components/sections/v4/FinalCTA.jsx"
+    },
+    {
+      "name": "Financing",
+      "file": "pages/Financing.jsx"
+    },
+    {
+      "name": "FinancingTeaser",
+      "file": "components/sections/v4/FinancingTeaser.jsx"
+    },
+    {
+      "name": "GlossarText",
+      "file": "components/glossary/autoGlossary.js"
+    },
+    {
+      "name": "GlossaryTooltip",
+      "file": "components/ui/glossary-tooltip.jsx"
+    },
+    {
+      "name": "Guide",
+      "file": "pages/Guide.jsx"
+    },
+    {
+      "name": "Heading",
+      "file": "components/ui/heading.jsx"
+    },
+    {
+      "name": "HeroSolar",
+      "file": "components/sections/v4/HeroSolar.jsx"
+    },
+    {
+      "name": "HomeV4",
+      "file": "pages/HomeV4.jsx"
+    },
+    {
+      "name": "ImpactSection",
+      "file": "components/sections/v4/ImpactSection.jsx"
+    },
+    {
+      "name": "Imprint",
+      "file": "pages/Imprint.jsx"
+    },
+    {
+      "name": "Input",
+      "file": "components/ui/input.jsx"
+    },
+    {
+      "name": "Label",
+      "file": "components/ui/label.jsx"
+    },
+    {
+      "name": "Layout",
+      "file": "layout.jsx"
+    },
+    {
+      "name": "LeadForm",
+      "file": "components/lead/LeadForm.jsx"
+    },
+    {
+      "name": "LeadMagnetLadder",
+      "file": "components/sections/LeadMagnetLadder.jsx"
+    },
+    {
+      "name": "MegaMenu",
+      "file": "components/nav/MegaMenu.jsx"
+    },
+    {
+      "name": "Metric",
+      "file": "components/ui/metric.jsx"
+    },
+    {
+      "name": "MetricsBar",
+      "file": "components/sections/v4/MetricsBar.jsx"
+    },
+    {
+      "name": "NotFound",
+      "file": "pages/NotFound.jsx"
+    },
+    {
+      "name": "OptionButton",
+      "file": "components/SmartPlanner.jsx"
+    },
+    {
+      "name": "PersonaProvider",
+      "file": "context/PersonaContext.jsx"
+    },
+    {
+      "name": "Pill",
+      "file": "components/ui/pill.jsx"
+    },
+    {
+      "name": "PopupBanners",
+      "file": "components/PopupBanners.jsx"
+    },
+    {
+      "name": "Pricing",
+      "file": "pages/Pricing.jsx"
+    },
+    {
+      "name": "PrimaryNav",
+      "file": "components/nav/PrimaryNav.jsx"
+    },
+    {
+      "name": "Privacy",
+      "file": "pages/Privacy.jsx"
+    },
+    {
+      "name": "ProblemSolutionSection",
+      "file": "components/sections/v4/ProblemSolutionSection.jsx"
+    },
+    {
+      "name": "ProcessJourney",
+      "file": "components/sections/v4/ProcessJourney.jsx"
+    },
+    {
+      "name": "Projects",
+      "file": "pages/Projects.jsx"
+    },
+    {
+      "name": "ReviewsJsonLd",
+      "file": "components/seo/ReviewsJsonLd.jsx"
+    },
+    {
+      "name": "Section",
+      "file": "components/ui/section.jsx"
+    },
+    {
+      "name": "SectionAblauf",
+      "file": "components/sections/SectionAblauf.jsx"
+    },
+    {
+      "name": "SectionAngebot",
+      "file": "components/sections/SectionAngebot.jsx"
+    },
+    {
+      "name": "SectionBeweis",
+      "file": "components/sections/SectionBeweis.jsx"
+    },
+    {
+      "name": "SectionComparison",
+      "file": "components/sections/SectionComparison.jsx"
+    },
+    {
+      "name": "SectionCostInaction",
+      "file": "components/sections/v2/SectionCostInaction.jsx"
+    },
+    {
+      "name": "SectionCTA",
+      "file": "components/sections/v2/SectionCTA.jsx"
+    },
+    {
+      "name": "SectionDifferentiators",
+      "file": "components/sections/v2/SectionDifferentiators.jsx"
+    },
+    {
+      "name": "SectionEconomicImpact",
+      "file": "components/sections/SectionEconomicImpact.jsx"
+    },
+    {
+      "name": "SectionGuarantees",
+      "file": "components/sections/v2/SectionGuarantees.jsx"
+    },
+    {
+      "name": "SectionHeader",
+      "file": "components/sections/SectionHeader.jsx"
+    },
+    {
+      "name": "SectionHero",
+      "file": "components/sections/v2/SectionHero.jsx"
+    },
+    {
+      "name": "SectionLeadMagnetStack",
+      "file": "components/sections/v2/SectionLeadMagnetStack.jsx"
+    },
+    {
+      "name": "SectionObjectionsFAQ",
+      "file": "components/sections/v2/SectionObjectionsFAQ.jsx"
+    },
+    {
+      "name": "SectionPainIntro",
+      "file": "components/sections/v2/SectionPainIntro.jsx"
+    },
+    {
+      "name": "SectionPricingTeaser",
+      "file": "components/sections/v2/SectionPricingTeaser.jsx"
+    },
+    {
+      "name": "SectionProcessSteps",
+      "file": "components/sections/v2/SectionProcessSteps.jsx"
+    },
+    {
+      "name": "SectionPromises",
+      "file": "components/sections/v2/SectionPromises.jsx"
+    },
+    {
+      "name": "SectionSavingsCalculatorTeaser",
+      "file": "components/sections/v2/SectionSavingsCalculatorTeaser.jsx"
+    },
+    {
+      "name": "SectionSolutionArchitecture",
+      "file": "components/sections/v2/SectionSolutionArchitecture.jsx"
+    },
+    {
+      "name": "SectionTeam",
+      "file": "components/sections/v2/SectionTeam.jsx"
+    },
+    {
+      "name": "SectionTechArchitecture",
+      "file": "components/sections/v2/SectionTechArchitecture.jsx"
+    },
+    {
+      "name": "SectionTechAuthority",
+      "file": "components/sections/v2/SectionTechAuthority.jsx"
+    },
+    {
+      "name": "SectionTechCalculatorCTA",
+      "file": "components/sections/v2/SectionTechCalculatorCTA.jsx"
+    },
+    {
+      "name": "SectionTechComparison",
+      "file": "components/sections/v2/SectionTechComparison.jsx"
+    },
+    {
+      "name": "SectionTechComponentsGrid",
+      "file": "components/sections/v2/SectionTechComponentsGrid.jsx"
+    },
+    {
+      "name": "SectionTrustWall",
+      "file": "components/sections/v2/SectionTrustWall.jsx"
+    },
+    {
+      "name": "Select",
+      "file": "components/ui/select.jsx"
+    },
+    {
+      "name": "SelectContent",
+      "file": "components/ui/select.jsx"
+    },
+    {
+      "name": "SelectItem",
+      "file": "components/ui/select.jsx"
+    },
+    {
+      "name": "SelectTrigger",
+      "file": "components/ui/select.jsx"
+    },
+    {
+      "name": "SelectValue",
+      "file": "components/ui/select.jsx"
+    },
+    {
+      "name": "Service",
+      "file": "pages/Service.jsx"
+    },
+    {
+      "name": "ServiceDrawer",
+      "file": "components/ServiceDrawer.jsx"
+    },
+    {
+      "name": "Sidebar",
+      "file": "components/Sidebar.jsx"
+    },
+    {
+      "name": "SiteFooter",
+      "file": "components/footer/SiteFooter.jsx"
+    },
+    {
+      "name": "SmartPlanner",
+      "file": "components/SmartPlanner.jsx"
+    },
+    {
+      "name": "StatCard",
+      "file": "components/ui/StatCard.jsx"
+    },
+    {
+      "name": "StepIndicator",
+      "file": "components/SmartPlanner.jsx"
+    },
+    {
+      "name": "SuccessStories",
+      "file": "pages/SuccessStories.jsx"
+    },
+    {
+      "name": "SupportChatDrawer",
+      "file": "components/SupportChatDrawer.jsx"
+    },
+    {
+      "name": "Team",
+      "file": "components/sections/Team.jsx"
+    },
+    {
+      "name": "TeamSection",
+      "file": "components/sections/v4/TeamSection.jsx"
+    },
+    {
+      "name": "Technology",
+      "file": "pages/Technology.jsx"
+    },
+    {
+      "name": "TestimonialCard",
+      "file": "components/ui/TestimonialCard.jsx"
+    },
+    {
+      "name": "TestimonialsSection",
+      "file": "components/sections/v4/TestimonialsSection.jsx"
+    },
+    {
+      "name": "TestimonialsSlider",
+      "file": "components/sections/TestimonialsSlider.jsx"
+    },
+    {
+      "name": "Textarea",
+      "file": "components/ui/textarea.jsx"
+    },
+    {
+      "name": "TrustAuthoritySection",
+      "file": "components/sections/v4/TrustAuthoritySection.jsx"
+    },
+    {
+      "name": "UVPGuarantee",
+      "file": "components/sections/UVPGuarantee.jsx"
+    },
+    {
+      "name": "ViewportLazy",
+      "file": "components/ViewportLazy.jsx"
+    },
+    {
+      "name": "WhyUs",
+      "file": "pages/WhyUs.jsx"
+    }
+  ],
+  "typography": {
+    "rawHeadings": {
+      "1": 5,
+      "2": 33,
+      "3": 58,
+      "4": 3
+    },
+    "headingComponentUses": 60,
+    "inlineFontSizes": []
+  },
+  "colors": {
+    "hex": {
+      "#12b3c7": 1,
+      "#18b364": 1
+    },
+    "rgb": {
+      "rgba(14,165,233,0.16)": 1
+    }
+  },
+  "colorDrift": {
+    "hex": [],
+    "rgb": [
+      {
+        "rgb": "rgba(14,165,233,0.16)",
+        "count": 1
+      }
+    ]
+  },
+  "spacingDrift": [
+    {
+      "file": "components/nav/MegaMenu.jsx",
+      "value": "m-[#12b3c7]"
+    }
+  ],
+  "shadowArbitrary": [],
+  "radiusArbitrary": []
+}

@@ -11,11 +11,11 @@ export default defineConfig(({ mode }) => ({
     host: true,
     strictPort: false,
     port: Number(process.env.PORT || 5173),
-    hmr: {
-      clientPort: Number(process.env.GITPOD_WORKSPACE_URL ? 443 : (process.env.HMR_CLIENT_PORT || 5173)),
-      host: process.env.CODESPACE_NAME ? `${process.env.CODESPACE_NAME}-5173.app.github.dev` : undefined,
-      protocol: process.env.CODESPACE_NAME ? 'https' : undefined,
-    },
+  // Hinweis: Eigene HMR-Host/Port Konfiguration entfernt.
+  // Grund: In Codespaces/Gitpod kollidierte ein fest verdrahteter Host (…-5173.app.github.dev)
+  // mit automatisch hochgezählten Ports (5174/5175). Dadurch versuchte der Client über HTTP
+  // auf den ursprünglichen Port zuzugreifen -> Mixed Content & WebSocket Fehler.
+  // Vite erkennt in diesen Umgebungen den Forwarding-Host korrekt selbst.
     proxy: {
       '/api': {
         target: 'http://localhost:3001',
