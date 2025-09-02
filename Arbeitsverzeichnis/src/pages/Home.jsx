@@ -263,7 +263,7 @@ export default function HomePage() {
                 href={`#${s.id}`}
                 title={s.label}
                 aria-current={activeId === s.id ? 'page' : undefined}
-                className={`group relative block rounded-full border transition-all ${activeId === s.id ? 'w-2.5 h-2.5 bg-amber-500 border-amber-500 ring-2 ring-amber-300/50' : 'w-2 h-2 bg-gray-300/80 border-white hover:bg-amber-400'}`}
+                className={`group relative block rounded-full border transition-all ${activeId === s.id ? 'w-2.5 h-2.5 bg-blue-500 border-blue-500 ring-2 ring-blue-300/50' : 'w-2 h-2 bg-gray-300/80 border-white hover:bg-blue-400'}`}
               >
                 <span className="sr-only">{s.label}</span>
                 <span className="pointer-events-none absolute right-6 top-1/2 -translate-y-1/2 whitespace-nowrap text-[13px] sm:text-sm bg-white/95 border border-gray-200 text-gray-800 rounded-full px-2 py-0.5 shadow-sm opacity-0 translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition">{s.label}</span>
@@ -282,7 +282,7 @@ export default function HomePage() {
       {/* Dezente Scroll-Fortschrittslinie (ohne zweite Menüleiste) */}
       <div className="pointer-events-none fixed top-0 left-0 right-0 z-40 hidden sm:block" aria-hidden="true">
         <div
-      className="h-[2px] md:h-[3px] bg-gradient-to-r from-amber-500 via-amber-400 to-orange-500 transition-[width] duration-200 rounded-r-full"
+      className="h-[2px] md:h-[3px] bg-gradient-to-r from-blue-500 via-blue-400 to-sky-500 transition-[width] duration-200 rounded-r-full"
           style={{ width: `${Math.round(scrollProgress * 100)}%` }}
         />
       </div>
@@ -290,7 +290,7 @@ export default function HomePage() {
       {/* Mobile: dezente Bottom-Bar als Scroll-Fortschritt */}
       <div className="pointer-events-none fixed bottom-0 left-0 right-0 z-40 sm:hidden" aria-hidden="true">
         <div
-          className="h-[2px] bg-amber-500/80 transition-[width] duration-200"
+          className="h-[2px] bg-blue-500/80 transition-[width] duration-200"
           style={{ width: `${Math.round(scrollProgress * 100)}%` }}
         />
       </div>
@@ -309,7 +309,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-12 gap-8 xl:gap-14 items-start">
             <div className="lg:col-span-7 max-w-3xl text-center lg:text-left mx-auto lg:mx-0">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/80 text-gray-900 px-3 py-1 text-xs sm:text-sm font-semibold">
-              <Star className="w-4 h-4 text-amber-500"/> 4,9/5 • Festpreis • Fixtermin
+              <Star className="w-4 h-4 text-blue-500"/> 4,9/5 • Festpreis • Fixtermin
             </div>
       <h1 className="mt-5 text-5xl sm:text-6xl font-extrabold tracking-tight text-white">
               {persona==='privat' ? 'Sparen Sie 250–450 € monatlich mit Solar' : 'Sparen Sie 900–1.400 € monatlich mit Solar'}
@@ -321,7 +321,7 @@ export default function HomePage() {
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <Link
-        className="inline-flex items-center justify-center rounded-md px-6 py-3.5 text-base font-semibold bg-amber-500 text-white hover:bg-amber-600 shadow-lg shadow-black/20"
+        className="inline-flex items-center justify-center rounded-md px-6 py-3.5 text-base font-semibold bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-black/20"
                 to={createPageUrl('Calculator') + `?persona=${persona}`}
                 onClick={()=>track('cta_click',{placement:'hero',action:'calculator',persona})}
               >
@@ -384,7 +384,7 @@ export default function HomePage() {
       </div>
 
   {/* Mission – Conversion-starke Kundenfalle */}
-  <section id="mission" className="relative py-24 bg-white bg-grid-slate bg-sun">
+  <section id="mission" className="relative py-24 bg-white bg-grid-slate bg-glow">
         <div className="absolute -z-10 left-[-10%] top-[-40px] w-[420px] h-[420px] rounded-full bg-gray-200/30 blur-3xl" />
         <div className="absolute -z-10 right-[-10%] bottom-[-60px] w-[360px] h-[360px] rounded-full bg-gray-200/20 blur-3xl" />
         <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-[17px] md:text-[18px] leading-relaxed content-lg">
@@ -403,7 +403,7 @@ export default function HomePage() {
             <div className="reveal">
               <div className="card-glass p-6 hover-lift">
                 <div className="flex items-center gap-3 text-gray-900 font-semibold text-base sm:text-lg">
-                  <span className="icon-pill-amber"><AlertCircle className="w-4 h-4 text-amber-900"/></span>
+                  <span className="icon-pill-blue"><AlertCircle className="w-4 h-4 text-blue-900"/></span>
                   <span>Woran viele scheitern</span>
                 </div>
                 <ul className="mt-4 space-y-2 text-base sm:text-lg text-gray-700">
@@ -414,7 +414,7 @@ export default function HomePage() {
               </div>
               <div className="mt-4 card-glass p-6 hover-lift">
                 <div className="flex items-center gap-3 text-gray-900 font-semibold text-base sm:text-lg">
-                  <span className="icon-pill-amber"><Shield className="w-4 h-4 text-amber-900"/></span>
+                  <span className="icon-pill-blue"><Shield className="w-4 h-4 text-blue-900"/></span>
                   <span>So schützen wir Sie</span>
                 </div>
                 <ul className="mt-4 space-y-2 text-base sm:text-lg text-gray-700">
@@ -437,7 +437,7 @@ export default function HomePage() {
               </div>
               <div className="absolute -bottom-4 left-4 right-4">
                 <div className="rounded-xl bg-white/95 backdrop-blur border border-gray-200 p-3 shadow-sm flex items-center gap-3 hover-lift text-[13px] sm:text-sm">
-                  <div className="flex items-center gap-1 text-amber-900"><FileCheck className="w-4 h-4 text-amber-600"/>Abnahme & Einweisung dokumentiert</div>
+                  <div className="flex items-center gap-1 text-blue-900"><FileCheck className="w-4 h-4 text-blue-600"/>Abnahme & Einweisung dokumentiert</div>
                   <div className="hidden sm:block w-px h-5 bg-gray-200"/>
                   <div className="text-gray-700">Netzbetreiber-Abstimmung inklusive</div>
                 </div>
@@ -447,8 +447,8 @@ export default function HomePage() {
 
           {/* Micro-Commit CTA – aufgewertet */}
           <div className="mt-12">
-            <div className="relative overflow-hidden rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 to-white shadow-sm hover-lift">
-              <div className="absolute -top-12 -right-12 h-40 w-40 rounded-full bg-amber-100/60 blur-3xl" aria-hidden />
+            <div className="relative overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50 to-white shadow-sm hover-lift">
+              <div className="absolute -top-12 -right-12 h-40 w-40 rounded-full bg-blue-100/60 blur-3xl" aria-hidden />
               <div className="relative px-5 sm:px-6 py-5">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                   <div className="text-center lg:text-left">
@@ -460,11 +460,11 @@ export default function HomePage() {
                   </div>
                   <div className="flex flex-col sm:flex-row items-center gap-3">
                           <Link to={createPageUrl('Calculator') + `?persona=${persona}`} data-gtm="mission_micro_commit" onClick={() => track('cta_click', { placement:'mission_cta', action:'calculator', persona })}>
-                            <Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 text-base">
+                            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-base">
                               <Calculator className="w-5 h-5 mr-2"/>Jetzt kostenlos prüfen
                             </Button>
                           </Link>
-                          <a href="#beweis" className="text-base text-amber-700 hover:text-amber-800 underline underline-offset-4">Referenzen ansehen</a>
+                          <a href="#beweis" className="text-base text-blue-700 hover:text-blue-800 underline underline-offset-4">Referenzen ansehen</a>
                   </div>
                 </div>
               </div>
@@ -478,11 +478,11 @@ export default function HomePage() {
       
 
       {/* Sicherheitsnetz / Vertrauen – neu gestaltet */}
-  <section id="versprechen" className="relative py-24 bg-gradient-to-b from-white to-amber-50/40 reveal bg-sun">
+  <section id="versprechen" className="relative py-24 bg-gradient-to-b from-white to-blue-50/40 reveal bg-glow">
         {/* dezente Dekoelemente */}
         <div aria-hidden className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-10 -left-10 h-56 w-56 rounded-full bg-amber-100/50 blur-3xl" />
-          <div className="absolute top-20 -right-16 h-48 w-48 rounded-full bg-amber-200/40 blur-3xl" />
+          <div className="absolute -top-10 -left-10 h-56 w-56 rounded-full bg-blue-100/50 blur-3xl" />
+          <div className="absolute top-20 -right-16 h-48 w-48 rounded-full bg-blue-200/40 blur-3xl" />
         </div>
     <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-[17px] md:text-[18px] leading-relaxed content-lg">
       <div className="text-center max-w-2xl mx-auto">
@@ -495,7 +495,7 @@ export default function HomePage() {
     <Card className="card-glass hover-lift">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3">
-      <span className="icon-pill-amber"><FileCheck className="w-4 h-4 text-amber-900"/></span>
+      <span className="icon-pill-blue"><FileCheck className="w-4 h-4 text-blue-900"/></span>
                   <div className="font-semibold text-gray-900">Transparenz</div>
                 </div>
                 <ul className="mt-4 space-y-2 text-base sm:text-lg text-gray-700">
@@ -508,7 +508,7 @@ export default function HomePage() {
     <Card className="card-glass hover-lift">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3">
-      <span className="icon-pill-amber"><Shield className="w-4 h-4 text-amber-900"/></span>
+      <span className="icon-pill-blue"><Shield className="w-4 h-4 text-blue-900"/></span>
                   <div className="font-semibold text-gray-900">Qualität</div>
                 </div>
                 <ul className="mt-4 space-y-2 text-base sm:text-lg text-gray-700">
@@ -521,7 +521,7 @@ export default function HomePage() {
     <Card className="card-glass hover-lift">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3">
-      <span className="icon-pill-amber"><LineChart className="w-4 h-4 text-amber-900"/></span>
+      <span className="icon-pill-blue"><LineChart className="w-4 h-4 text-blue-900"/></span>
                   <div className="font-semibold text-gray-900">Sicherheit</div>
                 </div>
                 <ul className="mt-4 space-y-2 text-base sm:text-lg text-gray-700">
@@ -534,14 +534,14 @@ export default function HomePage() {
           </div>
 
           {/* Trennlinie */}
-          <div className="mt-10 mb-2 h-px bg-gradient-to-r from-transparent via-amber-200 to-transparent" />
+          <div className="mt-10 mb-2 h-px bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
 
           {/* Garantien & Schutz – konkret und überprüfbar */}
       <div className="mt-8 grid md:grid-cols-3 gap-6 reveal">
     <Card className="card-glass hover-lift">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 font-semibold text-gray-900">
-      <span className="icon-pill-amber"><FileCheck className="w-4 h-4 text-amber-900"/></span>
+      <span className="icon-pill-blue"><FileCheck className="w-4 h-4 text-blue-900"/></span>
                   Festpreis – was es heißt
                 </div>
                 <ul className="mt-3 text-base sm:text-lg text-gray-700 space-y-2">
@@ -554,7 +554,7 @@ export default function HomePage() {
     <Card className="card-glass hover-lift">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 font-semibold text-gray-900">
-      <span className="icon-pill-amber"><Calendar className="w-4 h-4 text-amber-900"/></span>
+      <span className="icon-pill-blue"><Calendar className="w-4 h-4 text-blue-900"/></span>
                   Terminbindung
                 </div>
                 <ul className="mt-3 text-base sm:text-lg text-gray-700 space-y-2">
@@ -567,7 +567,7 @@ export default function HomePage() {
     <Card className="card-glass hover-lift">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 font-semibold text-gray-900">
-      <span className="icon-pill-amber"><Phone className="w-4 h-4 text-amber-900"/></span>
+      <span className="icon-pill-blue"><Phone className="w-4 h-4 text-blue-900"/></span>
                   Erreichbarer Service
                 </div>
                 <ul className="mt-3 text-base sm:text-lg text-gray-700 space-y-2">
@@ -582,19 +582,19 @@ export default function HomePage() {
           {/* Klartext-Details – entfernt auf Wunsch */}
 
           {/* Trust‑Leiste mit starker, aber seriöser CTA */}
-          <div className="mt-10 rounded-2xl border border-amber-200 bg-gradient-to-r from-white via-amber-50/60 to-white px-4 sm:px-6 py-5 shadow-sm reveal hover-lift">
+          <div className="mt-10 rounded-2xl border border-blue-200 bg-gradient-to-r from-white via-blue-50/60 to-white px-4 sm:px-6 py-5 shadow-sm reveal hover-lift">
             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 justify-between">
               <div className="flex flex-wrap items-center gap-3 text-sm">
-                <span className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-900 rounded-full px-3 py-1"><Star className="w-4 h-4 text-amber-500"/>4,9/5 aus 250+ Bewertungen</span>
-                <span className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-900 rounded-full px-3 py-1"><FileCheck className="w-4 h-4 text-amber-600"/>Keine versteckten Kosten</span>
-                <span className="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-900 rounded-full px-3 py-1"><XCircle className="w-4 h-4 text-amber-600"/>Kein Verkaufsdruck</span>
+                <span className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-900 rounded-full px-3 py-1"><Star className="w-4 h-4 text-blue-500"/>4,9/5 aus 250+ Bewertungen</span>
+                <span className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-900 rounded-full px-3 py-1"><FileCheck className="w-4 h-4 text-blue-600"/>Keine versteckten Kosten</span>
+                <span className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-900 rounded-full px-3 py-1"><XCircle className="w-4 h-4 text-blue-600"/>Kein Verkaufsdruck</span>
               </div>
               <div className="flex items-center gap-3">
                 <Link to={createPageUrl('Calculator') + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'versprechen', action: 'calculator', persona })}>
-                  <Button className="bg-amber-500 hover:bg-amber-600 text-white"><Calculator className="w-4 h-4 mr-2"/>In 30 Sekunden prüfen</Button>
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white"><Calculator className="w-4 h-4 mr-2"/>In 30 Sekunden prüfen</Button>
                 </Link>
                 <Link to={createPageUrl('Contact') + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'versprechen', action: 'contact', persona })}>
-                  <Button variant="outline" className="border-amber-200 text-amber-800 hover:bg-amber-50"><Phone className="w-4 h-4 mr-2"/>Erstgespräch</Button>
+                  <Button variant="outline" className="border-blue-200 text-blue-800 hover:bg-blue-50"><Phone className="w-4 h-4 mr-2"/>Erstgespräch</Button>
                 </Link>
               </div>
             </div>
@@ -653,7 +653,7 @@ export default function HomePage() {
             <div className="inline-flex flex-col sm:flex-row items-center gap-4 rounded-2xl border border-gray-200 bg-white px-6 py-5 shadow-sm">
               <div className="text-base text-gray-800">Starten Sie mit der ersten Zahl – dauert 30 Sekunden</div>
               <Link to={createPageUrl('Calculator') + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'problem', action: 'calculator', persona })}>
-                <Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 text-base">Jetzt kostenlos prüfen</Button>
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-base">Jetzt kostenlos prüfen</Button>
               </Link>
               <div className="text-sm text-gray-500">Kein Verkaufsdruck. Keine versteckten Kosten.</div>
             </div>
@@ -670,27 +670,27 @@ export default function HomePage() {
   
 
       {/* Beweis / Social Proof – verkaufsstark gestaltet */}
-      <section id="beweis" className="py-24 bg-gradient-to-b from-white to-amber-50/20 bg-sun">
+      <section id="beweis" className="py-24 bg-gradient-to-b from-white to-blue-50/20 bg-glow">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-[17px] md:text-[18px] leading-relaxed content-lg">
           <div className="text-center max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-amber-50 text-amber-900 border border-amber-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold">Beweise</div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-900 border border-blue-200 rounded-full px-3 py-1 text-xs sm:text-sm font-semibold">Beweise</div>
             <h3 className="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900">Ergebnisse, die überzeugen</h3>
             <p className="mt-2 text-xl text-gray-700">Zahlen, die standhalten. Stimmen aus der Praxis. Standards, die Sie absichern.</p>
           </div>
 
           {/* Vertrauens-Badges */}
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
-            <span className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-800 rounded-full px-3 py-1"><Star className="w-4 h-4 text-amber-500"/>4,9/5 aus 250+ Bewertungen</span>
-            <span className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-800 rounded-full px-3 py-1"><Calendar className="w-4 h-4 text-amber-600"/>98% Termintreue</span>
-            <span className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-800 rounded-full px-3 py-1"><Sparkles className="w-4 h-4 text-amber-600"/>2.500+ Installationen</span>
+            <span className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-800 rounded-full px-3 py-1"><Star className="w-4 h-4 text-blue-500"/>4,9/5 aus 250+ Bewertungen</span>
+            <span className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-800 rounded-full px-3 py-1"><Calendar className="w-4 h-4 text-blue-600"/>98% Termintreue</span>
+            <span className="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-800 rounded-full px-3 py-1"><Sparkles className="w-4 h-4 text-blue-600"/>2.500+ Installationen</span>
           </div>
 
           {/* Stat-Kacheln */}
           <div className="mt-10 grid md:grid-cols-3 gap-6 reveal">
             {[{ icon: Sparkles, number: '2.500+', label: 'Installationen' }, { icon: Star, number: '4,9/5', label: 'Kundenzufriedenheit' }, { icon: Calendar, number: '98%', label: 'Termintreue' }].map((s) => (
               <div key={s.label} className="rounded-2xl p-6 card-glass text-center hover-lift">
-                <div className="mx-auto mb-3 icon-pill-amber">
-                  <s.icon className="w-4 h-4 text-amber-900" />
+                <div className="mx-auto mb-3 icon-pill-blue">
+                  <s.icon className="w-4 h-4 text-blue-900" />
                 </div>
                 <div className="text-3xl font-extrabold text-gray-900">{s.number}</div>
                 <div className="text-sm text-gray-600 mt-1">{s.label}</div>
@@ -739,17 +739,17 @@ export default function HomePage() {
           </div>
 
           {/* Lead-Magnet CTA innerhalb der Beweis-Sektion */}
-          <div className="mt-10 rounded-2xl border border-amber-200 bg-gradient-to-r from-white via-amber-50/60 to-white px-5 py-5 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 reveal hover-lift">
+          <div className="mt-10 rounded-2xl border border-blue-200 bg-gradient-to-r from-white via-blue-50/60 to-white px-5 py-5 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 reveal hover-lift">
             <div>
               <div className="text-base font-semibold text-gray-900">Holen Sie sich Ihren Beispiel‑Bericht</div>
               <div className="text-sm text-gray-700">Konservativ gerechnete Ertragsbasis als PDF – in 2 Minuten angefordert.</div>
             </div>
       <div className="flex items-center gap-3">
               <Link to={createPageUrl('Calculator') + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'beweis', action: 'calculator', persona })}>
-        <Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 text-base"><Calculator className="w-5 h-5 mr-2"/>Jetzt kostenlos prüfen</Button>
+        <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-base"><Calculator className="w-5 h-5 mr-2"/>Jetzt kostenlos prüfen</Button>
               </Link>
               <Link to={createPageUrl('Contact') + `?persona=${persona}&offer=beispielbericht`} onClick={() => track('cta_click', { placement: 'beweis', action: 'contact', persona })}>
-        <Button variant="outline" className="border-amber-200 text-amber-800 hover:bg-amber-50 px-6 py-3 text-base"><FileCheck className="w-5 h-5 mr-2"/>Bericht anfordern</Button>
+        <Button variant="outline" className="border-blue-200 text-blue-800 hover:bg-blue-50 px-6 py-3 text-base"><FileCheck className="w-5 h-5 mr-2"/>Bericht anfordern</Button>
               </Link>
             </div>
           </div>
@@ -758,7 +758,7 @@ export default function HomePage() {
 
 
       {/* Ablauf – Projektfahrplan mit klaren Lieferobjekten */}
-      <section id="ablauf" className="py-24 bg-gradient-to-b from-amber-50/50 to-white bg-grid-slate">
+      <section id="ablauf" className="py-24 bg-gradient-to-b from-blue-50/50 to-white bg-grid-slate">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-[17px] md:text-[18px] leading-relaxed content-lg">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900">Ihr persönlicher Projektfahrplan – in ~14 Tagen zur Entscheidung</h2>
@@ -820,10 +820,10 @@ export default function HomePage() {
 
               {/* CTA unter dem Stepper */}
               <div className="mt-10">
-                <div className="flex flex-col sm:flex-row items-center gap-4 rounded-2xl border border-amber-200 bg-white px-6 py-5 shadow-sm">
+                <div className="flex flex-col sm:flex-row items-center gap-4 rounded-2xl border border-blue-200 bg-white px-6 py-5 shadow-sm">
                   <div className="text-base text-gray-800">Fordern Sie Ihren Fahrplan an – kostenlos, in wenigen Minuten startklar.</div>
                   <Link to={createPageUrl('Contact') + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'ablauf', action: 'contact', persona })}>
-                    <Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 text-base">Fahrplan anfordern</Button>
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-base">Fahrplan anfordern</Button>
                   </Link>
                   <div className="text-sm text-gray-500">Kein Verkaufsdruck. Ergebnisse schriftlich.</div>
                 </div>
@@ -836,17 +836,17 @@ export default function HomePage() {
               <Card className="card-glass hover-lift">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2">
-                    <span className="icon-pill-amber"><Shield className="w-4 h-4 text-amber-900"/></span>
+                    <span className="icon-pill-blue"><Shield className="w-4 h-4 text-blue-900"/></span>
                     <div className="font-semibold text-gray-900">Was Sie schriftlich bekommen</div>
                   </div>
                   <ul className="mt-4 space-y-2 text-base sm:text-lg text-gray-700">
-                    <li className="flex gap-2"><FileCheck className="w-4 h-4 text-amber-700"/> Kurzkonzept (PDF) mit Variante(n)</li>
-                    <li className="flex gap-2"><LineChart className="w-4 h-4 text-amber-700"/> Ertrags‑ & Amortisationsbasis (konservativ)</li>
-                    <li className="flex gap-2"><Calendar className="w-4 h-4 text-amber-700"/> Fixtermin‑Vorschlag mit Meilensteinen</li>
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-amber-700"/> Förder‑Check & nächster Schritt</li>
-                    <li className="flex gap-2"><Shield className="w-4 h-4 text-amber-700"/> Festpreisangebot mit Leistungsbeschreibung</li>
+                    <li className="flex gap-2"><FileCheck className="w-4 h-4 text-blue-700"/> Kurzkonzept (PDF) mit Variante(n)</li>
+                    <li className="flex gap-2"><LineChart className="w-4 h-4 text-blue-700"/> Ertrags‑ & Amortisationsbasis (konservativ)</li>
+                    <li className="flex gap-2"><Calendar className="w-4 h-4 text-blue-700"/> Fixtermin‑Vorschlag mit Meilensteinen</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-700"/> Förder‑Check & nächster Schritt</li>
+                    <li className="flex gap-2"><Shield className="w-4 h-4 text-blue-700"/> Festpreisangebot mit Leistungsbeschreibung</li>
                   </ul>
-                  <div className="mt-6 p-4 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-sm">
+                  <div className="mt-6 p-4 rounded-lg bg-blue-50 border border-blue-200 text-blue-900 text-sm">
                     Fair & risikofrei: Keine Verpflichtung. Festpreis vorbehaltlich Vor‑Ort‑Check. Keine versteckten Kosten.
                   </div>
                 </CardContent>
@@ -873,7 +873,7 @@ export default function HomePage() {
             ].map(t => (
               <div key={t.key} className="relative">
                 {t.recommended && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-semibold text-amber-800 bg-amber-100 border border-amber-200 rounded-full px-2 py-0.5">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-semibold text-blue-800 bg-blue-100 border border-blue-200 rounded-full px-2 py-0.5">
                     Empfohlen
                   </span>
                 )}
@@ -893,7 +893,7 @@ export default function HomePage() {
       <Card className="card-glass reveal hover-lift">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2">
-        <span className="icon-pill-amber"><Sparkles className="w-4 h-4 text-amber-900"/></span>
+        <span className="icon-pill-blue"><Sparkles className="w-4 h-4 text-blue-900"/></span>
                     <div className="font-semibold">{persona==='privat' ? 'Leistung & Ausstattung' : 'Scope & Ausstattung'}</div>
                   </div>
                   <ul className="mt-4 space-y-2 text-base sm:text-lg text-gray-700">
@@ -917,7 +917,7 @@ export default function HomePage() {
                             persona==='privat' ? 'Wallbox & Notstrom‑Option' : 'EVU‑Abstimmung & PPA‑Option',
                           ]
                     ).map((li) => (
-                      <li key={li} className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600"/>{li}</li>
+                      <li key={li} className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600"/>{li}</li>
                     ))}
                   </ul>
 
@@ -929,10 +929,10 @@ export default function HomePage() {
 
                   <div className="mt-8 flex flex-col sm:flex-row gap-3">
                     <Link to={createPageUrl('Contact') + `?persona=${persona}&tier=${offerTier}`} onClick={() => track('cta_click', { placement: 'angebot', action: 'contact', persona, offerTier })}>
-                      <Button className="bg-amber-500 hover:bg-amber-600 text-white">Konkretes Angebot anfordern</Button>
+                      <Button className="bg-blue-600 hover:bg-blue-700 text-white">Konkretes Angebot anfordern</Button>
                     </Link>
                     <Link to={createPageUrl('Calculator') + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'angebot', action: 'calculator', persona, offerTier })}>
-                      <Button variant="outline" className="border-amber-200 text-amber-800 hover:bg-amber-50">{persona==='privat'?'Ersparnis prüfen':'ROI prüfen'}</Button>
+                      <Button variant="outline" className="border-blue-200 text-blue-800 hover:bg-blue-50">{persona==='privat'?'Ersparnis prüfen':'ROI prüfen'}</Button>
                     </Link>
                   </div>
                 </CardContent>
@@ -943,15 +943,15 @@ export default function HomePage() {
             <div className="lg:col-span-5">
         <Card className="card-glass reveal hover-lift">
                 <CardContent className="p-6">
-          <div className="font-semibold flex items-center gap-2"><span className="icon-pill-amber"><Shield className="w-4 h-4 text-amber-900"/></span>{persona==='privat' ? 'Was fix ist' : 'Was fix zugesichert ist'}</div>
+          <div className="font-semibold flex items-center gap-2"><span className="icon-pill-blue"><Shield className="w-4 h-4 text-blue-900"/></span>{persona==='privat' ? 'Was fix ist' : 'Was fix zugesichert ist'}</div>
                   <ul className="mt-4 space-y-2 text-base sm:text-lg text-gray-700">
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600"/> Ertrags‑ & Amortisationsbasis (konservativ, schriftlich)</li>
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600"/> Festpreis & Leistungsbeschreibung (keine versteckten Kosten)</li>
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600"/> Terminplan mit Meilensteinen</li>
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600"/> Förder‑Check & Abwicklung</li>
-                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-amber-600"/> Meistergeführte Montage, dokumentierte Übergabe</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600"/> Ertrags‑ & Amortisationsbasis (konservativ, schriftlich)</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600"/> Festpreis & Leistungsbeschreibung (keine versteckten Kosten)</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600"/> Terminplan mit Meilensteinen</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600"/> Förder‑Check & Abwicklung</li>
+                    <li className="flex gap-2"><CheckCircle2 className="w-4 h-4 text-blue-600"/> Meistergeführte Montage, dokumentierte Übergabe</li>
                   </ul>
-                  <div className="mt-6 p-4 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-sm">
+                  <div className="mt-6 p-4 rounded-lg bg-blue-50 border border-blue-200 text-blue-900 text-sm">
                     Realistisch & fair: Zeitpläne sind Richtwerte. Angebot gilt vorbehaltlich Vor‑Ort‑Check.
                   </div>
                 </CardContent>
@@ -1012,8 +1012,8 @@ export default function HomePage() {
               { h: 'Qualitätsgarantien', d: 'Bis zu 25 Jahre auf Module und Leistung.', i: CheckCircle2 },
               { h: 'Meisterbetrieb', d: 'Zertifizierte Fachmontage, geprüfte Komponenten.', i: Crown },
             ].map((b) => (
-      <div key={b.h} className="rounded-2xl border border-amber-200 p-6 bg-white hover-lift">
-                <b.i className="w-6 h-6 text-amber-600" />
+      <div key={b.h} className="rounded-2xl border border-blue-200 p-6 bg-white hover-lift">
+                <b.i className="w-6 h-6 text-blue-600" />
                 <div className="mt-3 font-semibold text-gray-900">{b.h}</div>
                 <p className="mt-1 text-sm text-gray-600">{b.d}</p>
               </div>
@@ -1027,7 +1027,7 @@ export default function HomePage() {
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-[17px] md:text-[18px] leading-relaxed">
                    <div className="rounded-2xl border border-gray-200 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover-lift">
             <div className="text-base text-gray-800">Jeder Monat ohne PV kostet Sie bei einem Preis von 0,34 €/kWh etwa <span className="font-semibold">{persona==='privat' ? '200–300€' : '900–1.400€'}</span> – das ist verlorenes Geld. Wir rechnen Ihnen das exakt vor.</div>
-            <Link to={createPageUrl('Calculator') + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'nudge', action: 'calculator', persona })}><Button className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 text-base">Jetzt berechnen</Button></Link>
+            <Link to={createPageUrl('Calculator') + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'nudge', action: 'calculator', persona })}><Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-base">Jetzt berechnen</Button></Link>
           </div>
         </div>
       </section>
@@ -1055,7 +1055,7 @@ export default function HomePage() {
       </section>
 
       {/* Abschluss-CTA */}
-      <section id="cta" className="py-24 bg-amber-500 text-white">
+      <section id="cta" className="py-24 bg-blue-600 text-white">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[17px] md:text-[18px] leading-relaxed">
           <div className="flex flex-wrap justify-center gap-3 mb-6">
             {[{icon:Shield, text:'25 Jahre Garantie'},{icon:FileCheck,text:'Echter Festpreis'},{icon:Handshake,text:'Ohne Druck'},{icon:Crown,text:'Meisterbetrieb'},{icon:Clock,text:'Schnelle Umsetzung'}].map((b,i)=>(
@@ -1068,13 +1068,13 @@ export default function HomePage() {
           <p className="mt-3 text-xl opacity-90 max-w-2xl mx-auto">In wenigen Minuten verstehen Sie Ihr Potenzial – konservativ gerechnet, schriftlich dokumentiert. Kein Druck, nur Fakten.</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link to={createPageUrl("Calculator") + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'cta', action: 'calculator', persona })}>
-              <Button size="lg" className="bg-white text-amber-700 hover:bg-amber-50 font-bold px-12 py-6 text-lg">{persona==='privat' ? 'Ersparnis prüfen' : 'ROI prüfen'}</Button>
+              <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold px-12 py-6 text-lg">{persona==='privat' ? 'Ersparnis prüfen' : 'ROI prüfen'}</Button>
             </Link>
             <Link to={createPageUrl("Contact")  + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'cta', action: 'contact', persona })}>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-amber-700 px-12 py-6 text-lg">15‑Min‑Mini‑Beratung</Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-700 px-12 py-6 text-lg">15‑Min‑Mini‑Beratung</Button>
             </Link>
           </div>
-              <div className="flex items-center gap-2 text-base text-amber-800 bg-amber-50 border border-amber-200 rounded-full px-3 py-1.5 w-full sm:w-auto mx-auto mt-6">
+              <div className="flex items-center gap-2 text-base text-blue-800 bg-blue-50 border border-blue-200 rounded-full px-3 py-1.5 w-full sm:w-auto mx-auto mt-6">
                 <Calendar className="w-5 h-5" /> {getNextInstallSlotLabel()}
               </div>
           {/* Inline Lead Form */}
@@ -1123,12 +1123,12 @@ function LeadForm({ persona, onTracked }) {
 
   if (done) {
     return (
-      <div className="mt-10 max-w-2xl mx-auto bg-white text-amber-800 rounded-2xl p-6 text-left">
+      <div className="mt-10 max-w-2xl mx-auto bg-white text-blue-800 rounded-2xl p-6 text-left">
         <div className="flex items-start gap-3">
           <CheckCircle2 className="w-6 h-6 text-emerald-600"/>
           <div>
             <p className="font-semibold">Danke! Wir melden uns schnellstmöglich.</p>
-            <p className="text-sm mt-1 text-amber-900">Unser Team ruft Sie in der Regel binnen 24 Stunden zurück.</p>
+            <p className="text-sm mt-1 text-blue-900">Unser Team ruft Sie in der Regel binnen 24 Stunden zurück.</p>
           </div>
         </div>
       </div>
@@ -1142,24 +1142,24 @@ function LeadForm({ persona, onTracked }) {
       <div className="grid md:grid-cols-3 gap-4">
         <div>
           <Label htmlFor="lead-name" className="text-white/90 text-base">Name</Label>
-          <Input id="lead-name" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Max Mustermann" className="mt-1 bg-white text-amber-900 placeholder:text-amber-700/60 h-11 text-base" />
+          <Input id="lead-name" value={name} onChange={(e)=>setName(e.target.value)} placeholder="Max Mustermann" className="mt-1 bg-white text-blue-900 placeholder:text-blue-700/60 h-11 text-base" />
         </div>
         <div>
           <Label htmlFor="lead-email" className="text-white/90 text-base">E‑Mail</Label>
-          <Input id="lead-email" type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="max@mail.de" className="mt-1 bg-white text-amber-900 placeholder:text-amber-700/60 h-11 text-base" />
+          <Input id="lead-email" type="email" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="max@mail.de" className="mt-1 bg-white text-blue-900 placeholder:text-blue-700/60 h-11 text-base" />
         </div>
         <div>
           <Label htmlFor="lead-phone" className="text-white/90 text-base">Telefon</Label>
-          <Input id="lead-phone" type="tel" value={phone} onChange={(e)=>setPhone(e.target.value)} placeholder="0151 2345678" className="mt-1 bg-white text-amber-900 placeholder:text-amber-700/60 h-11 text-base" />
+          <Input id="lead-phone" type="tel" value={phone} onChange={(e)=>setPhone(e.target.value)} placeholder="0151 2345678" className="mt-1 bg-white text-blue-900 placeholder:text-blue-700/60 h-11 text-base" />
         </div>
       </div>
       <div className="mt-4">
         <Label htmlFor="lead-msg" className="text-white/90 text-base">Kurz Ihr Ziel (optional)</Label>
-        <Input id="lead-msg" value={message} onChange={(e)=>setMessage(e.target.value)} placeholder={persona==='privat' ? 'z.B. Einfamilienhaus, 5 kWp, Speicher geplant' : 'z.B. Halle, 50 kWp, Lastspitzen senken'} className="mt-1 bg-white text-amber-900 placeholder:text-amber-700/60 h-11 text-base" />
+        <Input id="lead-msg" value={message} onChange={(e)=>setMessage(e.target.value)} placeholder={persona==='privat' ? 'z.B. Einfamilienhaus, 5 kWp, Speicher geplant' : 'z.B. Halle, 50 kWp, Lastspitzen senken'} className="mt-1 bg-white text-blue-900 placeholder:text-blue-700/60 h-11 text-base" />
       </div>
       <div className="mt-5 flex items-center justify-between gap-3 flex-wrap">
         <p className="text-sm text-white/85">Mit Klick stimmen Sie der Verarbeitung gemäß Datenschutz zu. Wir rufen Sie nur für die Beratung an.</p>
-        <Button type="submit" disabled={busy} className="bg-white text-amber-700 hover:bg-amber-50 px-6 py-3 text-base">{busy ? 'Senden…' : 'Rückruf anfordern'}</Button>
+        <Button type="submit" disabled={busy} className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-3 text-base">{busy ? 'Senden…' : 'Rückruf anfordern'}</Button>
       </div>
     </form>
   );
@@ -1183,11 +1183,11 @@ function SmartStickyCTA({ activeId, persona }) {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 pb-4">
-        <div className="bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 border border-amber-200 rounded-2xl shadow-xl p-4 flex items-center justify-between">
-          <div className="text-base font-semibold text-amber-800">{msg}</div>
+        <div className="bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 border border-blue-200 rounded-2xl shadow-xl p-4 flex items-center justify-between">
+          <div className="text-base font-semibold text-blue-800">{msg}</div>
           <div className="flex gap-2">
-            <Link to={createPageUrl('Calculator') + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'sticky', action: 'calculator', persona })}><Button className="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 text-sm">{persona==='privat'?'Ersparnis prüfen':'ROI prüfen'}</Button></Link>
-            <Link to={createPageUrl('Contact') + `?persona=${persona}`}><Button variant="outline" className="border-amber-200 text-amber-800 hover:bg-amber-50 px-4 py-2 text-sm">{persona==='privat'?'Beratung':'Gespräch'}</Button></Link>
+            <Link to={createPageUrl('Calculator') + `?persona=${persona}`} onClick={() => track('cta_click', { placement: 'sticky', action: 'calculator', persona })}><Button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm">{persona==='privat'?'Ersparnis prüfen':'ROI prüfen'}</Button></Link>
+            <Link to={createPageUrl('Contact') + `?persona=${persona}`}><Button variant="outline" className="border-blue-200 text-blue-800 hover:bg-blue-50 px-4 py-2 text-sm">{persona==='privat'?'Beratung':'Gespräch'}</Button></Link>
           </div>
         </div>
       </div>

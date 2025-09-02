@@ -222,7 +222,7 @@ export default function Layout({ children }) {
 
       {/* Top Promo Banner */}
   {showTopBanner && (
-    <div ref={bannerRef} className="w-full bg-gradient-to-r from-amber-600 via-amber-500 to-orange-500 text-white sticky top-0 z-50">
+    <div ref={bannerRef} className="w-full bg-gradient-to-r from-blue-600 via-blue-500 to-sky-500 text-white sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between gap-3">
             <div className="text-sm sm:text-base md:text-[17px] font-medium leading-snug">
               <span className="hidden sm:inline">Jeder Monat ohne PV kostet bei 0,34 €/kWh rund 200–300 €.</span>{' '}
@@ -246,7 +246,7 @@ export default function Layout({ children }) {
       <div className={`flex items-center justify-between ${afterHero ? '' : 'rounded-full bg-white/70 backdrop-blur border border-gray-200/60 shadow-sm'} ${afterHero ? '' : 'border'} px-3 sm:px-4 py-3 w-full transition-all duration-300`}>
             {/* Left: Logo */}
             <Link to={createPageUrl('Home')} className="flex items-center gap-2 pl-1">
-              <img src="/Logo-ZOE.png" alt="ZOE Solar" width="28" height="28" className="rounded" />
+              <img src="/Logo-ZOE-blue.png" alt="ZOE Solar" width="28" height="28" className="rounded" />
               <span className="hidden sm:block font-semibold text-gray-800">ZOE Solar</span>
             </Link>
 
@@ -323,7 +323,7 @@ export default function Layout({ children }) {
                         if (s) setCommand(s.label);
                       }
                     }}
-                    className="w-[260px] px-3 py-1.5 text-sm rounded-full border border-gray-300 bg-white/70 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    className="w-[260px] px-3 py-1.5 text-sm rounded-full border border-gray-300 bg-white/70 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     ref={cmdInputRef}
                   />
                   <span className="absolute right-2 top-1.5 text-[11px] text-gray-400">Enter · ⌘/Ctrl K</span>
@@ -369,7 +369,7 @@ export default function Layout({ children }) {
               <Link to={createPageUrl('Calculator')} className="hidden sm:inline-flex items-center px-3 py-1.5 text-[15px] sm:text-base lg:text-[17px] rounded-full border border-gray-300 text-gray-800 hover:bg-gray-100">
                 Solarrechner
               </Link>
-              <Link to={createPageUrl('Contact')} className="inline-flex items-center px-3 sm:px-4 py-1.5 text-[15px] sm:text-base lg:text-[17px] font-semibold rounded-full text-white bg-amber-600 hover:bg-amber-700">
+              <Link to={createPageUrl('Contact')} className="inline-flex items-center px-3 sm:px-4 py-1.5 text-[15px] sm:text-base lg:text-[17px] font-semibold rounded-full text-white bg-blue-600 hover:bg-blue-700">
                 <Phone className="w-4 h-4 mr-1.5" /> Kontakt
               </Link>
               <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden p-2 rounded-full hover:bg-gray-100">
@@ -403,7 +403,7 @@ export default function Layout({ children }) {
               </div>
               <div className="mt-2 flex gap-2">
                 <Link to={createPageUrl('Calculator')} className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm sm:text-base rounded-lg border border-gray-300 text-gray-800 hover:bg-gray-50">Rechner</Link>
-                <Link to={createPageUrl('Contact')} className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm sm:text-base font-semibold rounded-lg text-white bg-amber-600 hover:bg-amber-700">Kontakt</Link>
+                <Link to={createPageUrl('Contact')} className="flex-1 inline-flex items-center justify-center px-3 py-2 text-sm sm:text-base font-semibold rounded-lg text-white bg-blue-600 hover:bg-blue-700">Kontakt</Link>
               </div>
             </div>
           </div>
