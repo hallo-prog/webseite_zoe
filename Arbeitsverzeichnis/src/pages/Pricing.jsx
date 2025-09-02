@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Helmet } from 'react-helmet-async';
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
@@ -19,90 +19,20 @@ import {
   Home
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Pill } from "@/components/ui/pill";
+import { Bundles, FinancingTeaser, ProcessJourney, ImpactSection, FinalCTA, MetricsBar } from '@/components/sections/v4';
+import { Section } from '@/components/ui/section';
+import { trackVariant, trackCta } from '@/utils/tracking';
 
 export default function Pricing() {
   const { t } = useTranslation();
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  useEffect(()=> { trackVariant('pricing_view'); },[]);
 
-  useEffect(() => {
-    const targetDate = new Date('2025-09-15T23:59:59');
-    const timer = setInterval(() => {
-      const now = new Date();
-      const difference = targetDate - now;
-
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60)
-        });
-      }
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const packages = [
-    {
-      name: "Solar Basic",
-      price: "18.900€",
-      originalPrice: "22.500€",
-      savings: "3.600€",
-      description: "Perfekt für den Einstieg in die Energiewende",
-      features: [
-        "6 kWp Solarmodule (Heckert)",
-        "5 kW Hybrid-Wechselrichter (SMA)",
-        "Kein Stromspeicher",
-        "25 Jahre Komplettgarantie",
-        "Montage & Inbetriebnahme",
-        "Förderungsabwicklung"
-      ],
-      popular: false,
-      roi: "~7 Jahre",
-      yearlySavings: "~1.800€"
-    },
-    {
-      name: "Solar Komplett",
-      price: "24.900€",
-      originalPrice: "29.500€",
-      savings: "4.600€",
-      description: "Die beliebteste Wahl für maximale Unabhängigkeit",
-      features: [
-        "8 kWp Solarmodule (Heckert)",
-        "8 kW Hybrid-Wechselrichter (SMA)",
-        "10 kWh LiFePO4-Speicher (BYD)",
-        "25 Jahre Komplettgarantie",
-        "Montage & Inbetriebnahme",
-        "Förderungsabwicklung",
-        "Wallbox Vorbereitung"
-      ],
-      popular: true,
-      roi: "~6 Jahre",
-      yearlySavings: "~2.400€"
-    },
-    {
-      name: "Solar Premium",
-      price: "32.900€",
-      originalPrice: "38.500€",
-      savings: "5.600€",
-      description: "Für höchste Ansprüche und Zukunftssicherheit",
-      features: [
-        "10 kWp Solarmodule (Meyer Burger)",
-        "10 kW Hybrid-Wechselrichter (Fronius)",
-        "15 kWh LiFePO4-Speicher (LG)",
-        "25 Jahre Komplettgarantie",
-        "Montage & Inbetriebnahme",
-        "Förderungsabwicklung",
-        "Wallbox inklusive (11 kW)",
-        "Premium-Monitoring"
-      ],
-      popular: false,
-      roi: "~5.5 Jahre",
-      yearlySavings: "~3.200€"
-    }
+  const bundles = [
+    { id:'pv-basic', title:'Solar Basic', desc:'Einstieg mit Fokus auf schnelle Amortisation', kpis:['6 kWp Module','5 kW Hybrid WR','Ohne Speicher','25J Garantie'], price:'ab 18.9k €' },
+    { id:'pv-storage', title:'Solar Komplett', desc:'Beliebtes Unabhängigkeits-Paket (Speicher)', kpis:['8 kWp Module','10 kWh Speicher','Wallbox ready','25J Garantie'], price:'ab 24.9k €' },
+    { id:'pv-premium', title:'Solar Premium', desc:'Maximale Zukunftssicherheit & Monitoring', kpis:['10 kWp Premium','15 kWh Speicher','Wallbox inkl.','Premium Monitoring'], price:'ab 32.9k €' }
   ];
 
   const testimonials = [
@@ -135,118 +65,30 @@ export default function Pricing() {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
-      {/* Urgency Banner */}
-      <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-4">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center space-x-4">
-            <Clock className="w-5 h-5" />
-            <span className="font-semibold">Sonderaktion endet in:</span>
-            <div className="flex space-x-2">
-              <span className="bg-white/20 px-2 py-1 rounded text-sm">
-                {timeLeft.days}T {timeLeft.hours}H {timeLeft.minutes}M {timeLeft.seconds}S
-              </span>
-            </div>
-            <span className="text-sm">1.500€ Winterbonus + kostenlose Wallbox</span>
+      {/* Warm Neutral Hero */}
+      <Section className="hero-shell cinematic relative text-center" padding="normal" variant="default" size="wide">
+        <div className="max-w-5xl mx-auto flow">
+          <Pill variant="light" className="mb-5 bg-neutral-100 border-neutral-200 text-neutral-600">Preisstruktur 2025</Pill>
+          <h1 className="display-1 inline-soft">Transparente Solarpakete mit Festpreis</h1>
+          <p className="lead text-neutral-600 max-w-3xl mx-auto inline-emphasis">Keine Überraschungen: konservative Auslegung, 25 Jahre Garantie und modulare Erweiterbarkeit. Wählen Sie den passenden Start – skalieren Sie später.</p>
+          <div className="flex flex-wrap gap-5 justify-center">
+              <Button onClick={()=>trackCta('pricing','calculator')} variant="primary" size="lg">Ersparnis prüfen</Button>
+              <Button onClick={()=>trackCta('pricing','contact')} variant="outline" size="lg">Beratung anfordern</Button>
           </div>
         </div>
-      </div>
+      </Section>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-emerald-50 to-white py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Pill variant="light" className="mb-4">Festpreise 2025</Pill>
-          <h1 className="heading-1 text-gray-800">Solaranlage kaufen – transparente Preise</h1>
-          <p className="lead text-gray-600 max-w-3xl mx-auto mt-6">
-            Keine versteckten Kosten, keine Überraschungen. Festpreise inklusive Förderung, Montage und 25 Jahren Garantie.
-          </p>
+      <MetricsBar metrics={[{label:'Ø Amortisation',value:'9–11 J.'},{label:'Termintreue',value:'96%'},{label:'Garantie',value:'25 J.'},{label:'Kunden',value:'2.500+'}]} />
 
-          {/* Loss Aversion Stats */}
-          <div className="mt-12 bg-red-50 border border-red-200 rounded-2xl p-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center mb-4">
-              <TrendingUp className="w-8 h-8 text-red-600 mr-2" />
-              <h3 className="text-2xl font-bold text-red-800">Ohne Solar zahlen Sie mehr</h3>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div className="bg-white rounded-lg p-4 shadow-sm">
-                <div className="text-3xl font-bold text-red-600">+€2.400</div>
-                <div className="text-sm text-gray-600">Jährliche Mehrkosten</div>
-              </div>
-              <div className="bg-white rounded-lg p-4 shadow-sm">
-                <div className="text-3xl font-bold text-red-600">€48.000</div>
-                <div className="text-sm text-gray-600">In 20 Jahren ohne Solar</div>
-              </div>
-              <div className="bg-white rounded-lg p-4 shadow-sm">
-                <div className="text-3xl font-bold text-emerald-600">€0</div>
-                <div className="text-sm text-gray-600">Mit unserer Solaranlage</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Bundles bundles={bundles} onSelect={(b)=> trackVariant('pricing_bundle_select',{bundle_id:b.id})} />
 
-      {/* Pricing Cards */}
-      <section className="py-24">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 content-lg">
-          <div className="grid md:grid-cols-3 gap-8">
-            {packages.map((pkg, index) => (
-              <Card key={index} className={`relative shadow-lg hover:shadow-2xl transition-shadow pro-card ${pkg.popular ? 'ring-2 ring-emerald-500' : ''}`}>
-        {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <Pill variant="custom" className="bg-emerald-500 text-white border-emerald-600 px-4 py-2">Am beliebtesten</Pill>
-                  </div>
-                )}
-
-                <CardHeader className="text-center pb-8">
-                  <CardTitle className="text-2xl text-gray-800">{pkg.name}</CardTitle>
-                  <p className="text-gray-600 mt-2">{pkg.description}</p>
-
-                  <div className="mt-6">
-                    <div className="flex items-center justify-center space-x-2">
-                      <span className="text-4xl font-bold text-gray-800">{pkg.price}</span>
-                      <span className="text-lg text-gray-500 line-through">{pkg.originalPrice}</span>
-                    </div>
-                    <div className="text-emerald-600 font-semibold mt-1">Sie sparen {pkg.savings}</div>
-                    <div className="text-sm text-gray-500 mt-2">inkl. 25% Förderung & Montage</div>
-                  </div>
-                </CardHeader>
-
-                <CardContent>
-                  <ul className="space-y-3 mb-8 text-base sm:text-lg">
-                    {pkg.features.map((feature, i) => (
-                      <li key={i} className="flex items-start space-x-3">
-                        <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* ROI Info */}
-                  <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-600">Jährliche Ersparnis:</span>
-                      <span className="font-semibold text-emerald-600">{pkg.yearlySavings}</span>
-                    </div>
-                    <div className="flex items-center justify-between text-sm mt-1">
-                      <span className="text-gray-600">Amortisation:</span>
-                      <span className="font-semibold text-emerald-600">{pkg.roi}</span>
-                    </div>
-                  </div>
-
-                  <Link to={createPageUrl("Contact")} className="block">
-                    <Button className={`w-full ${pkg.popular ? 'bg-emerald-600 hover:bg-emerald-700' : ''}`}>
-                      {pkg.popular ? 'Jetzt beliebtestes Paket wählen' : 'Jetzt anfragen'}
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FinancingTeaser />
+      <ProcessJourney />
+      <ImpactSection />
 
       {/* Authority Section */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="neutral" padding="normal" size="wide">
+        <div className="flow">
           <div className="text-center mb-16">
             <Award className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
             <h2 className="text-3xl font-extrabold text-gray-800 tracking-tight">Warum Sie uns vertrauen können</h2>
@@ -276,11 +118,11 @@ export default function Pricing() {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
 
       {/* Testimonials */}
-      <section className="py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="plain" padding="normal" size="wide">
+        <div className="flow">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-extrabold text-gray-800 tracking-tight">Was unsere Kunden sagen</h2>
             <p className="mt-4 text-xl text-gray-600">Erfahrungen mit unseren Solarpaketen</p>
@@ -316,35 +158,9 @@ export default function Pricing() {
             ))}
           </div>
         </div>
-      </section>
+      </Section>
 
-      {/* Reciprocity CTA */}
-      <section className="bg-emerald-600 py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <Calculator className="w-16 h-16 mx-auto mb-6" />
-          <h2 className="text-3xl font-extrabold mb-4">
-            Kostenloses Angebot in 2 Minuten
-          </h2>
-          <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
-            Wir analysieren Ihr Dach kostenlos und erstellen Ihnen ein maßgeschneidertes Festpreis-Angebot – ohne Verpflichtung.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to={createPageUrl("Calculator")}>
-              <Button size="lg" variant="secondary" className="bg-white text-emerald-600 hover:bg-gray-100">
-                <Calculator className="w-4 h-4 mr-2" />
-                Jetzt Ersparnis berechnen
-              </Button>
-            </Link>
-            <Link to={createPageUrl("Contact")}>
-              <Button size="lg" className="bg-emerald-700 hover:bg-emerald-800 border border-white">
-                <Phone className="w-4 h-4 mr-2" />
-                Kostenlose Beratung
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+  <FinalCTA onPrimary={()=>trackCta('pricing','calculator_final')} onSecondary={()=>trackCta('pricing','contact_final')} />
     </div>
   );
 }

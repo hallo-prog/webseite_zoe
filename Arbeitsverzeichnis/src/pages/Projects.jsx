@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from 'react-helmet-async';
 import { MapPin, Zap, TrendingUp, Calendar, Clock, Star, Award, Users, CheckCircle, Phone, Euro, Home, Shield } from "lucide-react";
+import { Heading } from '@/components/ui/heading';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Pill } from "@/components/ui/pill";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
+import ReviewsJsonLd from '@/components/seo/ReviewsJsonLd';
+import { Section } from '../components/ui/section';
 
 export default function Projects() {
   const { t } = useTranslation();
@@ -105,11 +108,16 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Helmet>
-        <title>Solar-Projekte: 2.500+ Installationen | ZOE Solar Erfolgsgeschichten</title>
-        <meta name="description" content="Sehen Sie unsere Solar-Projekte: 2.500+ Installationen, €52M+ gesparte Energiekosten, 4.9/5 Sterne. TÜV-zertifizierte Anlagen mit Garantie." />
-        <meta property="og:title" content="Solar-Projekte: Über 2.500 erfolgreiche Installationen" />
-        <meta property="og:description" content="Entdecken Sie unsere Solar-Erfolgsgeschichten: Von der Planung bis zur Installation - sehen Sie, wie wir Häuser unabhängig machen." />
+        <title>Solaranlagen Berlin | 2.500+ Installationen | ZOE Projekte & Referenzen</title>
+        <meta name="description" content="Solaranlagen Berlin: 2.500+ Installationen ✓ €52M+ gesparte Energiekosten ✓ 4.9/5 Sterne ✓ TÜV-zertifiziert ✓ Sehen Sie unsere Projekte in Berlin & Brandenburg!" />
+        <meta name="keywords" content="Solaranlagen Berlin, PV-Anlagen Projekte, Solarinstallationen Berlin, Photovoltaik Referenzen, Solarstrom Projekte" />
+        <meta property="og:title" content="Solaranlagen Berlin | 2.500+ Installationen | ZOE Projekte & Referenzen" />
+        <meta property="og:description" content="Solaranlagen Berlin: 2.500+ Installationen ✓ €52M+ gesparte Energiekosten ✓ 4.9/5 Sterne ✓ TÜV-zertifiziert ✓ Sehen Sie unsere Projekte in Berlin & Brandenburg!" />
         <meta property="og:image" content="/Logo-ZOE.png" />
+        <meta name="geo.region" content="DE-BE" />
+        <meta name="geo.placename" content="Berlin" />
+        <meta name="geo.position" content="52.5200;13.4050" />
+        <meta name="ICBM" content="52.5200, 13.4050" />
         <link rel="canonical" href="https://zoe-solar.de/projekte" />
       </Helmet>
 
@@ -138,14 +146,11 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Hero Section */}
+  <Section padding="normal" variant="gradient" className="bg-gradient-to-br from-blue-50 to-indigo-50" size="wide">
           <div className="text-center mb-16">
             <Pill variant="light" className="mb-4">Unsere Arbeit</Pill>
-            <h1 className="heading-1 text-gray-900 mb-6">
-              Projekte, die für sich <span className="text-blue-600">sprechen</span>
-            </h1>
+            <Heading as="h1" size="4xl" className="text-gray-900 mb-6">Projekte, die für sich <span className="text-blue-600">sprechen</span></Heading>
             <p className="lead text-gray-600 max-w-3xl mx-auto mb-8">
               Sehen Sie eine Auswahl unserer jüngsten Installationen und die beeindruckenden Ergebnisse,
               die unsere Kunden mit ZOE Solar erzielen.
@@ -169,22 +174,20 @@ export default function Projects() {
           {/* Stats Section */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center tabular-nums">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                <div className="text-3xl font-bold text-gray-900 mb-2 tabular-nums">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+  </Section>
 
-      {/* Projects Grid */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+    {/* Projects Grid Section */}
+    <Section padding="normal" variant="plain" size="wide">
+      <div className="grid lg:grid-cols-2 gap-12 mb-16 flow">
             {projects.map((project, index) => (
               <Card key={index} className="pro-card overflow-hidden group hover:scale-105 transition-transform">
                 <div className="relative overflow-hidden h-64">
@@ -274,13 +277,11 @@ export default function Projects() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
+      </div>
+    </Section>
 
-      {/* Authority Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Authority Section */}
+  <Section padding="tight" variant="plain" size="wide">
           <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
             <CardContent className="p-8">
               <div className="flex items-start space-x-6">
@@ -300,12 +301,10 @@ export default function Projects() {
               </div>
             </CardContent>
           </Card>
-        </div>
-      </section>
+  </Section>
 
-      {/* Loss Aversion Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Loss Aversion Section */}
+  <Section padding="tight" variant="neutral" size="wide">
           <Card className="bg-gradient-to-r from-red-50 to-orange-50 border-red-200">
             <CardContent className="p-8 text-center">
               <div className="flex items-center justify-center mb-4">
@@ -332,13 +331,12 @@ export default function Projects() {
               </div>
             </CardContent>
           </Card>
-        </div>
-      </section>
+  </Section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12">
+      <Section padding="normal" variant="gradient" className="bg-gradient-to-r from-blue-600 to-green-600" size="wide">
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 flow">
             <h2 className="text-3xl font-bold text-white mb-6">
               Bereit für Ihr Solar-Projekt?
             </h2>
@@ -347,7 +345,7 @@ export default function Projects() {
               Solar-Konzept - kostenlos und unverbindlich.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-4 text-lg"
@@ -382,7 +380,8 @@ export default function Projects() {
             </Card>
           </div>
         </div>
-      </section>
+      </Section>
+      <ReviewsJsonLd />
     </div>
   );
 }

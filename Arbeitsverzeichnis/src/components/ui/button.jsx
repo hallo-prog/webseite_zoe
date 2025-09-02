@@ -1,20 +1,51 @@
 import React from 'react';
 
-export function Button({ className = '', variant = 'default', size = 'md', children, ...props }) {
-  const base = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
-  const variants = {
-  default: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-600',
-    outline: 'border border-gray-300 text-gray-900 hover:bg-gray-50',
-    secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200',
-  };
-  const sizes = {
-    sm: 'h-9 px-3 text-sm',
-    md: 'h-10 px-4 text-sm',
-    lg: 'h-12 px-6 text-base',
-  };
+// Vereinheitlichte Button-Komponente, die die bestehenden globalen CSS Utility-Klassen (btn-*) nutzt.
+// Ziel: Alle CTAs laufen perspektivisch über diese Schnittstelle, damit Variant-Änderungen zentral möglich sind.
+// Props: variant (primary|outline|secondary|ghost|destructive), size (sm|md|lg|xl), loading, iconStart, iconEnd, as (Elementtyp)
+
+const VARIANT_CLASS = {
+  primary: 'btn-primary',
+  outline: 'btn-outline-primary',
+  secondary: 'btn-secondary',
+  ghost: 'btn-ghost',
+  destructive: 'btn-destructive'
+};
+
+const SIZE_CLASS = {
+  sm: 'btn-sm',
+  md: '',
+  lg: 'btn-lg',
+  xl: 'btn-lg px-8 py-4 text-base' // xl nutzt lg Basis + größere Padding-Erweiterung
+};
+
+export function Button({
+  className = '',
+  variant = 'primary',
+  size = 'md',
+  loading = false,
+  disabled,
+  iconStart,
+  iconEnd,
+  as: Component = 'button',
+  children,
+  ...rest
+}) {
+  const variantCls = VARIANT_CLASS[variant] || VARIANT_CLASS.primary;
+  const sizeCls = SIZE_CLASS[size] || '';
+  const loadingCls = loading ? 'btn-loading' : '';
+  const isDisabled = disabled || loading;
   return (
-    <button className={`${base} ${variants[variant]} ${sizes[size]} ${className}`} {...props}>
-      {children}
-    </button>
+    <Component
+      className={`${variantCls} ${sizeCls} ${loadingCls} ${className}`.trim()}
+      disabled={isDisabled}
+      {...rest}
+    >
+      {iconStart && <span className="btn-icon-start flex items-center">{iconStart}</span>}
+      <span className="inline-flex items-center gap-2">{children}</span>
+      {iconEnd && <span className="btn-icon-end flex items-center">{iconEnd}</span>}
+    </Component>
   );
 }
+
+export default Button;

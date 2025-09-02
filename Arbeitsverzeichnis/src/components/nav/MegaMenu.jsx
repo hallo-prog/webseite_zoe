@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Pill } from '@/components/ui/pill';
 
 // leftRail: { title: string, items: [{ label, desc, to, until?: string|number|Date, badge?: string }] }
-export default function MegaMenu({ label, items, image, highlight, leftRail, onLinkClick }) {
+export default function MegaMenu({ label, items, image, highlight, leftRail, onLinkClick, active=false }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
   const menuRef = useRef(null);
@@ -89,13 +89,14 @@ export default function MegaMenu({ label, items, image, highlight, leftRail, onL
   return (
     <div className="relative" ref={ref} onMouseLeave={() => setOpen(false)}>
       <button
-        className={`flex items-center text-[15px] sm:text-base lg:text-[17px] font-medium px-2 py-2 rounded-md transition-all duration-200 ${
-          open ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-        }`}
+        className={`flex items-center text-[15px] sm:text-base lg:text-[17px] font-medium px-2 py-2 rounded-md transition-all duration-200 relative ${
+          active || open ? 'text-blue-700 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+        } ${active ? 'after:absolute after:left-2 after:right-2 after:bottom-1 after:h-0.5 after:rounded-full after:bg-gradient-to-r after:from-[#12b3c7] after:to-[#18b364]' : ''}`}
         onMouseEnter={() => setOpen(true)}
         onFocus={() => setOpen(true)}
         aria-haspopup="true"
         aria-expanded={open}
+        aria-current={active? 'page': undefined}
         onKeyDown={onButtonKeyDown}
       >
         {label}

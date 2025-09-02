@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Sun, Euro, Shield, Clock, CheckCircle, AlertTriangle, Calculator, Phone, Award, Users, Star, Gift, Zap, Battery, Leaf } from 'lucide-react';
+import { Heading } from '@/components/ui/heading';
+import { Section } from '../components/ui/section';
 
 export default function Financing() {
   const { t } = useTranslation();
@@ -118,26 +120,19 @@ export default function Financing() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-emerald-600/10 to-green-600/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+      <Section padding="normal" variant="gradient" className="relative overflow-hidden" size="wide">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-emerald-600/10 to-green-600/10" />
+        <div className="relative text-center flow">
             <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
               <Award className="w-4 h-4" />
               TÜV-zertifizierte Förderberatung
             </div>
-            <h1 className="heading-1 text-gray-900 mb-6">
-              <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
-                Bis zu 18.500€
-              </span>
-              <br />
-              Förderung sichern
-            </h1>
-            <p className="lead text-gray-600 mb-8 max-w-3xl mx-auto">
+            <Heading as="h1" size="4xl" className="text-gray-900"><span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Bis zu 18.500€</span><br />Förderung sichern</Heading>
+            <p className="lead text-gray-600 max-w-3xl mx-auto">
               Maximieren Sie Ihre Solar-Investition! Wir beantragen alle Förderungen für Sie –
               kostenlos & risikofrei. Seit 2019 haben wir über 2.500 Förderanträge erfolgreich durchgeführt.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to={createPageUrl('Contact')}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -153,19 +148,17 @@ export default function Financing() {
                 Förderrechner starten
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
+    </div>
+      </Section>
 
-      {/* Loss Aversion Section */}
-      <section className="py-16 bg-gradient-to-r from-red-50 to-orange-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+  {/* Loss Aversion Section */}
+  <Section padding="tight" variant="gradient" className="bg-gradient-to-r from-red-50 to-orange-50" size="wide">
+          <div className="text-center flow">
             <div className="inline-flex items-center gap-2 bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <AlertTriangle className="w-4 h-4" />
               Warnung: Hohe Verluste ohne Förderung
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900">
               Ohne Förderung verlieren Sie Tausende Euro!
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -174,13 +167,13 @@ export default function Financing() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 tabular-nums">
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-red-100">
               <div className="text-center">
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Euro className="w-8 h-8 text-red-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-red-600 mb-2">3.360€/Jahr</h3>
+                <h3 className="text-2xl font-bold text-red-600 mb-2 tabular-nums">3.360€/Jahr</h3>
                 <p className="text-gray-600">Mehrkosten ohne Solar</p>
               </div>
             </div>
@@ -189,7 +182,7 @@ export default function Financing() {
                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-8 h-8 text-red-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-red-600 mb-2">3-5 Jahre</h3>
+                <h3 className="text-2xl font-bold text-red-600 mb-2 tabular-nums">3-5 Jahre</h3>
                 <p className="text-gray-600">Längere Amortisation</p>
               </div>
             </div>
@@ -202,19 +195,17 @@ export default function Financing() {
                 <p className="text-gray-600">Förderungen laufen aus</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </Section>
 
-      {/* Authority Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+  {/* Authority Section */}
+  <Section padding="tight" variant="plain" size="wide">
+          <div className="text-center flow">
             <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Shield className="w-4 h-4" />
               TÜV-zertifizierte Expertise
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900">
               Warum ZOE Solar Ihre Förderungen maximieren kann
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -252,14 +243,12 @@ export default function Financing() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">Ø 7.800€</h3>
               <p className="text-gray-600">Förderung pro Kunde</p>
             </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </Section>
 
-      {/* Subsidies Overview */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+  {/* Subsidies Overview */}
+  <Section padding="tight" variant="neutral" size="wide">
+          <div className="text-center flow">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Alle verfügbaren Förderungen 2025
             </h2>
@@ -289,19 +278,17 @@ export default function Financing() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+      </div>
+    </Section>
 
-      {/* Social Proof */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+  {/* Social Proof */}
+  <Section padding="tight" variant="plain" size="wide">
+          <div className="text-center flow">
             <div className="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Star className="w-4 h-4" />
               4.9/5 Sterne aus 487 Bewertungen
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900">
               Das sagen unsere Kunden über die Förderberatung
             </h2>
           </div>
@@ -321,20 +308,19 @@ export default function Financing() {
                     <div className="text-sm text-gray-500">{testimonial.location}</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-lg font-bold text-emerald-600">{testimonial.savings}</div>
+                    <div className="text-lg font-bold text-emerald-600 tabular-nums">{testimonial.savings}</div>
                     <div className="text-sm text-gray-500">gespart</div>
                   </div>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+      </div>
+    </Section>
 
-      {/* Scarcity & CTA */}
-      <section className="py-16 bg-gradient-to-r from-amber-500 to-orange-500">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+  {/* Scarcity & CTA */}
+  <Section padding="normal" variant="gradient" className="bg-gradient-to-r from-amber-500 to-orange-500" size="wide">
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 flow">
             <Gift className="w-16 h-16 text-white mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Nur noch begrenzte Fördermittel verfügbar!
@@ -352,21 +338,19 @@ export default function Financing() {
                 Jetzt Förderberatung sichern
               </Link>
               <div className="text-orange-100">
-                <div className="text-2xl font-bold">{timeLeft.days} Tage {timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}</div>
+                <div className="text-2xl font-bold tabular-nums">{timeLeft.days} Tage {timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}</div>
                 <div className="text-sm">bis Förderdeadline</div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </Section>
 
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Häufige Fragen zu Förderungen
-            </h2>
+  {/* FAQ Section */}
+  <Section padding="tight" variant="plain" size="wide">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center flow">
+            <h2 className="text-3xl font-bold text-gray-900">Häufige Fragen zu Förderungen</h2>
           </div>
 
           <div className="space-y-6">
@@ -384,7 +368,7 @@ export default function Financing() {
             </div>
           </div>
         </div>
-      </section>
+      </Section>
     </div>
   );
 }

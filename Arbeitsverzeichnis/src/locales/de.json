@@ -1,0 +1,465 @@
+{
+  "nav": {"start": "Start", "why": "Warum ZOE?", "info": "Informationen", "exp": "Erfahrungen", "calc": "Rechner", "deals": "Angebote", "consult": "Kostenlose Beratung"},
+  "seo": {"home": {"title": "Solaranlage kaufen – Bis zu 50% Stromkosten sparen | ZOE Solar", "desc": "Werden Sie in 2 Minuten energieunabhängig: kostenlose Potenzialanalyse, Festpreis‑Angebot, 25 Jahre Garantie. Jetzt Ersparnis berechnen!"}},
+  "common": {
+    "skip_content": "Zum Inhalt springen",
+    "loading": {
+      "calculator": "Lädt Rechner…",
+      "voices": "Lädt Stimmen…",
+      "form": "Formular lädt…",
+      "section": "Lädt Abschnitt:"
+    }
+  },
+  "sections": {
+    "start": "Start",
+    "mission": "Warum wir",
+  "impact": "Wirtschaft",
+    "problem": "Das Problem",
+    "beweis": "Beweise",
+    "ablauf": "Ablauf",
+    "angebot": "Angebot",
+    "vergleich": "Vergleich",
+    "versprechen": "Sicherheitsnetz",
+    "schutz": "Sicherheit",
+    "einwaende": "Einwände",
+    "faq": "FAQ",
+    "cta": "Loslegen"
+  },
+  "einwaende": {
+    "eyebrow": "Typische Einwände",
+    "headline_priv": "Die häufigsten Denkfehler – sauber geklärt",
+    "headline_biz": "Häufigste Einwände im Business Case – entkräftet",
+    "sub_priv": "Kurz, sachlich & belegbar: Warum konservative Zahlen & Schriftlichkeit Risiko wirklich senken.",
+    "sub_biz": "CAPEX / OPEX, Cashflow & Förderfenster: Klarheit statt Aufschub – schriftlich nachvollziehbar.",
+    "chips": ["Konservativ","Schriftlich","Nachvollziehbar"],
+    "items_priv": [
+      { "q": "Ich warte bis Preise weiter fallen", "a": "Preisrückgänge flachen ab; entgangene Einsparung (Opportunitätskosten) überholt den Preisvorteil schnell. Konservativ gerechnet liegen Sie heute bereits bei 250–450 € / Monat Potenzial." },
+      { "q": "Förderung unsicher – lieber später", "a": "Förderfenster & Degression ändern sich. Schriftliche Basis + Reservierung sichern Konditionen & Installations-Slot – ohne Verpflichtung." },
+      { "q": "Ertragsrechnungen sind eh geschönt", "a": "Wir legen Annahmen konservativ offen (Standort, Profil, Degression). Keine Peak-Werte – alles schriftlich nachvollziehbar." },
+      { "q": "Festpreis heißt bestimmt Nachträge", "a": "Leistungsumfang, Termin & technische Basis sind schriftlich definiert. Änderungen nur mit Ihrer expliziten Freigabe." }
+    ],
+    "items_biz": [
+      { "q": "CAPEX blockiert Liquidität", "a": "Konservative ROI-Basis + mögliche Förder-/Abschreibungshebel zeigen den realen Cashflow-Effekt. Typisch +1–3% EBIT – schriftlich dokumentiert." },
+      { "q": "Lastprofil noch zu unklar", "a": "Wir arbeiten mit konservativen Bandbreiten + Sensitivitäten. Präzisierungen fließen versionsgeführt ein – keine Schönrechnerei." },
+      { "q": "Marktpreise könnten sinken", "a": "Volatilität bleibt hoch; Anteil planbarer Eigenstrom reduziert Risiken jetzt. Abwarten erhöht die nicht refinanzierte Opportunitätslücke." },
+      { "q": "Interne Ressourcen fehlen", "a": "Strukturierter Fahrplan + Dokument-Templates minimieren Ihren internen Aufwand. Netz- & Förderprozesse übernehmen wir." }
+    ],
+    "block_headline": "Was die Entscheidung belastbar macht",
+    "block_text": "Sie erhalten vor Commitment eine konservative Spanne + schriftliche Basis – nicht nur eine optimistische Zahl.",
+    "block_list": ["Konservative Ertrags- & Amortisationsbasis","Festpreis + Leistungsumfang dokumentiert","Fixtermin-Vorschlag & Meilensteine","Förder- & Netz-Vorprüfung"],
+    "risk_title": "Risiken beim Warten",
+    "risk_pairs": [
+      { "r": "Opportunitätskosten", "m": "Jeden Monat entgeht Ihnen messbare Einsparung" },
+      { "r": "Förderfenster", "m": "Programme / Degression ändern Parameter" },
+      { "r": "Slots", "m": "Installationskapazitäten sind begrenzt" },
+      { "r": "Preisvolatilität", "m": "Unsichere Bezugskosten bleiben bestehen" }
+    ]
+  },
+  "hero": {"kicker": "Strompreise steigen? Nicht für Sie!", "h1": "Halbieren Sie Ihre Stromrechnung – garantiert planbar.", "sub": "In 2 Minuten wissen Sie, wie viel Sie sparen. Premium‑Technik, Festpreis‑Angebot, 25 Jahre Garantie und Förderung inklusive.", "cta_calc": "Jetzt Ersparnis berechnen", "cta_call": "15‑Min Erstgespräch sichern"},
+  "hero_ext": {
+    "head_priv_prefix": "Ihre Stromkosten senken – ",
+    "head_biz_prefix": "Energiekosten senken – ",
+  "head_priv_prefix_alt": "Ihre Stromkosten halbieren – ",
+  "head_biz_prefix_alt": "Energiekosten strukturell senken – ",
+  "words_priv": ["einfach","planbar","sicher"],
+  "words_biz": ["planbar","cashflow","transparent"],
+    "badge_rating": "4,9/5 • Festpreis • Termin",
+    "badge_list": {"festpreis": "Festpreis","fixtermin": "Fixtermin","handover": "Dokumentierte Übergabe"},
+    "cta_calc_priv": "Jetzt prüfen",
+    "cta_calc_biz": "ROI prüfen",
+    "cta_contact": "Kurzberatung",
+  "microline_priv": "Kurze Eingabe – sofort vorsichtige Ersparnis‑Spanne. Festpreis & Termin kommen schriftlich.",
+  "microline_biz": "Schnell vorsichtige ROI‑Basis sehen. Festpreis & Termin schriftlich. Kein Druck.",
+  "simple_bullets_priv": ["Vorsichtig gerechnet","Festpreis","Ohne Druck"],
+  "simple_bullets_biz": ["Conservative","Fixed scope","Transparent"],
+    "alt": "Solarstrom für Ihr Zuhause",
+    "inline_quality": "4,9/5 Qualität",
+  "inline_capacity": "12.300+ kWp umgesetzt",
+  "persona_toggle": {"privat": "Privat", "gewerbe": "Gewerbe"},
+  "price_trend_label": "Ø Börsenstrompreis (12M)",
+  "price_trend_hint": "Steigende Volatilität = höheres Risiko",
+  "volatility": "Volatilität",
+  "last_update": "Stand"
+  },
+  "cta": {
+    "final": {
+      "headline": "In 30 Sek. vorsichtige Spanne sehen",
+      "sub": "Kurze Eingabe – sofort verstehen, ob es sich lohnt. Festpreis & Termin folgen schriftlich.",
+      "primary_priv": "Jetzt prüfen",
+      "primary_biz": "ROI prüfen",
+      "secondary": "Kurzberatung",
+      "chip_no_commit": "Keine Verpflichtung",
+      "chip_transparency": "Transparente Annahmen",
+      "chip_handover": "Dokumentierte Übergabe",
+      "trust_list": {
+        "warranty": "25 Jahre Komponenten",
+        "fixed_price": "Schriftlicher Festpreis",
+        "no_sales_pressure": "Kein Verkaufsdruck",
+        "master_led": "Meistergeführt",
+        "scheduled": "Planbare Termine"
+      },
+      "micro_kpis_priv": [
+        {"label": "Ø Ersparnis", "value": "250–450 €/Mon"},
+        {"label": "Ø Autarkie", "value": "75–85%"},
+        {"label": "Payback konservativ", "value": "8–11 J."}
+      ],
+      "micro_kpis_biz": [
+        {"label": "EBIT Effekt", "value": "+1–3%"},
+        {"label": "Ø Autarkie", "value": "55–70%"},
+        {"label": "Payback konservativ", "value": "6–9 J."}
+      ],
+      "urgency_badges": ["Förderfenster","Begrenzte Slots","Preisvolatilität"],
+      "aria_kpi_grid": "CTA Kennzahlen"
+    },
+    "sticky": {"priv_msg": "Sparen Sie 250–450 €/Monat mit Solar", "biz_msg": "Verdienen Sie mit Solar: ROI kalkulieren", "calc_priv": "Ersparnis prüfen", "calc_biz": "ROI prüfen", "contact_priv": "Beratung", "contact_biz": "Gespräch"},
+    "hero": {"calc_priv": "Ersparnis prüfen", "calc_biz": "ROI prüfen", "contact": "15‑Min‑Mini‑Beratung"}
+  },
+  "schutz": {"headline": "Sicherheit für Ihre Entscheidung", "sub": "Alles was wichtig ist wird schriftlich: Zahlen, Umfang, Termin, Übergabe.", "simple_intro": "Kurz: Vorsichtig gerechnet. Festpreis. Fixtermin. Dokumentiert.", "simple_bullets": ["Festpreis","Vorsichtig","Dokumente","Service"], "items": [{ "h": "Festpreis & Umfang", "d": "Schwarz auf weiß – keine Überraschungen." }, { "h": "Geprüfte Technik", "d": "Marken‑Komponenten & Normen eingehalten." }, { "h": "Dokumentierte Übergabe", "d": "Protokolle, Einweisung, Monitoring Option." }], "cta_calc_priv": "Jetzt prüfen", "cta_calc_biz": "ROI prüfen", "cta_contact": "Kurzberatung"},
+  "value": {"badge": "Warum wir", "title": "Ihr Nutzen auf einen Blick", "subtitle": "Mehr Sicherheit. Weniger Aufwand. Zahlen, die man versteht.", "boxes": [
+    { "h": "Echte Entscheidungs-Zahl", "d": "Vorsichtig gerechnete Spanne statt schön geredeter Best Case." },
+    { "h": "Feste Kosten", "d": "Festpreis & Umfang klar – kein Nachschieben versteckter Positionen." },
+    { "h": "Planbarer Termin", "d": "Fixtermin & Slots – Sie wissen rechtzeitig, wann es passiert." },
+    { "h": "Saubere Unterlagen", "d": "Protokolle, Übergabe, Monitoring – alles ordentlich abgelegt." },
+    { "h": "Direkter Ansprechpartner", "d": "Kein Hotline-Pingpong – erreichbare Person, die Verantwortung trägt." },
+    { "h": "Förder & Netz geklärt", "d": "Wir prüfen & beantragen – Sie sparen Zeit & vermeiden Fehler." }
+  ]},
+  "nudge": {"priv": "Jeder Monat ohne PV kostet Sie bei 0,34 €/kWh ca. 200–300€ Opportunitätskosten. Holen Sie sich eine belastbare Zahl & Zeitachse – schriftlich.", "biz": "Jeder Monat ohne PV kostet Ihr Unternehmen bei 0,34 €/kWh ca. 900–1.400€ Opportunitätskosten. Holen Sie sich eine belastbare Zahl & Zeitachse – schriftlich.", "cta": "Jetzt berechnen"},
+  "metrics": {"aria": "Kennzahlen", "avg_rating": "Ø Bewertung", "installed_capacity": "Installierte Leistung", "avg_amort_priv": "Ø Amortisation privat", "on_time": "Termintreue", "avg_autarky": "Ø Autarkie"},
+  "availability": {"window": "Liefer-/Montagefenster in {{startDays}}–{{endDays}} Tagen · Täglich 2 freie Slots"},
+  "cert": {"headline": "Technische Konformität & Netzabstimmung", "sub": "Unsere Planung, Montage und Inbetriebnahme folgen anerkannten technischen Standards & regionalen Netzvorgaben – nachvollziehbar dokumentiert für langfristig sicheren Betrieb.", "simple_intro": "Was zählt: Normen eingehalten, Netz geprüft, Übergabe dokumentiert.", "simple_bullets": ["Netz geprüft","VDE konform","Dokumentiert"], "badge": "Zertifizierungen", "sub_headline": "Sicherer Netz- & Technikstandard", "paragraph": "Abstimmung mit Netzbetreibern, geprüfte Komponenten (VDE) und dokumentierte Inbetriebnahme – damit Ihre Anlage stabil & regelkonform läuft.", "bullets": ["Netzbetreiber-konforme Planung", "VDE‑geprüfte Komponenten", "Dokumentierte Übergabe & Protokolle"], "chips": {"net_approved": "Netzbetreiber abgestimmt", "tech_checked": "Technik geprüft", "docs": "Protokolle & Dokumente"}, "logo_labels": {"edis": "E.DIS Netzbetreiber", "hwk": "Handwerkskammer", "stromnetz_berlin": "Stromnetz Berlin", "vde": "VDE Zertifizierung"}},
+  "partners": {"trusted_by": "Vertraut von", "partner_alt": "Partner {{index}}"},
+  "problem": {"eyebrow": "Ihr Weg", "title": "Von Idee zu laufender Anlage in 3 klaren Schritten", "subtitle": "Statt vager Versprechen: Zahl → schriftlicher Rahmen → dokumentierte Übergabe. Planbar, nachvollziehbar, risikoarm.", "steps": [{"title": "30‑Sek. Spanne", "benefit": "Realistische Ertrags‑ & Ersparnisspanne", "desc": "Konservativ kalkuliert – keine Pflichtfelder, keine Schönrechnerei.", "chips": ["≈30 Sek.", "Konservativ", "Ohne Pflicht"]}, {"title": "Festpreis & Plan", "benefit": "Schriftliches Angebot mit Termin", "desc": "Leistungsumfang, Meilensteine & Fixtermin schwarz auf weiß.", "chips": ["Festpreis", "Termin", "Transparent"]}, {"title": "Saubere Umsetzung", "benefit": "Meistergeführte Montage", "desc": "Netzbetreiber, Dokumentation & Einweisung inklusive.", "chips": ["Meisterhaft", "Dokumentiert", "Übergabe"]}], "bottom": ["Konservative Basis statt Marketing‑Peak", "Alles schriftlich – keine Interpretationslücken", "Dokumentierte Übergabe & Einweisung"], "cta_line": "Starten Sie jetzt mit Ihrer konservativen Ertrags‑ & Ersparnisspanne.", "cta_addon": "Dauert ≈30 Sekunden. Kein Verkaufsdruck.", "cta_calc": "Jetzt prüfen", "cta_contact": "Beratung", "progress_label": "Schritt Fortschritt", "savings_ticker_priv": "Ø Privat: 250–450 € mtl. Potenzial", "savings_ticker_biz": "+1–3% EBIT Cashflow Effekt"},
+  "beweis": {"eyebrow": "Belege statt Buzzwords", "title": "Ergebnisse, die einer Prüfung standhalten", "subtitle": "Echte Basiswerte, dokumentierte Übergaben, prüfbare Kennzahlen – keine aufgeblasenen Versprechungen.", "simple_intro": "Kurz: Viele echte Umsetzungen, hohe Zufriedenheit, Termine eingehalten. Alles nachvollziehbar dokumentiert.", "simple_bullets": ["Viele reale Projekte","Hohe Zufriedenheit","Termine gehalten"], "chips": {"rating": "4,9/5 aus 250+ Bewertungen", "on_time": "98% Termintreue", "installs": "2.500+ Installationen"}, "stats": [{"number": "2.500+", "label": "Installationen"}, {"number": "4,9/5", "label": "Kundenzufriedenheit"}, {"number": "98%", "label": "Termintreue"}], "stats_help": ["Abgeschlossene Anlagen","Ø Bewertung aller Kanäle","Fristgerecht fertig"], "cases": [{"title": "EFH Berlin‑Pankow", "caption": "Satteldach Süd/Ost · Speicher 7 kWh", "points": [1800,2100,2300,2400,2450], "kpis": ["8,6 kWp","80% Autarkie","≈ 2.450 € /Jahr"], "note": "Konservativ auf Basis Standortdaten & Profil."}, {"title": "Gewerbe Brandenburg", "caption": "Flachdach 60 kWp · Peak‑Lasten gesenkt", "points": [0,8,11,13,12], "kpis": ["ROI 6–7 Jahre","Fixtermin","Festpreis"], "note": "Eigenverbrauch – Speicher ausgeklammert."}], "case_badge": "Echte Basiswerte", "cta_block": {"title": "Beispiel‑Bericht anfordern", "sub": "Konservativ gerechnete Basis & Annahmen – transparent als PDF.", "calc": "Jetzt kostenlos prüfen", "report": "Bericht anfordern", "report_icon": "Kurzbericht"}, "toggle_priv": "Privat KPIs", "toggle_biz": "Business KPIs", "disclaimer": "Angaben = konservative Beispiele / Erfahrungswerte. Ergebnisse variieren je Standort, Dach, Lastprofil & Förderlage."},
+  "ablauf": {"eyebrow": "Fahrplan", "title": "In ≈14 Tagen zur belastbaren Entscheidung", "subtitle": "Struktur statt Verkaufsdruck: dokumentierte Etappen, schriftliche Basis, klare Verantwortlichkeit.", "simple_intro": "Kurzüberblick: 4 Etappen – jede dokumentiert, konservativ gerechnet, ohne Verkaufsdruck.", "simple_bullets": ["Konservativ","Festpreis","Fixtermin"], "steps": [{"badge": "Tag 0–2", "title": "Kickoff & Kurzkonzept", "duration": "30–45 Min", "desc": "Dach & Zähler prüfen, Grunddaten, erste konservative Spanne.", "chips": ["ohne Pflichtunterlagen","digital/ vor Ort","erste Spanne"]}, {"badge": "Tag 3–6", "title": "Vorprüfung & Wirtschaftlichkeit", "duration": "2–3 Tage", "desc": "Standortdaten, Verschattung, Förderung/EEG, Last-Profil-Indiz.", "chips": ["Förder‑Check","Standortdaten","konservativ"]}, {"badge": "Tag 7–10", "title": "Festpreis & Terminplan", "duration": "1–2 Tage", "desc": "Leistungsumfang, Fixtermin-Vorschlag, Meilensteine dokumentiert.", "chips": ["Festpreis","Termin","Transparenz"]}, {"badge": "Tag 11–14", "title": "Entscheidung & Reservierung", "duration": "optional", "desc": "Offene Punkte klären, Komponenten reservieren, Netz-Voranfrage.", "chips": ["ohne Druck","Reservierung","Netz vorgeklärt"]}], "cta_title": "Ihr individueller Fahrplan – kostenlos", "cta_sub": "Konservativ & schriftlich. Keine Verpflichtung.", "cta_btn": "Fahrplan anfordern", "disclaimer": "Zeitfenster = Erfahrungswerte. Abweichungen je Dach / Komplexität möglich.", "deliverables_title": "Dokumentierte Ergebnisse", "deliverables": ["Kurzkonzept (PDF) – Varianten","Ertrags- & Amortisationsbasis","Fixtermin-Vorschlag + Meilensteine","Förder-Check","Festpreisangebot"], "why_title": "Warum strukturierter Fahrplan?", "why_items": ["Reduziert Fehlentscheidungen","Klare Verantwortlichkeiten","Schneller ROI-Vergleich","Frühzeitige Förder-Sicherung"], "fair_note": "Fair: Festpreis vorbehaltlich Vor-Ort-Check. Keine versteckten Kosten.", "progress_label": "Fortschritt", "progress_hint": "Struktur statt Druck", "persona_note_priv": "Privat: Dimensionierung ohne Übergröße – Risiko runter", "persona_note_biz": "Business: CAPEX/OPEX früh transparent", "kpi_yield": "Ertrag", "kpi_risk": "Risiko ↓", "kpi_docs": "Dokumente", "step_cta_calc": "Spanne prüfen", "step_cta_contact": "Fragen?", "mini_metrics": [{"label": "Ø Planungszeit", "note": "≤14 Tage"}, {"label": "Termintreue", "note": "98%"}, {"label": "Ø Autarkie", "note": "75–85%"}, {"label": "ROI Spanne", "note": "8–11 J."}], "why_note": "Struktur senkt Fehlentscheidungen & Nachträge."},
+  "offer": {
+    "eyebrow": "Pakete",
+    "title_priv": "Das passende Paket für Ihr Dach",
+    "title_biz": "Das skalierbare Paket für Ihr Projekt",
+    "subtitle": "Wählen Sie den Ansatz – konservative Ertragsbasis & schriftliches Angebot folgen nach wenigen Angaben.",
+  "simple_intro_priv": "Drei Ausstattungen – alle mit konservativer Ertragsbasis, Festpreis & sauberer Dokumentation. Wählen Sie einfach wie viel Komfort Sie wollen.",
+  "simple_intro_biz": "Skalierbarer Leistungsumfang: von Basis-Auslegung bis detaillierter Dokumentation & Redundanz. Jede Stufe baut klar aufeinander auf.",
+    "tiers": {"smart": "Smart", "komfort": "Komfort", "premium": "Premium", "recommended": "Empfohlen"},
+    "features": {"header_priv": "Leistung & Ausstattung", "header_biz": "Scope & Ausstattung"},
+    "featureSets": {
+      "priv": {
+        "smart": ["Module + Wechselrichter · Speicher optional","Transparente Basis‑Auslegung","Monitoring & Einweisung","Wallbox Vorbereitung"],
+        "komfort": ["Module, WR, Speicher 5–10 kWh","Optimierte Auslegung (inkl. Verschattung)","Monitoring · App · Dokumentation","Optionale Wallbox-Integration"],
+        "premium": ["High‑Efficiency Module + Hybrid‑WR","Speicher 10–15 kWh (optimiert)","Detail‑Auslegung inkl. Strings/Statik","Wallbox & Notstrom‑Option"]
+      },
+      "biz": {
+        "smart": ["Module + Strang‑WR · Speicher optional","Transparente Basis‑Auslegung","Monitoring & Einweisung","Netz-/EEG‑Check inklusive"],
+        "komfort": ["Module, Strang-/Zentral‑WR","Lastmanagement & optimierte Auslegung","Monitoring · App · Dokumentation","Förder‑Check & Antrag"],
+        "premium": ["High‑Efficiency Module, Redundanz","Detail‑Auslegung (Strings/Statik)","Erweitertes Monitoring & Protokoll","EVU‑Abstimmung & PPA‑Option"]
+      }
+    },
+    "matrix": {
+      "headline": "Unterschiede im Überblick",
+      "rows": [
+        {"label": "Speicheroption", "smart": "Optional", "komfort": "5–10 kWh", "premium": "10–15 kWh"},
+        {"label": "Auslegung & Verschattung", "smart": "Basis", "komfort": "Optimiert", "premium": "Detail / Statik"},
+        {"label": "Monitoring", "smart": "Standard", "komfort": "Erweitert", "premium": "Erweitert + Protokoll"},
+        {"label": "Förder / EEG", "smart": "Check", "komfort": "Check + Antrag", "premium": "Strategisch"},
+        {"label": "Wallbox / Lastmanagement", "smart": "Vorbereitet", "komfort": "Optional integrierbar", "premium": "Integriert / Redundanz"}
+      ],
+      "col_smart": "Smart",
+      "col_komfort": "Komfort",
+      "col_premium": "Premium"
+    },
+    "pills": {"price": "Festpreis schriftlich", "conservative": "Konservativ gerechnet", "no_hidden": "Keine versteckten Kosten"},
+    "tier_benefits_label": "Kurz erklärt",
+    "tier_benefits": {
+      "priv": {
+        "smart": ["Solider Start – Speicher optional nachrüstbar","Transparente Basis-Auslegung ohne Schnickschnack"],
+        "komfort": ["Optimierte Auslegung + Speicher abgestimmt","Alle Kerndokumente & Monitoring bequem"],
+        "premium": ["Max. Effizienz + größerer Speicher","Detailplanung (Strings/Statik) & Optionen wie Notstrom"]
+      },
+      "biz": {
+        "smart": ["Grundlage für schnelle Wirtschaftlichkeitsprüfung","Monitoring & Netz/EEG-Check enthalten"],
+        "komfort": ["Optimierte Auslegung + Lastmanagement","Förderantrag & Doku inklusive"],
+        "premium": ["Redundanz + detaillierte Planung","Erweitertes Monitoring & PPA/EVU-Option"]
+      }
+    },
+    "kpis_priv": [
+      {"label": "Ø Ersparnis", "value": "250–450 €/Mon"},
+      {"label": "Ø Autarkie", "value": "75–85%"},
+      {"label": "Payback konservativ", "value": "8–11 J."}
+    ],
+    "kpis_biz": [
+      {"label": "EBIT Effekt", "value": "+1–3%"},
+      {"label": "Ø Autarkie", "value": "55–70%"},
+      {"label": "Payback konservativ", "value": "6–9 J."}
+    ],
+    "micro_note_priv": "Spanne konservativ · schriftlich fixiert",
+    "micro_note_biz": "ROI Basis konservativ · schriftlich",
+    "cta_contact": "Konkretes Angebot anfordern",
+    "cta_calc_priv": "Ersparnis prüfen",
+    "cta_calc_biz": "ROI prüfen",
+    "fix_headline": "Fix zugesichert",
+    "fix_points": ["Konservative Ertrags- & Amortisationsbasis schriftlich", "Festpreis & Leistungsumfang (keine versteckten Kosten)", "Terminplan & Meilensteine", "Förder‑Check & Abwicklung", "Meistergeführte Montage & Übergabeprotokoll"],
+    "disclaimer": "Realistisch & fair: Zeitpläne sind Richtwerte. Angebot vorbehaltlich Vor‑Ort‑Check.",
+    "rate_headline": "Investition als Monatsrate gedacht",
+    "rate_note": "Keine Finanzberatung · Details im Gespräch.",
+    "badge_recommend": "Meist gewählt",
+    "aria_tier_tabs": "Paket Auswahl",
+    "aria_matrix": "Vergleich Paket Merkmale"
+  },
+  "comparison": {"headline": "Warum Struktur & Schriftlichkeit zählen", "sub": "Kernunterschiede, die Ihre Investition planbar machen – und typische Schwachstellen im Markt.", "chips": {"responsibility": "Verantwortung", "written": "Schriftlich", "dates": "Fixtermine", "conservative": "Konservativ"}, "features": {"ertragsbasis": "Ertrags- & Amortisationsbasis", "festpreis": "Festpreis + Leistungsumfang", "foerder": "Förderabwicklung", "terminplan": "Terminplan", "monitoring": "Monitoring & Einweisung", "subunternehmer": "Subunternehmer-Steuerung", "handover": "Dokumentierte Übergabe", "transparency": "Transparenz Annahmen"}, "rows": [{"k": "Ertrags- & Amortisationsbasis", "a": "konservativ & schriftlich", "b": "optimistischer Best Case"}, {"k": "Festpreis + Leistungsumfang", "a": "fest & transparent", "b": "Nachträge möglich"}, {"k": "Förderabwicklung", "a": "inklusive", "b": "selbst kümmern"}, {"k": "Terminplan", "a": "Fixtermine + Meilensteine", "b": "variabel / unverbindlich"}, {"k": "Monitoring & Einweisung", "a": "inklusive", "b": "optional"}, {"k": "Subunternehmer-Steuerung", "a": "zentrale Verantwortung", "b": "oft unklar"}, {"k": "Dokumentierte Übergabe", "a": "Protokoll & Einweisung", "b": "häufig verkürzt"}, {"k": "Transparenz Annahmen", "a": "offen gelegt", "b": "kaum detailliert"}], "micro_cta": "Ihre konservative Spanne prüfen", "cta_calc": "Jetzt prüfen", "aria_table": "Vergleich ZOE Solar vs. Marktstandard", "mobile_label": "Vergleich (mobil)", "legend_yes": "Vorhanden / zugesichert", "legend_no": "Fehlt / unsicher", "legend_focus": "Fokus: Planbarkeit & Schriftlichkeit", "legend_aria": "Legende", "to_offer_cta": "Jetzt Paket prüfen"},
+  "mission": {
+    "why_now": "Warum jetzt?",
+    "headline_priv": "Weniger Stromkosten. Ohne Stress.",
+    "headline_biz": "Energiekosten runter. Planung rauf.",
+    "sub_priv": "Wir rechnen vorsichtig, schreiben alles auf und begleiten bis nach der Übergabe. So behalten Sie Ruhe und Kontrolle.",
+    "sub_biz": "Klare Zahlen statt Bauchgefühl: konservative ROI‑Basis, schriftlicher Festpreis, dokumentierte Umsetzung – liquiditätsschonend.",
+    "pains": ["Schön gerechnete Versprechen","Spätere Zusatzkosten","Unsicherer Ablauf"],
+    "safeguards": ["Vorsichtig gerechnete Basis","Festpreis & Umfang klar","Fixer Termin & Plan"],
+    "outcomes_priv": ["Sie wissen schnell Ihre Spanne","Keine bösen Preis-Überraschungen","Planbarer Termin"],
+    "outcomes_biz": ["Planbarer Cashflow","Früh Förderfenster sichern","Transparente Dokumentation"],
+    "chips": {"conservative": "Vorsichtig","written": "Schriftlich","documented": "Dokumentiert"},
+    "pill": {"price_time": "Festpreis & Termin","master": "Meistergeführt","conservative": "Vorsichtig gerechnet","handover": "Saubere Übergabe"},
+    "cards": {"problem": "Problem","problem_title": "Was oft schief geht","solution": "Schutz","solution_title": "So sichern wir ab","outcome": "Ergebnis","outcome_title": "Ihr Vorteil"},
+    "micro_headline": "In 30 Sek. Ihre Ersparnis‑Spanne sehen",
+    "micro_sub": "Keine Pflichtangaben. Vorsichtig gerechnet. Direkt vergleichbar.",
+    "micro_cta": "Jetzt prüfen",
+    "micro_pills": {"no_sales": "Kein Druck","roi": "ROI Basis","traceable": "Nachvollziehbar"},
+    "pillars_title": "Was wir für Sie absichern",
+    "pillars": [
+      {"h": "Zahlen", "d": "Vorsichtige Ertrags- & Amortisationsbasis."},
+      {"h": "Kosten", "d": "Festpreis & Umfang sauber definiert."},
+      {"h": "Termin", "d": "Fixtermin & klarer Ablauf."},
+      {"h": "Übergabe", "d": "Dokumente, Einweisung, Monitoring."}
+    ],
+    "matrix_title": "Risiko → Schutz",
+    "matrix_cols": {"risk": "Risiko","mit": "Schutz"},
+    "matrix_rows": [
+      {"r": "Zu optimistische Zahlen", "m": "Vorsichtig gerechnet"},
+      {"r": "Nachträge", "m": "Festpreis schriftlich"},
+      {"r": "Verzögerungen", "m": "Termin & Slots"},
+      {"r": "Qualität offen", "m": "Meister & Doku"}
+    ]
+  },
+    "scarcity": {"ribbon": {"msg_slots": "Noch {{count}} freie Installations‑Slots diesen Monat","msg_action": "Countdown bis Ende des Tages","msg_cta": "Jetzt Termin reservieren."}},
+    "popup": {
+      "common": {"email_invalid": "Bitte gültige E‑Mail eingeben.", "submit_error": "Senden fehlgeschlagen. Bitte später erneut versuchen.", "email_ok": "Danke! Wir senden Ihnen die Infos per E‑Mail.", "sending": "Senden…", "receive": "Erhalten"},
+      "timed": {"title": "Der 10‑Minuten Solar‑Kurzguide", "l1": "Ersparnis/ROI – konservativ, als Spanne", "l2": "Speicher: ja/nein mit Daumenregel", "l3": "Förder‑Check: was wirklich zählt", "email_help": "1–2 E‑Mails/Woche, jederzeit abbestellbar.", "cta_calc": "Jetzt rechnen", "btn_later": "Später", "email_placeholder": "E‑Mail"},
+      "exit": {"aria_title": "Bevor Sie gehen", "title_base": "Kurzer Reality‑Check?", "desc_base": "Ihre realistische {Ersparnis/ROI}-Spanne in 30 Sekunden – ohne Pflichtfelder. Oder erhalten Sie unser Kurzkonzept‑Muster per E‑Mail.", "title_incentive": "Spezial: 500 € Installationsrabatt sichern", "desc_incentive": "Erhalten Sie einen einmaligen <strong>500 € Rabatt</strong>, wenn Sie innerhalb von 14 Tagen nach Erhalt Ihrer konservativen Spanne einen Installations‑Slot reservieren.", "btn_calc": "Jetzt prüfen", "btn_incentive": "Rabatt vormerken", "email_intro": "Oder: Kurzkonzept‑Muster per E‑Mail"}
+    },
+  "versprechen": {
+    "eyebrow": "Planbarkeit & Schutz",
+    "title": "Das Sicherheitsnetz für Ihre Investition",
+    "subtitle": "Jede Zusage schriftlich fixiert: Basiszahlen konservativ, Umsetzung meistergeführt, Verantwortung klar geregelt.",
+  "simple_intro": "Kurz gesagt: Wir rechnen vorsichtig, schreiben alles auf und dokumentieren die Übergabe. So vermeiden Sie böse Überraschungen.",
+  "simple_bullets": ["Konservative Zahlen","Festpreis + Umfang","Fixtermin Vorschlag","Dokumentierte Übergabe"],
+    "top": [
+      {"title": "Transparenz", "points": ["Festpreis & Leistungsbeschreibung schriftlich","Nachvollziehbare Ertragsrechnung vorab","Keine versteckten Zusatzkosten"]},
+      {"title": "Qualität", "points": ["Meistergeführte, dokumentierte Montage","Marken‑Komponenten passend dimensioniert","Saubere Übergabe inkl. Einweisung"]},
+      {"title": "Sicherheit", "points": ["Netzbetreiber‑Abstimmung inklusive","Inbetriebnahme mit Protokoll","Erreichbarer Service statt Hotline‑Pingpong"]}
+    ],
+    "mid": [
+      {"title": "Festpreis – was es heißt", "points": ["Leistungsumfang schriftlich definiert","Keine nachträglichen Materialaufschläge","Änderungswünsche nur mit schriftlicher Freigabe"]},
+      {"title": "Terminbindung", "points": ["Fixtermin schriftlich im Angebot","Montagefenster 10–14 Tage","Pro Tag begrenzte Slots – planbar"]},
+      {"title": "Erreichbarer Service", "points": ["Fester Ansprechpartner statt Hotline","Dokumentierte Übergabe & Einweisung","Auf Wunsch: Monitoring & Wartung"]}
+    ],
+    "chips": ["4,9/5 · 250+ Bewertungen","Alles schriftlich","Kein Verkaufsdruck"],
+    "cta_calc": "In 30 Sek. prüfen",
+    "cta_contact": "Erstgespräch",
+    "disclaimer": "Keine Kaltakquise. Keine Weitergabe an unkontrollierte Subunternehmer.",
+    "disclaimer_sub": "Festpreis gilt vorbehaltlich Vor‑Ort‑Check.",
+    "kpis_priv": [
+      {"label": "Ø Ersparnis-Spanne", "value": "250–450 €/Mon"},
+      {"label": "Ø Autarkie", "value": "75–85%"},
+      {"label": "Payback konservativ", "value": "8–11 J."}
+    ],
+    "kpis_biz": [
+      {"label": "EBIT Cashflow Effekt", "value": "+1–3%"},
+      {"label": "Ø Autarkie", "value": "55–70%"},
+      {"label": "Payback konservativ", "value": "6–9 J."}
+    ],
+  "kpi_heading_priv": "Ihre Kennzahlen",
+  "kpi_heading_biz": "Projekt-KPIs",
+    "risk_title": "Wie Risiko umgedreht wird",
+  "risk_col_risk": "Risiko",
+  "risk_col_mit": "Absicherung",
+    "risk_pairs": [
+      {"risk": "Überoptimistische Ertragsannahmen", "mit": "Konservativ dokumentierte Basis"},
+      {"risk": "Variable Kosten / Nachträge", "mit": "Festpreis + Umfang schriftlich"},
+      {"risk": "Unklare Verantwortlichkeiten", "mit": "Zentrale Meister-Verantwortung"},
+      {"risk": "Späte Förder- / Netz-Hürden", "mit": "Früher Förder- & Netz-Check"}
+    ],
+    "guarantee_title": "Schriftliche Absicherungen",
+    "guarantee_points": ["Festpreis & Terminplan","Konservative Ertragsbasis","Dokumentierte Übergabe","Monitoring Option"],
+  "legend_risk": "Risiko",
+  "legend_mit": "Absicherung",
+  "legend_aria": "Legende",
+    "aria_kpi_grid": "Sicherheitsnetz Kennzahlen",
+    "aria_risk_table": "Risiko Inversion Tabelle"
+  },
+  "faq": {
+    "headline": "Häufige Fragen – kompakt & ehrlich",
+  "simple_intro": "Kurz: Die wichtigsten Fragen zu Zahlen, Ablauf, Kosten & Betrieb – klar und ohne Fachjargon.",
+  "simple_bullets": ["Konservativ","Festpreis","Fixtermin","Service"],
+    "search_placeholder": "Suchen (z.B. Förderung)",
+    "search_aria": "FAQ durchsuchen",
+    "open_all": "Alle öffnen",
+    "close_all": "Alle schließen",
+    "no_results": "Keine Treffer. Suchbegriff anpassen.",
+    "clear_search": "Zurücksetzen",
+    "groups": [
+      {"group": "Planung & Zahlen", "items": [
+        {"q": "Wie realistisch sind die Ertragsprognosen?", "a": "Wir rechnen bewusst konservativ mit Standortdaten & Verbrauchsprofil. Annahmen schriftlich offengelegt."},
+        {"q": "Bekomme ich eine Amortisationsbasis?", "a": "Ja – konservativ, dokumentiert & nachvollziehbar. Keine Marketing-Peaks."},
+        {"q": "Was passiert wenn Werte abweichen?", "a": "Abweichungen werden erklärt (Wetter, Lastprofil). Keine Schuldverschiebung – Transparenz vor Schönrechnerei."}
+      ]},
+      {"group": "Umsetzung & Ablauf", "items": [
+        {"q": "Wie schnell geht die Montage?", "a": "Typisch 1–2 Tage nach Freigabe. Fixtermin & Meilensteine schriftlich vorab."},
+        {"q": "Wie läuft die Anmeldung beim Netzbetreiber?", "a": "Wir übernehmen Antrag, Kommunikation, Protokolle. Sie müssen nichts tun."},
+        {"q": "Wer koordiniert Subunternehmer?", "a": "Zentrale Verantwortung bei uns. Keine Weitergabe in eine unkontrollierte Kette."}
+      ]},
+      {"group": "Kosten & Förderung", "items": [
+        {"q": "Welche Förderungen sind möglich?", "a": "Wir prüfen Programme, sichern Fristen & beantragen – Einrechnung transparent im Angebot."},
+        {"q": "Muss ich vorab zahlen?", "a": "Nein. Staffelung fair & schriftlich geregelt. Keine versteckten Kosten."},
+        {"q": "Festpreis – wirklich ohne Nachträge?", "a": "Leistungsumfang ist schriftlich fixiert; Änderungen nur mit schriftlicher Freigabe."}
+      ]},
+      {"group": "Betrieb & Service", "items": [
+        {"q": "Wie wird die Anlage gewartet?", "a": "Monitoring & Sichtprüfung enthalten; Wartungsplan optional skalierbar."},
+        {"q": "Wie erreiche ich Support?", "a": "Direkter Ansprechpartner – kein Hotline-Pingpong."},
+        {"q": "Was bekomme ich zur Übergabe?", "a": "Protokolle, Einweisung, Dokumentation & Zugriff aufs Monitoring."}
+      ]}
+    ]
+  },
+  "testimonials": {
+    "aria": "Kundenstimmen",
+    "status": "{{count}} Kundenstimmen vorhanden. Seite {{page}} von {{pages}}. {{state}}",
+    "paused": "Automatischer Wechsel pausiert.",
+    "running": "Automatischer Wechsel alle 6 Sekunden.",
+    "play_label": "Auto",
+    "pause_label": "Pause",
+    "prev": "Vorherige Seite",
+    "next": "Nächste Seite",
+    "page": "Seite {{page}}",
+    "rating_value": "5.0",
+    "items": [
+      {"quote": "Unsere Stromrechnung ist endlich entspannt. Saubere Arbeit und nichts beschönigt – genau so wollten wir das.", "name": "Familie M., Potsdam", "meta": "9,8 kWp + Speicher · 05/2025"},
+      {"quote": "Klare Zahlen statt Blabla. Termin gehalten, Dach nach zwei Tagen fertig – top organisiert.", "name": "Miriam M., Berlin-Pankow", "meta": "8,2 kWp · 04/2025"},
+      {"quote": "Respekt vor dem Aufwand gehabt – am Ende lief alles geräuschlos inkl. Netzbetreiberkram.", "name": "Jonas M., Teltow", "meta": "11,4 kWp + Speicher · 06/2025"},
+      {"quote": "Preis stand, Termin stand, ordentliche Einweisung. So macht man das.", "name": "Sven K., Köpenick", "meta": "7,6 kWp · 05/2025"}
+    ]
+  }
+  ,"impact": {
+    "eyebrow": "Wirtschaftlicher Hebel",
+    "headline_priv": "Ihr monatliches Einspar-Potenzial planbar machen",
+    "headline_biz": "Energiekosten senken – Cashflow & EBIT schützen",
+    "sub_priv": "Konservativ gerechnete Spanne, schriftlicher Festpreis & dokumentierte Umsetzung – Grundlage für Ihre Entscheidung ohne Verkaufsdruck.",
+    "sub_biz": "Transparente ROI-Basis, CAPEX/OPEX klar abgegrenzt & förderoptimiert – belastbar statt Marketing-Zahl.",
+  "simple_intro": "Kurz gesagt: Wir zeigen Ihnen eine vorsichtige Spanne und legen die Annahmen offen – schriftlich und nachvollziehbar.",
+  "simple_bullets": ["Konservativ gerechnet","Alles schriftlich","Annahmen offen","Kein Verkaufsdruck"],
+  "kpi_help": ["Zeit bis Investition sich amortisiert","Ø private Einspar-Spanne","EBIT Cashflow Effekt"],
+    "chips": ["Konservativ","Schriftlich","Nachvollziehbar","EBIT-Effekt"],
+    "lever_title": "Wesentliche Werthebel",
+    "levers": [
+      {"h": "Direkte Stromkostenreduktion", "d": "Eigenverbrauch optimiert – konservative kWh‑Ertragsbasis statt Peak-Szenario."},
+      {"h": "Absicherung gegen Preissteigerung", "d": "Fixierter Anteil Ihres Verbrauchs wird planbar – senkt Volatilität."},
+      {"h": "Förder- & Steueroptimierung", "d": "Programme, Degression & steuerliche Behandlung früh integriert."},
+      {"h": "Dokumentierte Übergabe & Monitoring", "d": "Sicherer Betrieb & frühzeitige Erkennung von Abweichungen."}
+    ],
+    "kpis": [
+      {"icon": "LineChart", "label": "Ø Amortisation", "value": "8–11 J.", "note": "Konservativ berechnet – Dach & Profil abhängig."},
+      {"icon": "PiggyBank", "label": "Monats-Effekt", "value": "250–450 €", "note": "Privat – nach Inbetriebnahme (Spanne)."},
+      {"icon": "Factory", "label": "EBIT Effekt", "value": "+1–3%", "note": "Gewerbe – abhängig Lastprofil."}
+    ],
+    "range_title": "Ihre konservative Spanne",
+    "range_text": "Wir zeigen Ihnen eine nachvollziehbare Basis: {{range}} Ersparnis bzw. Deckungsbeitrag – ohne Schönrechnerei.",
+  "range_reassure": "Konservativ & schriftlich – kein Verkaufsdruck.",
+    "calc_range_priv": "250–450 €/Monat",
+    "calc_range_biz": "Cashflow +1–3%",
+    "range_bullets": ["Standort- & Verbrauchsdaten einbezogen","Ann. transparent offengelegt","Förderpotenziale markiert","Keine Pflichtangaben"],
+    "range_chips": ["Konservativ","Schriftlich","Vergleichbar"],
+    "cta_calc_short": "Spanne prüfen",
+    "cta_contact_short": "Beratung",
+    "cta_calc_priv": "Ersparnis prüfen",
+    "cta_calc_biz": "ROI prüfen",
+    "cta_contact": "Kurzes Gespräch",
+    "window_title": "Aktuelles Handlungsfenster",
+    "window_text": "Förderanträge & Lieferfenster ändern sich. Wer jetzt dokumentiert, sichert Konditionen & Installations-Slot.",
+    "window_chips": ["Förderfenster","Slot-Sicherung","Preisvolatilität"],
+    "delta_title": "Was Sie konkret erhalten",
+    "delta_text": "Komprimiertes, prüfbares Entscheidungs-Set – weniger Unsicherheit, mehr finanzielle Klarheit.",
+    "delta_list": ["Konservative Ertrags- & Amortisationsbasis","Festpreis + Leistungsumfang schriftlich","Fixtermin-Vorschlag & Meilensteine","Förder- & Netzvorprüfung","Dokumentierte Übergabe & Monitoring-Option"]
+  },
+  "uvp": {
+    "badge": "Vollservice & Garantie",
+    "title": "Was uns messbar unterscheidet",
+    "subtitle": "Premium‑Komponenten, zentrale Verantwortung, schriftliche Absicherung & dokumentierte Übergabe – kein Bauchgefühl.",
+    "points": [
+      {"h": "Vollservice‑Garantie", "d": "Planung, Netz, Förderung, Montage, Übergabe – alles aus einer Hand."},
+      {"h": "25 Jahre Leistung", "d": "Langfristige Komponenten‑ & Leistungszusagen (Hersteller Tier‑1)."},
+      {"h": "Zertifizierte Installateure", "d": "Meistergeführt & nach anerkannten Normen dokumentiert."},
+      {"h": "Eigene Planungsabteilung", "d": "Kein Outsourcing – Transparenz & schnellere Iteration."},
+      {"h": "Smart‑Home Integration", "d": "Monitoring & Steuerung optional vernetzt."},
+      {"h": "Batteriespeicher Expertise", "d": "Optimierte Dimensionierung & Amortisationsbasis konservativ."},
+      {"h": "E‑Mobility Vorbereitung", "d": "Wallbox & Lastmanagement sauber integrierbar."}
+    ],
+    "guarantee_title": "Schriftliche Absicherungen",
+    "innovation_title": "Innovation & Zukunftsfähigkeit",
+    "guarantees": ["Festpreis + Leistungsumfang dokumentiert","Konservative Ertrags- & Amortisationsbasis","Fixtermin & Slots reservierbar","Dokumentierte Übergabe & Einweisung"],
+    "innovations": ["Smart‑Home & Monitoring APIs","Batteriespeicher Roadmap Beratung","Vorbereitung bidirektionales Laden","Optionale Notstrom‑Schnittstelle"]
+  },
+  "diff": {
+    "badge": "Differenzierung",
+    "title": "Risiken im Markt vs. dokumentierte Lösung",
+    "subtitle": "Wir drehen typische Schwachstellen um: Von unklar & variabel zu konservativ, schriftlich & verantwortet.",
+    "col_problems": "Branchenprobleme",
+    "col_risks": "Risiko Billiganbieter",
+    "col_solution": "Unser Schutz",
+    "problems": ["Unqualifizierte Beratung","Überoptimistische Ertragsannahmen","Versteckte Zusatzkosten","Unklare Verantwortlichkeit","Subunternehmer-Ketten"],
+    "risks": ["Nachträge & Preisaufschläge","Leistungseinbußen durch Fehlplanung","Garantieausfälle","Verzögerte Inbetriebnahme","Sicherheits-/Norm-Risiken"],
+    "solutions": ["Konservative Basis schriftlich","Festpreis + Umfang dokumentiert","Zentrale Meister-Verantwortung","Früher Förder- & Netz-Check","Dokumentierte Übergabe"],
+    "proof": [
+      {"h": "98% Termintreue", "d": "Verbindliche Termin- & Meilensteinplanung."},
+      {"h": ">94% Weiterempfehlung", "d": "Hohe Kundenzufriedenheit & Referenzprojekte."},
+      {"h": "Tier‑1 Komponenten", "d": "Langlebigkeit & Performance abgesichert."},
+      {"h": "2500+ Installationen", "d": "Breite Erfahrungsbasis & Prozessroutine."}
+    ]
+  },
+  "leadMagnets": {
+    "badge": "Schrittweise Mehrwert",
+    "title": "Ihre kostenlose Wertleiter zum fundierten Entscheid",
+    "subtitle": "Vom schnellen Überblick bis zur detaillierten Potenzialanalyse – jede Stufe erhöht Klarheit & Commitment ohne Druck.",
+    "step_label": "Stufe {{n}}",
+    "items": [
+      {"h": "E‑Book 45 Seiten", "d": "7 kostspielige Fehler vermeiden & bis zu 30% sparen – kompakt & verständlich.", "chips": ["Reziprozität","Vertrauen"], "cta": "ebook"},
+      {"h": "Potenzialanalyse", "d": "Personalisierte Spanne + 3D Dachvisualisierung – konservativ & nachvollziehbar.", "chips": ["Commitment","Transparenz"], "cta": "analyse"},
+      {"h": "Live Webinar", "d": "Monatlich: Förderungen optimal nutzen + Q&A – aktuelle Chancen verstehen.", "chips": ["Autorität","Aktualität"], "cta": "webinar"},
+      {"h": "Vor‑Ort Beratung", "d": "Individuelle Prüfung & 500 € Installationsrabatt bei Abschluss binnen 14 Tagen.", "chips": ["Knappheit","Incentive"], "cta": "onsite"}
+    ],
+    "cta_calc_priv": "Jetzt Spanne prüfen",
+    "cta_calc_biz": "ROI prüfen",
+    "cta_ebook": "E‑Book erhalten",
+    "cta_analysis": "Analyse starten",
+    "cta_webinar": "Webinar Platz sichern",
+    "cta_onsite": "Vor‑Ort Termin anfragen"
+  },
+  "team": {
+    "badge": "Team & Expertise",
+    "title": "Menschen, die Ihre Anlage planbar machen",
+    "subtitle": "Interdisziplinär: Planung, Netz, Förderung, Montage & Betrieb – eine Verantwortungs‑Kette.",
+    "members": [
+      {"name": "Laura K.", "role": "Leitung Planung", "exp": "1200+ Auslegungen"},
+      {"name": "Martin S.", "role": "Netz & Förderung", "exp": "300+ Anträge"},
+      {"name": "Elena R.", "role": "Qualität & Doku", "exp": "2500+ kWp dokumentiert"},
+      {"name": "Tobias W.", "role": "Lead Installateur", "exp": "900+ kWp Montage"}
+    ],
+    "stats": [
+      {"kpi": "98%", "label": "Termintreue"},
+      {"kpi": "2.500+", "label": "Installationen"},
+      {"kpi": "4,9/5", "label": "Ø Bewertung"}
+    ],
+    "cta_contact": "Kurzberatung sichern"
+  },
+  "consent": {
+    "title": "Cookies & Analyse",
+    "text": "Wir nutzen optionale Analyse & Marketing Cookies (GTM, Analytics) um Nutzung zu verstehen & Angebote zu verbessern. Sie können später widerrufen.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "settings": "Einstellungen"
+  }
+}

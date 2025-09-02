@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Star, MapPin, Calendar, TrendingUp, Euro, Home, Users, Award, Clock, CheckCircle, Phone, Zap, Heart } from 'lucide-react';
+import { Heading } from '@/components/ui/heading';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Pill } from '@/components/ui/pill';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
+import { Section } from '../components/ui/section';
 
 export default function SuccessStories() {
   const { t } = useTranslation();
@@ -162,14 +164,11 @@ export default function SuccessStories() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-blue-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Hero Section */}
+  <Section padding="normal" variant="gradient" className="bg-gradient-to-br from-green-50 to-blue-50" size="wide">
           <div className="text-center mb-16">
             <Pill variant="light" className="mb-4">Erfolgsgeschichten</Pill>
-            <h1 className="heading-1 text-gray-900 mb-6">
-              Wie unsere Kunden <span className="text-green-600">unabhängig</span> wurden
-            </h1>
+            <Heading as="h1" size="4xl" className="text-gray-900 mb-6">Wie unsere Kunden <span className="text-green-600">unabhängig</span> wurden</Heading>
             <p className="lead text-gray-600 max-w-3xl mx-auto mb-8">
               Echte Geschichten echter Menschen. Erfahren Sie, wie ZOE Solar Familien
               und Unternehmen dabei hilft, Energieunabhängigkeit zu erreichen.
@@ -201,14 +200,12 @@ export default function SuccessStories() {
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+      </div>
+    </Section>
 
-      {/* Success Stories */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
+    {/* Stories Intro Section */}
+    <Section padding="normal" variant="plain" size="wide">
+      <div className="flow-lg">
             {successStories.map((story, index) => (
               <Card key={story.id} className={`pro-card overflow-hidden ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col lg:flex`}>
                 <div className="lg:w-1/2">
@@ -295,13 +292,11 @@ export default function SuccessStories() {
                 </div>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
+      </div>
+    </Section>
 
-      {/* Authority Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Authority Section */}
+  <Section padding="tight" variant="plain" size="wide">
           <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
             <CardContent className="p-8">
               <div className="flex items-start space-x-6">
@@ -320,13 +315,11 @@ export default function SuccessStories() {
                 </div>
               </div>
             </CardContent>
-          </Card>
-        </div>
-      </section>
+      </Card>
+    </Section>
 
-      {/* Loss Aversion Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  {/* Loss Aversion Section */}
+  <Section padding="tight" variant="neutral" size="wide">
           <Card className="bg-gradient-to-r from-red-50 to-orange-50 border-red-200">
             <CardContent className="p-8 text-center">
               <div className="flex items-center justify-center mb-4">
@@ -339,27 +332,26 @@ export default function SuccessStories() {
               </p>
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-red-600">€48.000</div>
+                  <div className="text-2xl font-bold text-red-600 tabular-nums">€48.000</div>
                   <div className="text-sm text-red-600">Mehrkosten ohne Solar</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-green-600">€35.000+</div>
+                  <div className="text-2xl font-bold text-green-600 tabular-nums">€35.000+</div>
                   <div className="text-sm text-green-600">Durchschnittliche Ersparnis</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-600">€13.000</div>
+                  <div className="text-2xl font-bold text-blue-600 tabular-nums">€13.000</div>
                   <div className="text-sm text-blue-600">Ihr Netto-Vorteil</div>
                 </div>
               </div>
             </CardContent>
-          </Card>
-        </div>
-      </section>
+      </Card>
+    </Section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12">
+      <Section padding="normal" variant="gradient" className="bg-gradient-to-r from-blue-600 to-green-600" size="wide">
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 flow">
             <h2 className="text-3xl font-bold text-white mb-6">
               Werden Sie unsere nächste Erfolgsgeschichte
             </h2>
@@ -368,7 +360,7 @@ export default function SuccessStories() {
               Werden Sie unabhängig wie tausende andere zufriedene Kunden.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-4 text-lg"
@@ -403,7 +395,7 @@ export default function SuccessStories() {
             </Card>
           </div>
         </div>
-      </section>
+      </Section>
     </div>
   );
 }
