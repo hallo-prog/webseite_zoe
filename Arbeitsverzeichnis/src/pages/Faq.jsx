@@ -3,10 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { ChevronDown, ChevronUp, Clock, HelpCircle, Shield, Euro, Zap, Home, Phone, Award, CheckCircle, Star } from 'lucide-react';
 import { Heading } from '@/components/ui/heading';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { TestimonialCard } from '@/components/ui/TestimonialCard';
 import { Pill } from '@/components/ui/pill';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
-import { Section } from '../components/ui/section';
+import { Section } from '@/components/ui/section';
 
 export default function Faq() {
   const { t } = useTranslation();
@@ -200,7 +201,7 @@ export default function Faq() {
 
       {/* Urgency Banner */}
       <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center space-x-6">
+        <div className="pro-container flex items-center justify-center space-x-6">
           <Clock className="w-5 h-5" />
           <span className="font-semibold">🔥 €1.500 Bonus endet in:</span>
           <div className="flex space-x-2">
@@ -226,7 +227,7 @@ export default function Faq() {
   {/* Hero Section */}
   <Section padding="normal" variant="gradient" className="bg-gradient-to-br from-blue-50 to-indigo-50" size="wide">
           <div className="text-center mb-16">
-            <Pill variant="light" className="mb-4">Häufige Fragen</Pill>
+            <Pill variant="soft" color="neutral" className="mb-4">Häufige Fragen</Pill>
             <Heading as="h1" size="4xl" className="text-gray-900 mb-6">Ihre Fragen, <span className="text-blue-600">unsere Antworten</span></Heading>
             <p className="lead text-gray-600 max-w-3xl mx-auto mb-8">
               Transparente Antworten auf alle wichtigen Fragen zu Solaranlagen.
@@ -264,7 +265,11 @@ export default function Faq() {
                   {category.questions.map((item) => (
                     <div key={item.id} className="border border-gray-200 rounded-lg">
                       <Button
+<<<<<<< HEAD
                         variant="ghost"
+=======
+                        variant="plain"
+>>>>>>> c2d755e (docs(styleguide): Abschnitt 8.4 Container Governance + Container Audit Script & Hook Integration)
                         onClick={() => toggleItem(item.id)}
                         className="w-full text-left p-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
                         iconEnd={openItems.has(item.id) ? (
@@ -272,8 +277,11 @@ export default function Faq() {
                         ) : (
                           <ChevronDown className="w-5 h-5 text-gray-500" />
                         )}
+<<<<<<< HEAD
                       >
                         <span className="font-semibold text-gray-900">{item.question}</span>
+=======
+>>>>>>> c2d755e (docs(styleguide): Abschnitt 8.4 Container Governance + Container Audit Script & Hook Integration)
                       </Button>
                       {openItems.has(item.id) && (
                         <div className="px-4 pb-4">
@@ -318,18 +326,14 @@ export default function Faq() {
             <p className="text-gray-600">Transparente Beratung, klare Antworten</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 flow">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white">
-                <CardContent className="p-6 text-center">
-                  <div className="flex justify-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 italic mb-3">"{testimonial.text}"</p>
-                  <p className="text-sm font-semibold text-gray-900">{testimonial.name}</p>
-                </CardContent>
-              </Card>
+            {testimonials.map((t,i)=>(
+              <TestimonialCard
+                key={i}
+                name={t.name}
+                text={t.text}
+                rating={t.rating}
+                variant="glass"
+              />
             ))}
           </div>
   </Section>

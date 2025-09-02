@@ -3,6 +3,7 @@ import { Section } from '../components/ui/section';
 import { Helmet } from 'react-helmet-async';
 import { Award, Users, TrendingUp, Shield, CheckCircle, Clock, Star, MapPin, Euro, Heart, Zap, Home, Phone } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TestimonialCard } from '@/components/ui/TestimonialCard';
 import { Pill } from "@/components/ui/pill";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from 'react-i18next';
@@ -108,7 +109,7 @@ export default function About() {
 
       {/* Urgency Banner */}
       <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center space-x-6">
+        <div className="pro-container flex items-center justify-center space-x-6">
           <Clock className="w-5 h-5" />
           <span className="font-semibold">🔥 €1.500 Bonus endet in:</span>
           <div className="flex space-x-2">
@@ -134,7 +135,7 @@ export default function About() {
   {/* Hero Section */}
   <Section padding="normal" variant="gradient" className="bg-gradient-to-br from-emerald-50 to-white" size="wide">
           <div className="text-center mb-16">
-            <Pill variant="light" className="mb-4">Über ZOE Solar</Pill>
+            <Pill variant="soft" color="neutral" className="mb-4">Über ZOE Solar</Pill>
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Ihr vertrauensvoller Partner für <span className="text-emerald-600">Solarenergie</span>
             </h1>
@@ -249,7 +250,7 @@ export default function About() {
                 <p className="text-gray-600 mb-4">
                   Nur Tier-1 Module und Wechselrichter von führenden Herstellern wie LG, SMA und Fronius
                 </p>
-                <Pill variant="light" className="bg-emerald-100 text-emerald-800 border-emerald-200">TÜV-zertifiziert</Pill>
+                <Pill variant="soft" color="emerald">TÜV-zertifiziert</Pill>
               </CardContent>
             </Card>
 
@@ -262,7 +263,7 @@ export default function About() {
                 <p className="text-gray-600 mb-4">
                   Ein fester Ansprechpartner von der ersten Beratung bis zur lebenslangen Wartung
                 </p>
-                <Pill variant="light" className="bg-blue-100 text-blue-800 border-blue-200">24/7 Support</Pill>
+                <Pill variant="soft" color="info">24/7 Support</Pill>
               </CardContent>
             </Card>
 
@@ -275,7 +276,7 @@ export default function About() {
                 <p className="text-gray-600 mb-4">
                   Intelligente Planung für optimale Sonnenernte - durchschnittlich 15% mehr Ertrag
                 </p>
-                <Pill variant="light" className="bg-green-100 text-green-800 border-green-200">+15% Ertrag</Pill>
+                <Pill variant="soft" color="emerald">+15% Ertrag</Pill>
               </CardContent>
             </Card>
 
@@ -288,7 +289,7 @@ export default function About() {
                 <p className="text-gray-600 mb-4">
                   25 Jahre Vollgarantie und kostenloser Wartungsservice inklusive
                 </p>
-                <Pill variant="light" className="bg-purple-100 text-purple-800 border-purple-200">25 Jahre Garantie</Pill>
+                <Pill variant="soft" color="purple">25 Jahre Garantie</Pill>
               </CardContent>
             </Card>
           </div>
@@ -297,7 +298,7 @@ export default function About() {
   {/* Team Section */}
   <Section padding="normal" variant="plain" size="wide">
           <div className="text-center mb-16">
-            <Pill variant="light" className="mb-4">Unser Team</Pill>
+            <Pill variant="soft" color="neutral" className="mb-4">Unser Team</Pill>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Die Experten hinter ZOE Solar
             </h2>
@@ -324,7 +325,7 @@ export default function About() {
                   <p className="text-sm text-blue-600 font-medium mb-3">{member.credentials}</p>
                   <div className="flex flex-wrap justify-center gap-2">
                     {member.specializations.map((spec, i) => (
-                      <Pill key={i} variant="light" className="text-xs sm:text-sm">
+                      <Pill key={i} variant="soft" color="neutral" className="text-xs sm:text-sm">
                         {spec}
                       </Pill>
                     ))}
@@ -338,7 +339,7 @@ export default function About() {
   {/* Social Proof - Testimonials */}
   <Section padding="normal" variant="neutral" size="wide">
           <div className="text-center mb-16">
-            <Pill variant="light" className="mb-4">Kundenstimmen</Pill>
+            <Pill variant="soft" color="neutral" className="mb-4">Kundenstimmen</Pill>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Was unsere Kunden sagen
             </h2>
@@ -348,38 +349,26 @@ export default function About() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 flow">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="pro-card">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="flex">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <span className="ml-2 text-sm text-gray-600">{testimonial.name}</span>
-                  </div>
-                  <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center text-sm text-gray-500">
-                      <MapPin className="w-3 h-3 mr-1" />
-                      {testimonial.location}
-                    </div>
-                    <Pill variant="light" className="text-xs sm:text-sm">
-                      {testimonial.savings}/Jahr gespart
-                    </Pill>
-                  </div>
-                  <p className="text-xs sm:text-sm text-gray-500 mt-2">{testimonial.project}</p>
-                </CardContent>
-              </Card>
-            ))}
+              {testimonials.map((t,i)=>(
+                <TestimonialCard
+                  key={i}
+                  name={t.name}
+                  location={t.location}
+                  text={t.text}
+                  savings={`${t.savings}/Jahr gespart`}
+                  rating={t.rating}
+                  tag={t.project}
+                  tagColor="neutral"
+                  variant="glass"
+                />
+              ))}
           </div>
   </Section>
 
   {/* Certifications Section */}
   <Section padding="normal" variant="plain" size="wide">
           <div className="text-center mb-16">
-            <Pill variant="light" className="mb-4">Zertifizierungen</Pill>
+            <Pill variant="soft" color="neutral" className="mb-4">Zertifizierungen</Pill>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Höchste Qualitätsstandards
             </h2>

@@ -1,0 +1,26 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# UI Variant Konsistenz prüfen
+cd Arbeitsverzeichnis || exit 1
+npm run check:ui-variants || exit 1
+
+echo "UI Variant Check OK"
+
+# Erweiterter Kontrast Check
+npm run check:contrast:extended || exit 1
+echo "Extended Contrast OK"
+
+# Focus Audit (blockiert Commit bei neuen Problemen)
+npm run audit:focus || {
+	echo "Focus Audit hat Probleme gefunden (Commit blockiert). Bitte beheben oder Script anpassen.";
+	exit 1;
+}
+echo "Focus Audit OK"
+
+# Container Audit (verhindert Rückfall auf Legacy Container Muster)
+npm run audit:containers || {
+	echo "Container Audit hat Legacy Muster gefunden (Commit blockiert). Bitte migrieren zu pro-container.";
+	exit 1;
+}
+echo "Container Audit OK"

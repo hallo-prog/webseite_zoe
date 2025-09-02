@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { TestimonialCard } from '@/components/ui/TestimonialCard';
 import { Badge } from '@/components/ui/badge';
 import { useTranslation } from 'react-i18next';
 import { Calculator as CalculatorIcon, TrendingUp, Clock, Award, Users, Zap, Euro, Home, Shield } from 'lucide-react';
@@ -116,8 +117,8 @@ export default function Calculator() {
       </Helmet>
 
       {/* Urgency Banner */}
-      <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center space-x-6">
+      <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3">
+        <div className="pro-container flex items-center justify-center space-x-6">
           <Clock className="w-5 h-5" />
           <span className="font-semibold">🔥 €1.500 Bonus endet in:</span>
           <div className="flex space-x-2">
@@ -140,9 +141,9 @@ export default function Calculator() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto p-8">
+  <div className="pro-container p-8">
         {/* Header Section */}
-        <div className="text-center mb-12">
+  <div className="text-center flow-lg mb-12">
           <div className="flex items-center justify-center mb-4">
             <CalculatorIcon className="w-8 h-8 text-blue-600 mr-3" />
             <Heading as="h1" size="4xl" className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Ihr Solar-Schnellrechner</Heading>
@@ -196,45 +197,21 @@ export default function Calculator() {
                 Ihre Angaben
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div>
+            <CardContent className="flow">
+              <div className="flow-sm">
                 <Label className="text-base font-semibold">Dachfläche (m²)</Label>
-                <Input
-                  type="number"
-                  value={roofArea}
-                  onChange={(e) => setRoofArea(Number(e.target.value))}
-                  className="mt-2 text-lg"
-                  min="10"
-                  max="500"
-                />
-                <p className="text-sm text-gray-500 mt-1">Messbare Fläche ohne Hindernisse</p>
+                <Input type="number" value={roofArea} onChange={(e) => setRoofArea(Number(e.target.value))} min="10" max="500" className="text-lg" />
+                <p className="text-sm text-gray-500">Messbare Fläche ohne Hindernisse</p>
               </div>
-
-              <div>
+              <div className="flow-sm">
                 <Label className="text-base font-semibold">Jahresverbrauch (kWh)</Label>
-                <Input
-                  type="number"
-                  value={consumption}
-                  onChange={(e) => setConsumption(Number(e.target.value))}
-                  className="mt-2 text-lg"
-                  min="1000"
-                  max="20000"
-                />
-                <p className="text-sm text-gray-500 mt-1">Aus Ihrer letzten Stromrechnung</p>
+                <Input type="number" value={consumption} onChange={(e) => setConsumption(Number(e.target.value))} min="1000" max="20000" className="text-lg" />
+                <p className="text-sm text-gray-500">Aus Ihrer letzten Stromrechnung</p>
               </div>
-
-              <div>
+              <div className="flow-sm">
                 <Label className="text-base font-semibold">Aktueller Strompreis (€/kWh)</Label>
-                <Input
-                  type="number"
-                  step="0.01"
-                  value={price}
-                  onChange={(e) => setPrice(Number(e.target.value))}
-                  className="mt-2 text-lg"
-                  min="0.20"
-                  max="0.80"
-                />
-                <p className="text-sm text-gray-500 mt-1">Arbeitspreis ohne Grundgebühr</p>
+                <Input type="number" step="0.01" value={price} onChange={(e) => setPrice(Number(e.target.value))} min="0.20" max="0.80" className="text-lg" />
+                <p className="text-sm text-gray-500">Arbeitspreis ohne Grundgebühr</p>
               </div>
             </CardContent>
           </Card>
@@ -306,23 +283,17 @@ export default function Calculator() {
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-3 gap-6">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                  <div className="flex items-center mb-2">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
-                    ))}
-                    <span className="ml-2 text-sm text-gray-600">{testimonial.name}</span>
-                  </div>
-                  <p className="text-sm text-gray-700 mb-2">"{testimonial.text}"</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs sm:text-sm text-gray-500">{testimonial.location}</span>
-                    <Badge variant="secondary" className="text-xs sm:text-sm">
-                      {testimonial.savings}/Jahr gespart
-                    </Badge>
-                  </div>
-                </div>
-              ))}
+                {testimonials.map((t,i)=>(
+                  <TestimonialCard
+                    key={i}
+                    name={t.name}
+                    location={t.location}
+                    text={t.text}
+                    savings={`${t.savings}/Jahr gespart`}
+                    rating={t.rating}
+                    variant="glass"
+                  />
+                ))}
             </div>
           </CardContent>
         </Card>

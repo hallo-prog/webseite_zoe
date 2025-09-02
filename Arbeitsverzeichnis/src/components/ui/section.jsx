@@ -40,7 +40,7 @@ export function Section({
   const sizeClass = {
     base: 'pro-container',
     narrow: 'pro-container max-w-4xl',
-    wide: 'pro-container max-w-7xl',
+    wide: 'pro-container',
     full: 'pro-container max-w-none'
   }[size] || 'pro-container';
   const inner = contain ? <div className={sizeClass}>{children}</div> : children;

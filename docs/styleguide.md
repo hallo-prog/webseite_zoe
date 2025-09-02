@@ -87,14 +87,31 @@ Prinzipien:
 - Ein Primär-CTA pro Fold.
 
 ## 7. Badges & Meta Chips
-| Klasse | Funktion | Notiz |
-|--------|---------|-------|
-| .badge | Basis Container (Weight 600, Upper optional) | Micro Cognitive Anchor |
-| .badge-soft | Positive Kontextflächierung | Für „neu“, „aktualisiert“, „zertifiziert“ |
-| .badge-outline | Neutrale Markierung | Z.B. Filter Tags |
-| .badge-invert | Dunkler Kontrast | Auf hellen Hero / KPI Panels |
+| Klasse / Komponente | Funktion | Notiz |
+|---------------------|---------|-------|
+| `<Badge variant color size>` | Meta / Status Label | Varianten: soft | outline | invert; Farben: neutral | amber | emerald | ambient |
+| `<Pill variant color size>` | Interaktive / Filter Chips, Meta Listen | Farben erweitert: neutral | amber | emerald(success) | info | warning | danger | purple | custom |
+| .badge-soft / .badge-outline / .badge-invert | Basis CSS Implementierung (wird durch Komponente gemappt) | Direkte Nutzung vermeiden – stattdessen `<Badge>` |
 
-Chips vs. Badges: Chips (Listen / Filter) → lowercase, Badges (Status / Qualifier) → optional uppercase.
+Neues API (React):
+```
+<Badge variant="soft" color="amber">Neu</Badge>
+<Badge variant="outline" color="ambient">Live</Badge>
+<Pill variant="soft" color="info" size="xs">Info</Pill>
+<Pill variant="invert" color="emerald" icon={Check}>Sicher</Pill>
+```
+
+Semantik:
+- variant steuert Treatment (Fläche / Linie / invertiert), color steuert Tonalität.
+- Keine adhoc Tailwind Farbklassen mehr an Aufrufer – Ausnahme: `<Pill color="custom">` für experimentelle Sonderfälle (muss dokumentiert werden & später tokenisiert).
+
+Backward Mapping (temporär):
+- Badge: variant="amber|emerald|ambient|secondary" → gemappt auf (soft/outline + color)
+- Pill: variant="light|dark|custom" → soft / invert / outline+custom
+
+Entfernungsplan: Script `npm run check:ui-variants` schlägt fehl, sobald noch Legacy Varianten im Code vorkommen. Mapping wird nach Bereinigung (Release v3.4) entfernt.
+
+Chips vs. Badges: Pills (Listen / Filter / dynamische Meta) → lowercase, Badges (Status / Qualifier / Eyebrow) → optional uppercase / tighter Tracking.
 
 ## 8. Struktur & Container System (v3.3 Aktualisierung)
 Utility Klassen:
@@ -167,6 +184,57 @@ Implementierungsschritte (geplant):
 
 Status: Dokumentation fertig; Utility Klassen & Refactor folgen (Wave 5 Nacharbeit / Pre Wave 6).
 
+### 8.3 Grid & Columns System (Neu v3.3.3)
+Ziel: Semantische, leichtgewichtige Grid Utilities für häufige Spalten-Layouts ohne Wildwuchs an Tailwind-Kombinationen.
+
+Utilities:
+- `.grid-auto-sm` → 1col mobile, 2col md, 3col xl (Auto Cards / Metrics)
+- `.cols-2` → 2 Spalten ab md
+- `.cols-3` → 3 Spalten ab lg
+- `.cols-4` → 2 Spalten base, 4 Spalten ab lg
+- Modifikatoren: `.cols-tight` (kleiner Gap), `.cols-loose` (großer Gap)
+- Span Helfer: `.col-span-2` (span 2), `.col-span-full-sm` (Force Full Width mobile)
+
+Richtlinien:
+1. Nur ein Grid-Level je logischem Block (keine verschachtelten gleichartigen Spalten ohne inhaltliche Begründung).
+2. Für ungleichmäßige Layouts (z.B. 3/2/1 Patterns) weiterhin Tailwind direkt oder spezifische Komponenten.
+3. Gaps: Standard 2rem (entspricht ~32px), nur reduzieren bei dichter Info oder Micro-Karten.
+4. Keine individuellen `mt-*` Abstände innerhalb Grid Items – vertikaler Rhythmus über `.flow` in Item-Content.
+
+### 8.4 Container Governance (Neu v3.3.2)
+Ziel: Eliminierung divergenter max-width Wrapper & konsistente horizontale Rhythmik.
+
+Status Migration: Alle ehemaligen Muster `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` wurden ersetzt durch:
+- `.pro-container` (Standardbreite + responsives Padding)
+- `<Section size="wide"|"narrow"|"full" />` für Variant + Sizing in einem Schritt
+
+Durchsetzung (Automation):
+- `npm run audit:containers` – sucht nach Legacy Mustern (`max-w-7xl`, Kombination `mx-auto` + padding Sequence) und bricht mit Exit Code 1 ab.
+- In Pre-Commit Hook integriert → kein Commit mit neuem Legacy Muster möglich.
+
+Design-Richtlinien:
+1. Keine verschachtelten `pro-container` – Inline-Komponenten dürfen keinen zusätzlichen Container definieren.
+2. Innerhalb komplexer Komponenten (z.B. Slider, Tabs) nur dann einen eigenen Container, wenn sie bewusst im Seitenfluss „ausbrechen“ (Edge Case: Full-Bleed Media vs. Text).
+3. Hero / Gallery, welche Full-Bleed benötigen, verwenden `<Section size="full" contain={true|false}>` statt eigener Wrapper.
+4. Maximalbreite Anpassungen nicht ad-hoc per `max-w-*` – falls nötig, Erweiterung als neue `size` Option im `<Section>` implementieren (Governance über Komponenten-API).
+5. Keine direkten Margin-Hacks (`mx-*`) zur Zentrierung von Kerninhalten – Container kümmert sich um horizontale Zentrierung.
+
+Refactor Heuristik (bei neuem Code Review):
+- Wenn eine Diff Zeile sowohl `max-w-` als auch `px-4 sm:px-6 lg:px-8` enthält → Blocker, zurück zu Autor.
+- Wenn wiederholtes Pattern von `mx-auto` innerhalb einer Section auftritt → prüfen ob ein einziger übergeordneter Container genügt.
+
+Tracking / Weiteres:
+- Responsive Drift Audit (`npm run audit:responsive`) liefert Breakpoint Nutzung; zukünftig kombinierbar mit Container Audit für Metriken (z.B. Ratio Full-Bleed vs. Container Sektionen).
+- Mögliche zukünftige Erweiterung: ESLint Rule `no-legacy-container` statt Regex Script (Wave 6).
+
+Messbare Ziele:
+- 0 Legacy Container Treffer (Script) über 30 aufeinanderfolgende Commits.
+- ≤ 1 verschachtelter redundanter Container pro 5 Pull Requests (manuelles Review Tagging).
+
+Rollback-Kriterium: Falls Komponenten API `Section` zu „schwer“ für Micro-Fälle → Einführung leichtgewichtigerer Inline Utility `.inline-container` (nur Padding) – aktuell nicht nötig.
+
+Focus Ring System (vereinheitlicht): `.focus-ring`, `.focus-ring-danger`, `.focus-ring-inset` – ersetzen inkonsistente ring-* Kombinationen. Komponenten sollen `className+" focus-ring"` auf `:focus-visible` anwenden.
+
 ## 9. Komponenten-Katalog (Inventar aktualisiert)
 | Kategorie | Komponenten | Hinweise |
 |-----------|-------------|----------|
@@ -223,6 +291,14 @@ Legacy Hinweis: Alle `text-solar-*` und `bg-solar-*` Klassen sind deprecated und
 | Reduced Motion | Respektiert via `prefers-reduced-motion` + Data Attribute |
 | Farbkontrast | Primäre Buttons > 4.5:1 auf Weiß; Sekundäre Badges prüfen nach finaler Palette |
 | ARIA Labels | Schnellaktionen & Social Links mit `aria-label` |
+| Automatisierung | Pre-Commit führt Variant Legacy Scan, Extended Contrast Matrix & Focus Audit aus |
+
+### 10.1 Automatisierte Accessibility Checks (Dev Governance)
+- `npm run check:ui-variants`: Verhindert Verwendung abgekündigter Badge/Pill Variants (Backward Mapping Entfernung v3.4 vorbereitet).
+- `npm run check:contrast:extended`: Prüft definierte Farbkombinationen (Badge/Pill soft|outline|invert + Button primary/outline). AA Schwelle 4.5:1.
+- `npm run audit:focus`: Heuristische Analyse auf fehlende sichtbare Fokusstile (outline-none ohne Ersatz, interaktive Elemente ohne focus-visible Behandlung). Parser vermeidet False Positives in Wrapper-Komponenten.
+
+Failing eines dieser Skripte blockiert den Commit; Ziel ist langfristige Drift-Prävention.
 
 ## 11. Fokus & Interaktion (verfeinert)
 | Element | Fokus-Stil (Soll) | Anmerkung |

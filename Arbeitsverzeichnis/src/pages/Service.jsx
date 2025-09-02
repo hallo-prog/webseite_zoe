@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wrench, Shield, Clock, CheckCircle, Phone, Award, Users, Star, Zap, Home, AlertTriangle, Calendar } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { TestimonialCard } from '@/components/ui/TestimonialCard';
 import { Pill } from '@/components/ui/pill';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
@@ -145,7 +146,7 @@ export default function Service() {
 
       {/* Urgency Banner */}
       <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center space-x-6">
+        <div className="pro-container flex items-center justify-center space-x-6">
           <Clock className="w-5 h-5" />
           <span className="font-semibold">🔥 €1.500 Bonus endet in:</span>
           <div className="flex space-x-2">
@@ -171,7 +172,7 @@ export default function Service() {
   {/* Hero Section */}
   <Section padding="normal" variant="gradient" className="bg-gradient-to-br from-blue-50 to-indigo-50" size="wide">
           <div className="text-center mb-16">
-            <Pill variant="light" className="mb-4">Service & Wartung</Pill>
+            <Pill variant="soft" color="neutral" className="mb-4">Service & Wartung</Pill>
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Rundum-Service für <span className="text-blue-600">maximale Sicherheit</span>
             </h1>
@@ -223,7 +224,7 @@ export default function Service() {
               <Card key={index} className={`pro-card relative ${pkg.popular ? 'ring-2 ring-blue-500' : ''}`}>
         {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <Pill variant="custom" className="bg-blue-500 text-white border-blue-600 px-4 py-1">Beliebt</Pill>
+          <Pill variant="invert" color="info" className="px-4 py-1">Beliebt</Pill>
                   </div>
                 )}
                 <CardHeader className="text-center">
@@ -256,7 +257,7 @@ export default function Service() {
   {/* Emergency Services */}
   <Section padding="normal" variant="neutral" size="wide">
           <div className="text-center mb-16">
-            <Pill variant="light" className="mb-4 bg-red-100 text-red-800 border-red-200">Notfall-Service</Pill>
+            <Pill variant="soft" color="danger" className="mb-4">Notfall-Service</Pill>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Schnelle Hilfe im Notfall</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Bei Problemen sind wir sofort für Sie da
@@ -343,23 +344,17 @@ export default function Service() {
             <p className="text-gray-600">Zuverlässigkeit, die überzeugt</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 flow">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="pro-card">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-3">
-                    <div className="flex">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <span className="ml-2 text-sm font-semibold text-gray-700">
-                      {testimonial.name}, {testimonial.location}
-                    </span>
-                  </div>
-                  <Pill variant="light" className="mb-3">{testimonial.service}</Pill>
-                  <p className="text-gray-700 italic">"{testimonial.text}"</p>
-                </CardContent>
-              </Card>
+            {testimonials.map((t,i)=>(
+              <TestimonialCard
+                key={i}
+                name={t.name}
+                location={t.location}
+                text={t.text}
+                rating={t.rating}
+                tag={t.service}
+                tagColor="neutral"
+                variant="glass"
+              />
             ))}
           </div>
   </Section>
