@@ -78,7 +78,7 @@ This document outlines the tasks for the complete redesign and optimization of t
 - [x] **Optimize Forms:**
     - [x] Review `Contact.jsx` and other forms to ensure minimal fields.
     - [x] Implement real-time validation.
-- [ ] **Set up A/B Testing Infrastructure:** Prepare for future A/B tests on headlines, CTAs, and forms.
+- [x] **Set up A/B Testing Infrastructure:** Prepare for future A/B tests on headlines, CTAs, and forms.
 
 ## Phase 4: Finalization
 
@@ -115,17 +115,17 @@ Ziel: Vollständig einheitliches, skalierbares, dokumentiertes UI über alle Sei
 - [ ] Ersetzen aller spontanen `font-size:` Inline Styles durch Klassen oder Token.
 
 ### 5.4 Komponenten-Harmonisierung
-- [ ] Buttons: Sicherstellen dass ALLE Buttons über eine zentrale Komponente laufen (`<Button variant size loading iconStart iconEnd>`), CSS Utility Varianten de-duplizieren.
-- [ ] Badges: Konsolidieren auf 3 Varianten (soft / outline / invert) mit Props.
+- [x] Buttons: Sicherstellen dass ALLE Buttons über eine zentrale Komponente laufen (`<Button variant size loading iconStart iconEnd>`), CSS Utility Varianten de-duplizieren.
+- [x] Badges: Konsolidieren auf 3 Varianten (soft / outline / invert) mit Props.
 - [x] Cards: Einheitliche Card-Komponente mit Props für `elevation`, `interactive`, `variant` erweitert (Migration laufend: FinalCTA, ProblemSolutionSection erste Konvertierung).
 - [x] Forms: Gemeinsame Input-/Fieldset-Komponente (`<Field>`) eingeführt & Hauptformular migriert.
-- [ ] Navigation: Primary / Secondary Nav & Footer Navigationsobjekt (JSON Struktur) extrahieren.
-- [ ] CTA Banner / Promo: Einheitliche `PromotionStrip` Komponente statt mehrfacher improvisierter Banner.
+- [x] Navigation: Primary / Secondary Nav & Footer Navigationsobjekt (JSON Struktur) extrahieren.
+- [x] CTA Banner / Promo: Einheitliche `PromotionStrip` Komponente statt mehrfacher improvisierter Banner.
 - [x] KPIs / Metrics: `Metric` Komponente (Basis) implementiert (Animation & Migration offen).
-- [ ] Testimonial: Standardisiertes Layout + Avatar + Sterne + Quelle.
-- [ ] Accordion / Disclosure: Einheitliches Interaktionsmuster (Focus, Icon Rotation, Motion Reduced Kompatibilität).
-- [ ] Drawer / Modal: Gemeinsame Overlay Layer mit Portals + Scroll Lock.
-- [ ] Toast / Feedback: Einheitlicher Container & Queue Logik (falls noch nicht vorhanden – sonst dokumentieren).
+- [x] Testimonial: Standardisiertes Layout + Avatar + Sterne + Quelle.
+- [x] Accordion / Disclosure: Einheitliches Interaktionsmuster (Focus, Icon Rotation, Motion Reduced Kompatibilität).
+- [x] Drawer / Modal: Gemeinsame Overlay Layer mit Portals + Scroll Lock.
+- [x] Toast / Feedback: Einheitlicher Container & Queue Logik (falls noch nicht vorhanden – sonst dokumentieren).
 
 ### 5.5 Layout & Spacing Konsistenz
 - [x] Einheitliche Section Komponente (Props erweitert: variant + padding + size + contain) – alle Marketing Sektionen migriert.
@@ -174,17 +174,17 @@ Ziel: Vollständig einheitliches, skalierbares, dokumentiertes UI über alle Sei
 - [ ] Reduktion redundanter Box Shadows / große PNGs in UI Komponenten.
 
 ### 5.9 QA & Automatisierung
-- [ ] Visual Regression Setup (z.B. Playwright + percy/snapshots) vorbereiten – Kernseiten Snapshots definieren.
-- [ ] Lint-Regeln / Stylelint (falls noch nicht) für disallowed Hex Werte & Inline Styles einführen.
+- [x] Visual Regression Setup (z.B. Playwright + percy/snapshots) vorbereiten – Kernseiten Snapshots definieren.
+- [x] Lint-Regeln / Stylelint (falls noch nicht) für disallowed Hex Werte & Inline Styles einführen.
 - [ ] Storybook (oder Minimal Doc Site) Evaluierung: Quick Win Entscheid – falls ja: Grundgerüst mit 10 Kernkomponenten.
-- [ ] Smoke UI Test: Playwright Skript – prüft Rendering & wichtige ARIA Rollen.
-- [ ] Pre-Commit Hook erweitert: Lint + Kontrast Script (optional) / Dead CSS Report.
+- [x] Smoke UI Test: Playwright Skript – prüft Rendering & wichtige ARIA Rollen.
+- [x] Pre-Commit Hook erweitert: Lint + Kontrast Script (optional) / Dead CSS Report.
 
 ### 5.10 Dokumentation & Governance
-- [ ] `docs/styleguide.md` aktualisieren: Tokens Tabelle (Farbe, Typografie, Spacing, Motion, Radius, Elevation).
-- [ ] Changelog Abschnitt "UI Changes" etablieren.
-- [ ] Contribution Guidelines erweitern: Wann neue Variante vs neue Komponente.
-- [ ] Beispiel Code Snippets (Button, Card, Form Field) + Anti-Patterns Liste.
+- [x] `docs/styleguide.md` aktualisieren: Tokens Tabelle (Farbe, Typografie, Spacing, Motion, Radius, Elevation).
+- [x] Changelog Abschnitt "UI Changes" etablieren.
+- [x] Contribution Guidelines erweitern: Wann neue Variante vs neue Komponente.
+- [x] Beispiel Code Snippets (Button, Card, Form Field) + Anti-Patterns Liste.
 - [ ] Quarterly UI Audit Task erstellen (Recurring Issue Template).
 
 ### 5.11 Rollout & Refactor Waves
@@ -202,13 +202,13 @@ Ziel: Vollständig einheitliches, skalierbares, dokumentiertes UI über alle Sei
 - [ ] Wave 7: Final Visual Regression & Accessibility Re-Check.
 
 ### 5.12 Erfolgskriterien (Definition of Done)
-- [ ] 0 Inline `style="color|font|padding"` in produktiven Komponenten (ausgenommen dynamisch berechnete Styles mit JS Begründung).
-- [ ] <= 5 Nicht-Token Hex Farben im gesamten `src/` Code.
-- [ ] Jeder Button-Call via zentrale Button-Komponente.
-- [ ] Einheitliche Heading Klassen – keine rohen `h2` mit abweichenden Utility-Kombinationen.
+- [x] 0 Inline `style="color|font|padding"` in produktiven Komponenten (ausgenommen dynamisch berechnete Styles mit JS Begründung).
+- [x] <= 5 Nicht-Token Hex Farben im gesamten `src/` Code.
+- [x] Jeder Button-Call via zentrale Button-Komponente.
+- [x] Einheitliche Heading Klassen – keine rohen `h2` mit abweichenden Utility-Kombinationen.
 - [ ] Lighthouse Accessibility >= 95 auf Home, WhyUs, Technology, Contact.
-- [ ] Visuelle Regression: 0 ungewollte Diffs auf Kernseiten nach Refactor.
-- [ ] Dokumentierte Token Tabelle + Governance Abschnitt im Repository.
+- [x] Visuelle Regression: 0 ungewollte Diffs auf Kernseiten nach Refactor.
+- [x] Dokumentierte Token Tabelle + Governance Abschnitt im Repository.
 
 ---
 

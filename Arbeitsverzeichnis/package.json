@@ -7,7 +7,17 @@
     "dev": "vite",
     "build": "vite build && node scripts/inline-image-manifest.js",
     "preview": "vite preview",
-    "optimize:images": "node scripts/optimize-images.js"
+    "optimize:images": "node scripts/optimize-images.js",
+    "test:visual": "playwright test tests/visual-regression.spec.js",
+    "test:smoke": "playwright test tests/smoke.spec.js",
+    "test:all": "playwright test",
+    "test:ui": "playwright test --ui",
+    "lint:design": "eslint --config .eslintrc.design-system.js src/",
+    "lint:design:fix": "eslint --config .eslintrc.design-system.js src/ --fix",
+    "audit:colors": "grep -r '#[0-9a-fA-F]\\{3,6\\}' src/ --include='*.jsx' --include='*.tsx' --exclude-dir=node_modules | grep -v '#fff\\|#000\\|#ffffff\\|#000000\\|var(--color' || echo 'No disallowed colors found'",
+    "audit:inline-styles": "grep -r 'style=' src/ --include='*.jsx' --include='*.tsx' | grep -v '// dynamic style\\|// calculated style\\|// exception' || echo 'No problematic inline styles found'",
+    "quality:check": "npm run lint:design && npm run audit:colors && npm run audit:inline-styles",
+    "prepare": "husky install"
   },
   "dependencies": {
     "i18next": "^25.4.2",
